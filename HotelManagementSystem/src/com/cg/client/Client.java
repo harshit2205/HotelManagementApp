@@ -14,7 +14,7 @@ public class Client {
 	static Scanner scan;
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
+
 		
 		int choice = 0;
 		scan = new Scanner(System.in);
@@ -32,12 +32,12 @@ public class Client {
 			break;
 		default: System.out.println("incorrect input");
 		}
-=======
+
 		System.out.println("hello world");
 		admSer=new AdminServiceImpl();
 		Client.addHotel();
 		
->>>>>>> 4794dc58a608e2c81bd970d042aefa5088da63cb
+
 	}
 
 
