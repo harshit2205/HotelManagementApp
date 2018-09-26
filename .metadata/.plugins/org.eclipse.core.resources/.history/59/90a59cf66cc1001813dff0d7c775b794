@@ -28,7 +28,7 @@ public class AdminDaoImpl implements AdminDao
 		try 
 		{
 			con=DBUtil.getConn();
-			String selectqry="SELECT * FROM hotel";
+			String selectqry="SELECT * FROM purchasedetails";
 			st=con.createStatement();
 			rs=st.executeQuery(selectqry);		
 			
@@ -40,7 +40,7 @@ public class AdminDaoImpl implements AdminDao
 						rs.getString("address"),
 						rs.getString("description"),
 						rs.getFloat("avg_rate_per_night"),
-						rs.getString("phone_no1"),
+						rs.getString("phone_no"),
 						rs.getString("phone_no2"),
 						rs.getString("rating"),
 						rs.getString("email"),
