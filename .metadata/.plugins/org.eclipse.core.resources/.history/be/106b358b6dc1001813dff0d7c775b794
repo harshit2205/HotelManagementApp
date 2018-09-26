@@ -35,16 +35,16 @@ public class AdminDaoImpl implements AdminDao
 			while(rs.next())
 			{
 				HList.add(new Hotel(rs.getString("hotel_id"),
-				rs.getString("city"),
-				rs.getString("hotel_name"),
-				rs.getString("address"),
-				rs.getString("description"),
-				rs.getFloat("avg_rate_per_night"),
-				rs.getString("phone_no1"),
-				rs.getString("phone_no2"),
-				rs.getString("rating"),
-				rs.getString("email"),
-				rs.getString("fax")));
+						rs.getString("city"),
+						rs.getString("hotel_name"),
+						rs.getString("address"),
+						rs.getString("description"),
+						rs.getFloat("avg_rate_per_night"),
+						rs.getString("phone_no1"),
+						rs.getString("phone_no2"),
+						rs.getString("rating"),
+						rs.getString("email"),
+						rs.getString("fax")));
 			}
 		}
 		catch(Exception e)
