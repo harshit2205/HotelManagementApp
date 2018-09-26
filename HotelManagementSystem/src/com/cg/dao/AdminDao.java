@@ -8,7 +8,7 @@ import com.cg.entities.RoomDetails;
 public interface AdminDao {
 	
 	public List<Hotel> fetchHotelList();
-	public void addNewhotel(Hotel hotel);
+	public int addNewhotel(Hotel hotel);
 	public void updateHotelInfo(Hotel hotel);
 	public Hotel searchHotel(String hotel_id);
 	public List<RoomDetails> fetchAvailableRooms(String hotel_id);

@@ -72,8 +72,9 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public void addNewhotel(Hotel hotel) {
+	public int addNewhotel(Hotel hotel) {
 		// TODO Auto-generated method stub
+		
 		try
 		{
 			con = DBUtil.getConn();
@@ -90,12 +91,14 @@ public class AdminDaoImpl implements AdminDao
 			pst.setString(9, hotel.getRating());
 			pst.setString(10, hotel.getEmail());
 			pst.setString(11, hotel.getFax());
-			pst.executeUpdate();
+			
+			return pst.executeUpdate();
 		}
 		catch(SQLException | IOException e)
 		{
 			e.printStackTrace();
 		}
+		return 0;
 	}
 
 	@Override

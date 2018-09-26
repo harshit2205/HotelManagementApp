@@ -8,7 +8,7 @@ import com.cg.entities.RoomDetails;
 
 public class AdminServiceImpl implements AdminService{
 	
-	AdminDaoImpl adminDaoImpl;
+	AdminDaoImpl adminDaoImpl=null;
 	
 	
 
@@ -23,9 +23,9 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void addNewhotel(Hotel hotel) {
+	public int addNewhotel(Hotel hotel) {
 		// TODO Auto-generated method stub
-		adminDaoImpl.addNewhotel(hotel);
+		return adminDaoImpl.addNewhotel(hotel);
 	}
 
 	@Override
