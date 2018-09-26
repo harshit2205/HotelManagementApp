@@ -1,27 +1,121 @@
 package com.cg.dao;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.cg.DBUtil.DBUtil;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 
-public class AdminDaoImpl implements AdminDao{
-
+public class AdminDaoImpl implements AdminDao
+{
+	Connection con=null;
+	Statement st= null;
+	PreparedStatement pst = null;
+	ResultSet rs=null;
+	
+	
 	@Override
-	public List<Hotel> fetchHotelList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Hotel> fetchHotelList() 
+	{
+		List<Hotel> HList=new ArrayList<Hotel>();
+		try 
+		{
+			con=DBUtil.getConn();
+			String selectqry="SELECT * FROM purchasedetails";
+			st=con.createStatement();
+			rs=st.executeQuery(selectqry);		
+			
+			while(rs.next())
+			{
+				HList.add(new Hotel(rs.getString("hotel_id"),rs.getString("city"),rs.getString("hotel_name"),
+						rs.getString("address"),rs.getString("description"),rs.getFloat("avg_rate_per_night"),rs.getString("phone_no"),
+						rs.getString("phone_no2"),rs.getString("rating"),rs.getString("email"),rs.getString("fax")));
+			}
+		}
+		catch(Exception e)
+		{
+			
+			throw new HotelException(e.getMessage());
+		}
+		finally 
+		{
+			try
+			{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e)
+			{
+				throw  new HotelException(e.getMessage());
+			}
+		}
+		
+		return HList;
 	}
 
 	@Override
 	public void addNewhotel(Hotel hotel) {
 		// TODO Auto-generated method stub
-		
+		try
+		{
+			con = DBUtil.getConn();
+			String insertHotelQuery="INSERT INTO hotel VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+			pst=con.prepareStatement(insertHotelQuery);
+			pst.setString(1, hotel.getHotel_id());
+			pst.setString(2, hotel.getCity());
+			pst.setString(3, hotel.getHotel_name());
+			pst.setString(4, hotel.getAddress());
+			pst.setString(5, hotel.getDescription());
+			pst.setFloat(6, hotel.getAvg_rate_per_night());
+			pst.setString(7, hotel.getPhone_no());
+			pst.setString(8, hotel.getPhone_no2());
+			pst.setString(9, hotel.getRating());
+			pst.setString(10, hotel.getEmail());
+			pst.setString(11, hotel.getFax());
+			pst.executeUpdate();
+		}
+		catch(SQL Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void updateHotelInfo(Hotel hotel) {
-		// TODO Auto-generated method stub
+		try 
+		{
+			con = DBUtil.getConn();
+			String updateQuery = "UPDATE hotel SET city=?,hotel_name=?,address=?,description=?,avg_rate_per_night=?,phone_no1=?,phone_no2=?,rating=?,email=?,fax=? WHERE hotel_id=?";
+			pst = con.prepareStatement(updateQuery);
+			pst.setString(1, hotel.getCity());
+			pst.setString(2, hotel.getHotel_name());
+			pst.setString(3, hotel.getAddress());
+			pst.setString(4, hotel.getDescription());
+			pst.setFloat(5, hotel.getAvg_rate_per_night());
+			pst.setString(6, hotel.getPhone_no());
+			pst.setString(7, hotel.getPhone_no2());
+			pst.setString(8, hotel.getRating());
+			pst.setString(9, hotel.getEmail());
+			pst.setString(10, hotel.getFax());
+			pst.setString(11, hotel.getHotel_id());
+			pst.executeUpdate();	
+		} catch (SQLException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 
