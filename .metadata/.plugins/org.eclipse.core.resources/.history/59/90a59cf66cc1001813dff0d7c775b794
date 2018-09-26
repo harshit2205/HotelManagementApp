@@ -28,23 +28,23 @@ public class AdminDaoImpl implements AdminDao
 		try 
 		{
 			con=DBUtil.getConn();
-			String selectqry="SELECT * FROM hotel";
+			String selectqry="SELECT * FROM purchasedetails";
 			st=con.createStatement();
 			rs=st.executeQuery(selectqry);		
 			
 			while(rs.next())
 			{
 				HList.add(new Hotel(rs.getString("hotel_id"),
-				rs.getString("city"),
-				rs.getString("hotel_name"),
-				rs.getString("address"),
-				rs.getString("description"),
-				rs.getFloat("avg_rate_per_night"),
-				rs.getString("phone_no1"),
-				rs.getString("phone_no2"),
-				rs.getString("rating"),
-				rs.getString("email"),
-				rs.getString("fax")));
+						rs.getString("city"),
+						rs.getString("hotel_name"),
+						rs.getString("address"),
+						rs.getString("description"),
+						rs.getFloat("avg_rate_per_night"),
+						rs.getString("phone_no"),
+						rs.getString("phone_no2"),
+						rs.getString("rating"),
+						rs.getString("email"),
+						rs.getString("fax")));
 			}
 		}
 		catch(Exception e)
@@ -72,9 +72,8 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public int addNewhotel(Hotel hotel) {
+	public void addNewhotel(Hotel hotel) {
 		// TODO Auto-generated method stub
-		
 		try
 		{
 			con = DBUtil.getConn();
@@ -91,14 +90,12 @@ public class AdminDaoImpl implements AdminDao
 			pst.setString(9, hotel.getRating());
 			pst.setString(10, hotel.getEmail());
 			pst.setString(11, hotel.getFax());
-			
-			return pst.executeUpdate();
+			pst.executeUpdate();
 		}
 		catch(SQLException | IOException e)
 		{
 			e.printStackTrace();
 		}
-		return 0;
 	}
 
 	@Override
