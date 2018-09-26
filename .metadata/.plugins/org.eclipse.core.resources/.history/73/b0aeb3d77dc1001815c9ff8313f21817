@@ -259,29 +259,7 @@ public class AdminDaoImpl implements AdminDao
 	@Override
 	public void updateRoomInfo(RoomDetails roominfo) {
 		// TODO Auto-generated method stub
-		try 
-		{
-			con = DBUtil.getConn();
-			String updateRoomQuery = "UPDATE RoomDetails SET room_no=?,room_type=?,per_night_rate=?,availability=?,photo=? WHERE room_id=?";
-			pst = con.prepareStatement(updateRoomQuery);
-			pst.setString(1, roominfo.getRoom_no());
-			pst.setString(2, roominfo.getRoom_type());
-			pst.setFloat(3, roominfo.getPer_night_rate());
-			pst.setInt(4, roominfo.isAvailability());
-			pst.setBlob(5, roominfo.getImageFile());
-			pst.setString(6, roominfo.getRoom_id());
-			pst.executeUpdate();	
-		}
-		catch (SQLException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		catch (IOException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 	@Override
