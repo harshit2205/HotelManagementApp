@@ -1,0 +1,5 @@
+package com.cg.cms.util;
+
+public class DBUtil {
+	
+}
