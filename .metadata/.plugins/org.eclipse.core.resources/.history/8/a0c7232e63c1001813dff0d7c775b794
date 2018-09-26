@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cg.dbutil.DBUtil;
+import com.cg.DBUtil.DBUtil;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 
@@ -34,24 +34,15 @@ public class AdminDaoImpl implements AdminDao
 			
 			while(rs.next())
 			{
-				HList.add(new Hotel(rs.getString("hotel_id"),
-						rs.getString("city"),
-						rs.getString("hotel_name"),
-						rs.getString("address"),
-						rs.getString("description"),
-						rs.getFloat("avg_rate_per_night"),
-						rs.getString("phone_no"),
-						rs.getString("phone_no2"),
-						rs.getString("rating"),
-						rs.getString("email"),
-						rs.getString("fax")));
+				HList.add(new Hotel(rs.getString("hotel_id"),rs.getString("city"),rs.getString("hotel_name"),
+						rs.getString("address"),rs.getString("description"),rs.getFloat("avg_rate_per_night"),rs.getString("phone_no"),
+						rs.getString("phone_no2"),rs.getString("rating"),rs.getString("email"),rs.getString("fax")));
 			}
 		}
 		catch(Exception e)
 		{
 			
-//			throw new HotelException(e.getMessage());
-			e.printStackTrace();
+			throw new HotelException(e.getMessage());
 		}
 		finally 
 		{
@@ -63,8 +54,7 @@ public class AdminDaoImpl implements AdminDao
 			}
 			catch(SQLException e)
 			{
-//				throw  new HotelException(e.getMessage());
-				e.printStackTrace();
+				throw  new HotelException(e.getMessage());
 			}
 		}
 		
@@ -92,7 +82,7 @@ public class AdminDaoImpl implements AdminDao
 			pst.setString(11, hotel.getFax());
 			pst.executeUpdate();
 		}
-		catch(SQLException | IOException e)
+		catch(SQL Exception e)
 		{
 			e.printStackTrace();
 		}
