@@ -1,6 +1,7 @@
 package com.cg.entities;
 
 import java.io.File;
+import java.sql.Blob;
 
 public class RoomDetails {
 
@@ -9,13 +10,18 @@ public class RoomDetails {
 	private String room_no;
 	private String room_type;
 	private float per_night_rate;
-	private boolean availability;
-	private File imageFile;
+	private int availability;
+	private Blob imageFile;
 	
 	//constructors parameterized and non parameterized....
-	public RoomDetails(String hotel_id, String room_id, String room_no,
-			String room_type, float per_night_rate, boolean availability,
-			File imageFile) {
+
+
+	public RoomDetails() {
+		super();
+	}
+
+	public RoomDetails(String hotel_id, String room_id, String room_no, String room_type, float per_night_rate,
+			int availability, Blob imageFile) {
 		super();
 		this.hotel_id = hotel_id;
 		this.room_id = room_id;
@@ -24,10 +30,6 @@ public class RoomDetails {
 		this.per_night_rate = per_night_rate;
 		this.availability = availability;
 		this.imageFile = imageFile;
-	}
-
-	public RoomDetails() {
-		super();
 	}
 
 	//to String function....
@@ -80,19 +82,19 @@ public class RoomDetails {
 		this.per_night_rate = per_night_rate;
 	}
 
-	public boolean isAvailability() {
+	public int isAvailability() {
 		return availability;
 	}
 
-	public void setAvailability(boolean availability) {
+	public void setAvailability(int availability) {
 		this.availability = availability;
 	}
 
-	public File getImageFile() {
+	public Blob getImageFile() {
 		return imageFile;
 	}
 
-	public void setImageFile(File imageFile) {
+	public void setImageFile(Blob imageFile) {
 		this.imageFile = imageFile;
 	}
 	

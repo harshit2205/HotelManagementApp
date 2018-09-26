@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cg.dbutil.DBUtil;
+import com.cg.DBUtil.DBUtil;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 
@@ -136,9 +136,50 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public List<RoomDetails> fetchAvailableRooms(String hotel_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<RoomDetails> fetchAvailableRooms(String hotel_id) 
+	{
+		List<RoomDetails> RoomList=new ArrayList<RoomDetails>();
+		try 
+		{
+			con=DBUtil.getConn();
+			String selectqry="SELECT Room_No FROM RoomDetails where availability=1 AND hotel_id="+hotel_id;
+			st=con.createStatement();
+			rs=st.executeQuery(selectqry);		
+			
+			while(rs.next())
+			{
+				RoomList.add(new RoomDetails(rs.getString("hotel_id"),
+						rs.getString("room_id"),
+						rs.getString("room_no"),
+						rs.getString("room_type"),
+						rs.getFloat("per_night_rate"),
+						rs.getInt("availability"),
+						rs.getBlob("imageFile")));
+			}
+		}
+			
+		catch(Exception e)
+		{
+			
+//			throw new HotelException(e.getMessage());
+			e.printStackTrace();
+		}
+		finally 
+		{
+			try
+			{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e)
+			{
+//				throw  new HotelException(e.getMessage());
+				e.printStackTrace();
+			}
+		}
+		
+		return RoomList;
 	}
 
 	@Override

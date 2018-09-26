@@ -1,0 +1,830 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+	<title>Planet Eclipse</title>
+	<link>http://planeteclipse.org/planet/</link>
+	<language>en</language>
+	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
+
+<item>
+	<title>EclipseCon Europe 2018: EF @ ECE: Meet the Team</title>
+	<guid isPermaLink="false">https://www.eclipsecon.org/news/737 at https://www.eclipsecon.org</guid>
+	<link>https://www.eclipsecon.org/europe2018/news/ef-ece-meet-team</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The Eclipse Foundation offers a wide variety of professional services to its members, including intellectual property (IP) management, IT infrastructure, community development, and more.&lt;/p&gt;
+
+&lt;p&gt;EclipseCon Europe is a great place to meet Foundation staff who manage delivery of these services. Engage with them via informal networking at the ECE social events, or reach out to them ahead of time (click on their names to send email) and set up a F2F meeting in Ludwigsburg.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-news-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/europe2018/news/ef-ece-meet-team&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;img-responsive block-center&quot; height=&quot;250&quot; src=&quot;https://www.eclipsecon.org/sites/default/files/styles/solstice_news_-_default_-_thumbnail/public/news/EF_square.png?itok=TlYSclGA&quot; width=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Wed, 26 Sep 2018 00:12:38 +0000</pubDate>
+</item>
+<item>
+	<title>Holger Voormann: Eclipse IDE improvements: Photon is followed by 2018-09</title>
+	<guid isPermaLink="false">http://eclipsehowl.wordpress.com/?p=1419</guid>
+	<link>https://eclipsehowl.wordpress.com/2018/09/23/eclipse-ide-improvements-photon-is-followed-by-2018-09/</link>
+	<description>&lt;p&gt;With the first quarterly simultaneous release the naming scheme was changed: Photon, which was released in June, is followed by 2018-09 in September now. Many thanks to all the heroes who made the Eclipse IDE a bit better again!&lt;/p&gt;
+&lt;p&gt;I have made two short videos each for Photon three months ago and now for 2018-09, showing Eclipse IDE improvements in action: one about general and Git improvements and the other exclusively for Java developers. Below the two videos, you will find a list of the improvements with time stamps and links to details. If you dislike something, let me know what you want me to change next time (for example, if you prefer one longer video like before instead of several short videos like the current ones).&lt;/p&gt;
+&lt;h3&gt;2018-09 &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/platform.php&quot;&gt;general&lt;/a&gt; and &lt;a href=&quot;https://projects.eclipse.org/projects/technology.egit/reviews/5.1.0-release-review&quot;&gt;Git&lt;/a&gt; improvements&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs&quot;&gt;&lt;img alt=&quot;Eclipse 2018-09 IDE Improvements: General and Git&quot; class=&quot;alignnone size-full wp-image-1415&quot; height=&quot;253&quot; src=&quot;https://eclipsehowl.files.wordpress.com/2018/09/eclipse_2018-09_ide_improvements_general_git.png?w=450&amp;amp;h=253&quot; width=&quot;450&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=16s&quot;&gt;0:16&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/platform.php#minimap&quot;&gt;New view: &lt;em&gt;Minimap&lt;/em&gt;&lt;/a&gt; (see also: &lt;a href=&quot;https://softwareengineering.stackexchange.com/q/156362&quot;&gt;Does Minimap improve productivity?&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=46s&quot;&gt;0:46&lt;/a&gt;: Dark theme improvements, e. g. in code coverage or in the &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#breadcrumb-dark&quot;&gt;Java breadcrumb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=1m34s&quot;&gt;1:34&lt;/a&gt;: &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=533596&quot;&gt;Empty repository: &lt;em&gt;unborn ‘master’ branch&lt;/em&gt; hint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=1m54s&quot;&gt;1:54&lt;/a&gt;: &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=537200&quot;&gt;&lt;em&gt;Git Staging&lt;/em&gt; view: icons for author and committer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=2m0s&quot;&gt;2:00&lt;/a&gt;: &lt;em&gt;History&lt;/em&gt; view: &lt;em&gt;Link with Editor and Selection&lt;/em&gt; and &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=535742&quot;&gt;&lt;em&gt;Compare Mode&lt;/em&gt; enabled by default&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=2m22s&quot;&gt;2:22&lt;/a&gt;: &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=339796&quot;&gt;&lt;em&gt;History&lt;/em&gt; view: configurable table columns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=2m31s&quot;&gt;2:31&lt;/a&gt;: &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=538505&quot;&gt;&lt;em&gt;Commit Viewer&lt;/em&gt;: the focus set into ‘Files’ section&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=2m44s&quot;&gt;2:44&lt;/a&gt;: &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=537672&quot;&gt;&lt;em&gt;Commit Viewer&lt;/em&gt;: &lt;em&gt;Create Tag…&lt;/em&gt; and &lt;em&gt;Create Branch…&lt;/em&gt; icons with ‘+’&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/13dka9ut-xs?t=2m54s&quot;&gt;2:54&lt;/a&gt;: &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=536236&quot;&gt;&lt;em&gt;Git Repositories&lt;/em&gt; view: in right-click menu &lt;em&gt;Clean…&lt;/em&gt; moved down before &lt;em&gt;Collect Garbage&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2018-09 &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php&quot;&gt;Java&lt;/a&gt; improvements&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0&quot;&gt;&lt;img alt=&quot;Eclipse 2018-09 IDE Improvements: Java&quot; class=&quot;alignnone size-full wp-image-1415&quot; height=&quot;253&quot; src=&quot;https://eclipsehowl.files.wordpress.com/2018/09/eclipse_2018-09_ide_improvements_java.png?w=450&amp;amp;h=253&quot; width=&quot;450&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=16s&quot;&gt;0:16&lt;/a&gt;: &lt;a href=&quot;https://marketplace.eclipse.org/content/java-11-support-eclipse-photon-49&quot;&gt;Java 11 support via Marketplace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=29s&quot;&gt;0:29&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#step-compiler-compliance&quot;&gt;New quick fix for Java compiler compliance issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=40s&quot;&gt;0:40&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#create-abstract-method&quot;&gt;New quick fix to create abstract methods in an abstract class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=45s&quot;&gt;0:45&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#convert-to-static-import&quot;&gt;New quick fix to convert to static import&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=55s&quot;&gt;0:55&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#java7-hashcode-equals&quot;&gt;Improved &lt;em&gt;hashCode()&lt;/em&gt; and &lt;em&gt;equals()&lt;/em&gt; generation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=1m11s&quot;&gt;1:11&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#show-command-line&quot;&gt;In Java and JUnit launch configurations new &lt;em&gt;Show Command Line&lt;/em&gt; button&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=1m22s&quot;&gt;1:22&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#support-long-classpath&quot;&gt;Support for long classpath/modulepath&lt;/a&gt; via &lt;a href=&quot;https://stackoverflow.com/a/201969&quot;&gt;temporary JAR file trick&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=1m44s&quot;&gt;1:44&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#open-type-full-path&quot;&gt;&lt;em&gt;Open Type&lt;/em&gt; dialog now always shows the full path&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=1m57s&quot;&gt;1:57&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#align-spaces&quot;&gt;Java formatter: align items in columns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=2m18s&quot;&gt;2:18&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#compact-loops&quot;&gt;Java formatter: keep simple loops in one line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=2m50s&quot;&gt;2:50&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#step-result-timeout&quot;&gt;Debugging: timeout for observing method result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/rW6VRX1lqk0?t=3m10s&quot;&gt;3:10&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.9/jdt.php#step-result-hide&quot;&gt;Debug view: hide/show running threads&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Photon &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php&quot;&gt;general&lt;/a&gt; and &lt;a href=&quot;https://projects.eclipse.org/projects/technology.egit/reviews/5.0.0-release-review&quot;&gt;Git&lt;/a&gt; improvements&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug&quot;&gt;&lt;img alt=&quot;Eclipse Photon IDE Improvements: General and Git&quot; class=&quot;alignnone size-full wp-image-1415&quot; height=&quot;253&quot; src=&quot;https://eclipsehowl.files.wordpress.com/2018/09/eclipse_photon_ide_improvements_general_git.png?w=450&amp;amp;h=253&quot; width=&quot;450&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=21s&quot;&gt;0:21&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#report-missing-nature-as-marker&quot;&gt;Warnings for unsupported natures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=25s&quot;&gt;0:25&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#edit-project-natures&quot;&gt;Modifiable project natures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=38s&quot;&gt;0:38&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#contenttype-filename-pattern&quot;&gt;Content type via file name patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=1m04s&quot;&gt;1:04&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#open-resource-highlight-matching&quot;&gt;&lt;em&gt;Open Resource&lt;/em&gt; dialog highlights matching characters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=1m10s&quot;&gt;1:10&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#open-resource-dialog-paths&quot;&gt;&lt;em&gt;Open Resource&lt;/em&gt; dialog now always shows the full path&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=1m15s&quot;&gt;1:15&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#browser-autorefresh&quot;&gt;Browser editor with new auto-refresh option&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=1m39s&quot;&gt;1:39&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#quickaccess-matches-preference-keywords&quot;&gt;Quick access matches preference pages by keyword&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=1m49s&quot;&gt;1:49&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#parallel-builds-preference&quot;&gt;Parallel building of projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=1m54s&quot;&gt;1:54&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#preference-import-export-buttons&quot;&gt;Preference dialog with import/export buttons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=2m08s&quot;&gt;2:08&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#windows-modern-directory-dialog&quot;&gt;On windows native directory selection dialog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=2m17s&quot;&gt;2:17&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#tree-table-scaling&quot;&gt;On windows improved tree and table widget at high-DPI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=2m23s&quot;&gt;2:23&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#default-font-macos&quot;&gt;On macOs Menlo as default text font&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=2m31s&quot;&gt;2:31&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#gtk3-theme-override-support&quot;&gt;On Linux GTK3.14+ the &lt;em&gt;GTK_THEME&lt;/em&gt; environment variable is supported&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=2m43s&quot;&gt;2:43&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#swt-gtk3-memory-usage&quot;&gt;On Linux GTK3 memory leak fixed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=2m49s&quot;&gt;2:49&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#swt-gtk3-caret-performance&quot;&gt;On Linux GTK3 improved caret performance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=2m59s&quot;&gt;2:59&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#detach-editor-view&quot;&gt;Detach view or editor via right-click menu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=3m07s&quot;&gt;3:07&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#unde-redo-toolbar&quot;&gt;Undo/Redo can be added to the main toolbar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=3m24s&quot;&gt;3:24&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#delete-nested-projects&quot;&gt;Prompt before deleting nested projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=3m35s&quot;&gt;3:35&lt;/a&gt;: Dark theme improvements:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=3m42s&quot;&gt;3:42&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#text-editor-icons-dark-theme&quot;&gt;Icons with transparent instead of a white background&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=3m46s&quot;&gt;3:46&lt;/a&gt;: Font colors for section title and link text in dark theme improved&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=3m55s&quot;&gt;3:55&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/platform.php#range-indicator-color&quot;&gt;Configurable range indicator color&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=4m02s&quot;&gt;4:02&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#jdt-syntaxcoloring-dark&quot;&gt;Improved Java syntax highlighting in the dark theme&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=4m14s&quot;&gt;4:14&lt;/a&gt;: Eclipse Platform code mining ready (e. g. for &lt;a href=&quot;https://github.com/angelozerr/jdt-codemining)&quot;&gt;JDT Java Code Mining&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=4m44s&quot;&gt;4:44&lt;/a&gt;: &lt;a href=&quot;http://eclip.se/510132&quot;&gt;&lt;em&gt;Git Staging&lt;/em&gt; view search field ignores “*” wildcard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/6y-QgrNa5ug?t=4m49s&quot;&gt;4:49&lt;/a&gt;: &lt;a href=&quot;http://eclip.se/534604&quot;&gt;Git variables that can be used in a launch configuration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Photon &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php&quot;&gt;Java&lt;/a&gt; and &lt;a href=&quot;https://projects.eclipse.org/projects/technology.m2e/reviews/1.9-release-review&quot;&gt;Maven&lt;/a&gt; improvements&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU&quot;&gt;&lt;img alt=&quot;Eclipse Photon IDE Improvements: Java and Maven&quot; class=&quot;alignnone size-full wp-image-1415&quot; height=&quot;253&quot; src=&quot;https://eclipsehowl.files.wordpress.com/2018/09/eclipse_photon_ide_improvements_java_maven.png?w=450&amp;amp;h=253&quot; width=&quot;450&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=32s&quot;&gt;0:32&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#newproject-modulefile&quot;&gt;When creating a new Java project, dialog to create &lt;em&gt;module-info.java&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=48s&quot;&gt;0:48&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#java-9&quot;&gt;In &lt;em&gt;module-info.java&lt;/em&gt; new quick fix to create elements for empty packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=1m02s&quot;&gt;1:02&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#quickfix-javadoc&quot;&gt;In &lt;em&gt;module-info.java&lt;/em&gt; new quick fix to move a classpath entry to the modulepath&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=1m15s&quot;&gt;1:15&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#override-dependencies&quot;&gt;Overriding modular build path dependencies for launching&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=1m46s&quot;&gt;1:46&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#nonnullbydefault-per-module&quot;&gt;&lt;em&gt;@NonNullByDefault&lt;/em&gt; at module level&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=2m01s&quot;&gt;2:01&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#junit-5-support&quot;&gt;JUnit 5.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=2m14s&quot;&gt;2:14&lt;/a&gt;: Select JUnit tests by tags via logical expression for launching&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=2m32s&quot;&gt;2:32&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#jdt-test-sources&quot;&gt;Classpath separation for test sources&lt;/a&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=2m32s&quot;&gt;2:32&lt;/a&gt;: Plain Java: manually&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=3m38s&quot;&gt;3:38&lt;/a&gt;: Maven: automatically&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=3m36s&quot;&gt;3:36&lt;/a&gt;: &lt;a href=&quot;https://github.com/gradle/gradle/issues/4802#issuecomment-396165166&quot;&gt;Gradle: via build.gradle snippet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=4m08s&quot;&gt;4:08&lt;/a&gt;: Filter out test sources in the &lt;em&gt;Problems&lt;/em&gt; view, in the Java search dialog, in the &lt;em&gt;Call Hierarchy&lt;/em&gt; view and in launch configurations&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=4m56s&quot;&gt;4:56&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php&quot;&gt;&lt;em&gt;–release&lt;/em&gt; compiler flag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=5m36s&quot;&gt;5:36&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/M4/#debug-perspective-changed&quot;&gt;The debugging perspective has a new layout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=5m42s&quot;&gt;5:42&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#debug-shell&quot;&gt;&lt;em&gt;Display&lt;/em&gt; view renamed to &lt;em&gt;Debug Shell&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=5m52s&quot;&gt;5:52&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/M5/#worker-deobfuscated-jdt&quot;&gt;In &lt;em&gt;Debug&lt;/em&gt; view thread names are updated when they change&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=6m02s&quot;&gt;6:02&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#prototype-java-launch-configuration&quot;&gt;Launch prototypes for Java application launch configurations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=6m45s&quot;&gt;6:45&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#escape-non-ascii-when-pasting&quot;&gt;Escape non-ASCII characters when pasting into a string&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=7m12s&quot;&gt;7:12&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#jdt-remove-redundant-modifiers-cleanup&quot;&gt;New cleanup action &lt;em&gt;Remove redundant modifiers&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=7m42s&quot;&gt;7:42&lt;/a&gt;: &lt;a href=&quot;https://www.eclipse.org/eclipse/news/4.8/jdt.php#formatter-profile&quot;&gt;New Java formatter profile dialog:&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=7m46s&quot;&gt;7:46&lt;/a&gt;: Filter field&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=7m52s&quot;&gt;7:52&lt;/a&gt;: Bulk changes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=7m58s&quot;&gt;7:58&lt;/a&gt;: Custom preview contents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=8m15s&quot;&gt;8:15&lt;/a&gt;: Tip of the Day (see &lt;a href=&quot;https://youtu.be/gDAb_iyO5Fc&quot;&gt;Webinar&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/U-ZTkhek5TU?t=8m35s&quot;&gt;8:35&lt;/a&gt;: &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=465882&quot;&gt;Maven POM editor shows by default the &lt;em&gt;pom.xml&lt;/em&gt; instead of the overview page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Several &lt;a href=&quot;https://www.eclipse.org/downloads/packages/&quot;&gt;Eclipse 2018-09 IDE packages are available for download&lt;/a&gt;. Since Photon there has existed an &lt;em&gt;Latest Eclipse Release&lt;/em&gt; update site in &lt;em&gt;Window &amp;gt; Preferences: Install/Update &amp;gt; Available Software Sites&lt;/em&gt;. If you enable it, you can upgrade to 2018-09 via &lt;em&gt;Help &amp;gt; Check for Updates&lt;/em&gt;. If automatic updates (&lt;em&gt;Window &amp;gt; Preferences: Install/Update &amp;gt; Automatic Updates&lt;/em&gt;) have not been disabled, a dialog will ask you on December 19 if you want to upgrade to 2018-12.&lt;/p&gt;</description>
+	<pubDate>Sun, 23 Sep 2018 20:07:48 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Ditto: Selective push notifications available</title>
+	<guid isPermaLink="true">https://www.eclipse.org/ditto/2018-09-21-selective-push-notifications.html</guid>
+	<link>https://www.eclipse.org/ditto/2018-09-21-selective-push-notifications.html</link>
+	<description>&lt;p&gt;The &lt;a href=&quot;https://www.eclipse.org/ditto/architecture-services-connectivity.html&quot;&gt;connectivity service&lt;/a&gt; supercharged Ditto’s flexibility in integrating with other services.
+It’s such a great feature to let the other connected services know about thing updates and property changes.
+Even the direct exchange with real-world assets became more flexible through the multi-protocol support.
+But with a steady increase in connected devices, those messages easily sum up to a huge number.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; &lt;b&gt;Note:&lt;/b&gt; In order to simplify a little, we here use the term &lt;code class=&quot;highlighter-rouge&quot;&gt;message&lt;/code&gt; as synonym for both Ditto 
+        &lt;a href=&quot;https://www.eclipse.org/ditto/basic-signals.html&quot;&gt;signals&lt;/a&gt; and &lt;a href=&quot;https://www.eclipse.org/ditto/basic-messages.html&quot;&gt;messages&lt;/a&gt;.&lt;/div&gt;
+
+&lt;p&gt;Also, not every consuming application needs to know everything that’s going on.
+In fact, the only use case that requires processing of every message is logging.
+Therefore most of the times an application waits for a specific message to trigger a specific action.
+So all other messages are discarded unused.
+This adds a lot of unnecessary overhead both to the message transport capabilities and the processing of messages at the receiving end.&lt;/p&gt;
+
+&lt;p&gt;But what if you could avoid receiving those messages at all.&lt;br /&gt;
+Well, you can!&lt;br /&gt;
+This is exactly what selective push notifications do: 
+Configurable message filters that are applied to Ditto’s publishing connection before anything goes on the line. 
+They can help you with a lot of problems in a bunch of scenarios:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bandwidth limitations: The amount of occurring events is too large and/or frequent to be delivered via the available channels. With selective message filters, you can mute the noise in your event stream.&lt;/li&gt;
+  &lt;li&gt;Information hiding: Let consuming services only know what they need to know. Message filters allow you to control all published content in great detail.&lt;/li&gt;
+  &lt;li&gt;Specialized notifications: A specific event filter can be used to set a value thresholds or a status-change trigger. This removes the burden of implementing filter logic on the application side.&lt;/li&gt;
+  &lt;li&gt;Event routing: Create multiple connections with Ditto’s connectivity service and route your events through those aligned with your requirements. All by specifying appropriate filters for your connection targets.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following diagram visualizes this context:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;visual comparison&quot; src=&quot;https://www.eclipse.org/ditto/images/blog/2018-09-21-selective-push-notifications-visual-comparison.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With the upcoming Ditto release &lt;code class=&quot;highlighter-rouge&quot;&gt;0.8.0-M2&lt;/code&gt;, those filters are available for the following endpoints:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;WebSocket&lt;/li&gt;
+  &lt;li&gt;Server-Sent Events (SSE)&lt;/li&gt;
+  &lt;li&gt;All supported connectivity protocols (AMQP 0.9.1, AMQP 1.0 / &lt;a href=&quot;https://eclipse.org/hono/&quot;&gt;Eclipse Hono&lt;/a&gt;, MQTT)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can use a basic namespace filter on the following topics:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Twin events&lt;/li&gt;
+  &lt;li&gt;Live events&lt;/li&gt;
+  &lt;li&gt;Live messages&lt;/li&gt;
+  &lt;li&gt;Live commands&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This filter is a comma-separated list of selected namespaces. It only allows messages related to one of the given namespaces.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, there is an additional &lt;a href=&quot;https://www.eclipse.org/ditto/basic-rql.html&quot;&gt;RQL filter&lt;/a&gt; for an advanced description of twin and live events.
+Powered by the mighty syntax of Ditto’s search API it allows configuring the selected events in the same manner as you search for things.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://www.eclipse.org/ditto/basic-changenotifications.html#filtering&quot;&gt;documentation&lt;/a&gt; for more information on options and configuration.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-simple-example&quot;&gt;A simple example&lt;/h2&gt;
+
+&lt;p&gt;Imagine you have a flat with multiple environmental sensors: Some measure temperature, some humidity and some both.
+This information can be useful for different applications.
+In our case, a smart thermostat uses the sensor data to control the indoor climate and there is also a fire alarm installed that detects fires by abnormal high measured temperatures&lt;/p&gt;
+
+&lt;p&gt;The following figure displays this setting:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;example setup&quot; src=&quot;https://www.eclipse.org/ditto/images/blog/2018-09-21-selective-push-notifications-example-setup.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So let’s start with the prerequisites. You need:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A running Ditto instance with a valid user (You can follow our &lt;a href=&quot;https://www.eclipse.org/ditto/intro-hello-world.html&quot;&gt;Hello World example&lt;/a&gt; to create one). This example uses dittos default user on a locally running instance.&lt;/li&gt;
+  &lt;li&gt;A tool for executing HTTP requests (e.g. Ditto’s Swagger API, cURL, Postman). We use this to create our twins and simulate the sensors.&lt;/li&gt;
+  &lt;li&gt;A modern browser supporting WebSockets. This example uses &lt;a href=&quot;https://websocket.org/echo.html&quot;&gt;websocket.org&lt;/a&gt; as a websocket client. The site will tell you if your browser supports the WebSocket protocol. We will mock our applications this way.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-digital-twins&quot;&gt;The digital twins&lt;/h3&gt;
+
+&lt;p&gt;First we configure our sensors digital twins:&lt;/p&gt;
+
+&lt;p&gt;A temperature sensor&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'{
+       &quot;features&quot;: {
+         &quot;environmentSensor&quot;: {
+           &quot;properties&quot;: { 
+             &quot;temperature&quot;: 0.0
+           }
+         }
+       }
+     }'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3ATemperatureSensor'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A humidity sensor&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'{
+       &quot;features&quot;: {
+         &quot;environmentSensor&quot;: {
+           &quot;properties&quot;: { 
+             &quot;humidity&quot;: 0
+           }
+         }
+       }
+     }'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3AHumiditySensor'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;A combined temperature and humidity sensor&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'{
+       &quot;features&quot;: {
+         &quot;environmentSensor&quot;: {
+           &quot;properties&quot;: {
+             &quot;temperature&quot;: 0.0,
+             &quot;humidity&quot;: 0
+           }
+         }
+       }
+     }'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3ATemperatureAndHumiditySensor'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And finally, a teapot&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'{}'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3ATeapot'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;mocking-the-consuming-applications&quot;&gt;Mocking the consuming applications&lt;/h3&gt;
+
+&lt;p&gt;Open your browser on https://websocket.org/echo.html. 
+This site allows you to connect with any WebSocket endpoint and supports simple sending and receiving of messages. The interface is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;websocket.org site&quot; src=&quot;https://www.eclipse.org/ditto/images/blog/2018-09-21-selective-push-notifications-websocket_org.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Enter Ditto’s WebSocket endpoint with user credentials &lt;code class=&quot;highlighter-rouge&quot;&gt;ws://ditto:ditto@localhost:8080/ws/2&lt;/code&gt; and hit the &lt;em&gt;Connect&lt;/em&gt; button.
+The log output should confirm the action by printing a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;CONNECTED&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This means the socket is open and you’re able to receive messages from Ditto.
+But first, you should let Ditto know in what kind of messages you’re interested.
+This interest differs for both of the example applications:&lt;/p&gt;
+
+&lt;p&gt;The thermostat app only needs to know every humidity and temperature report so you can define a filter for change events on twins having those properties:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;START-SEND-EVENTS?filter=or(exists(features/environmentSensor/properties/temperature),exists(features/environmentSensor/properties/humidity))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Paste it into the &lt;em&gt;Message&lt;/em&gt; input and use the &lt;em&gt;Send&lt;/em&gt; button to post it. Ditto should acknowledge with a &lt;code class=&quot;highlighter-rouge&quot;&gt;START-SEND-EVENTS:ACK&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;That’s it for our thermostat app, let’s proceed to the fire alarm.
+Open https://websocket.org/echo.html again in a separate tab and repeat the connection process.
+But instead of consuming all temperature and humidity reports, we only want to be notified when a specific temperature threshold is exceeded.
+90°C seems to be a solid value for this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;START-SEND-EVENTS?filter=gt(features/environmentSensor/properties/temperature,90)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After receiving Ditto’s acknowledgment, you’re done with the configuration.&lt;/p&gt;
+
+&lt;h3 id=&quot;report-mocked-sensor-values-to-ditto&quot;&gt;Report mocked sensor values to Ditto&lt;/h3&gt;
+
+&lt;p&gt;Use Ditto’s HTTP API to send mocked data on behalf of our sensors. First report a new humidity value for the humidity sensor:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'55'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3AHumiditySensor/features/environmentSensor/properties/humidity'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now check both websocket.org tabs. The thermostat tab should have received an event with the reported value while nothing happened in the alarm tab.&lt;/p&gt;
+
+&lt;p&gt;Continue with some temperature data from another sensor:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'23'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3ATemperatureAndHumiditySensor/features/environmentSensor/properties/temperature'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The value change should be reported to the thermostat, but still no events for the alarm tab.&lt;/p&gt;
+
+&lt;p&gt;Finally it’s time to start a fire. Report a very high temperature for the third sensor:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'120'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3ATemperatureSensor/features/environmentSensor/properties/temperature'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now both applications should have received the reported data, and the fire alarm can use this event to (virtually) trigger its bell.&lt;/p&gt;
+
+&lt;p&gt;But what about the teapot? Let him declare his identity by setting a personal message:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ditto:ditto'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'{
+       &quot;properties&quot;: {
+         &quot;message&quot;: &quot;I'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'m a teapot&quot;
+       }
+     }'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080/api/2/things/org.eclipse.ditto%3ATeapot/features/status'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Unfortunately, no one cares and this no one is notified about that change.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+We do hope that &lt;strong&gt;you&lt;/strong&gt; care about this feature, we think it’s really awesome.
+&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img alt=&quot;Ditto&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/ditto.svg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;–&lt;br /&gt;
+The Eclipse Ditto team&lt;/p&gt;</description>
+	<pubDate>Fri, 21 Sep 2018 04:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Webtools News: WTP 3.11 Released!</title>
+	<guid isPermaLink="false">http://www.eclipse.org/webtools/news.php#permalink185</guid>
+	<link>http://eclipse.org/webtools/releases/3.11</link>
+	<description>&lt;div&gt;
+      The Eclise Web Tools Platform 3.11 has been released!  &lt;a href=&quot;https://wiki.eclipse.org/WTP_FAQ#How_do_I_install_WTP.3F&quot;&gt;Installation&lt;/a&gt; and update can be performed using the
+      &lt;a href=&quot;http://download.eclipse.org/releases/2018-09/&quot;&gt;SimRel 2018-09 Update Site&lt;/a&gt; or through the &lt;a href=&quot;https://marketplace.eclipse.org/user/nitind/listings&quot;&gt;Eclipse Marketplace&lt;/a&gt;.
+      Release 3.11 is included in the 2018-09
+          &lt;a href=&quot;https://www.eclipse.org/downloads/packages/release/2018-09/r/eclipse-ide-java-ee-developers&quot;&gt;Eclipse IDE for Java EE Developers&lt;/a&gt; and &lt;a href=&quot;https://www.eclipse.org/downloads/packages/release/2018-09/r/eclipse-ide-javascript-and-web-developers&quot;&gt;Eclipse IDE for JavaScript and Web Developers&lt;/a&gt;, with selected portions also included in &lt;a href=&quot;http://www.eclipse.org/downloads/compare.php&quot;&gt;other packages&lt;/a&gt;.  Adopters can download &lt;a href=&quot;http://download.eclipse.org/webtools/downloads/&quot;&gt;the R3.11 build itself&lt;/a&gt; directly.&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;http://www.eclipse.org/webtools/news.php#permalink185&quot;&gt;More news&lt;/a&gt;&lt;/p&gt;</description>
+	<pubDate>Thu, 20 Sep 2018 21:01:00 +0000</pubDate>
+</item>
+<item>
+	<title>itemis: Xtext 2.15 released!</title>
+	<guid isPermaLink="true">https://blogs.itemis.com/en/xtext-2.15-released</guid>
+	<link>https://blogs.itemis.com/en/xtext-2.15-released</link>
+	<description>&lt;p&gt;&lt;span style=&quot;font-weight: 400; background-color: transparent;&quot;&gt;We are proud to announce Xtext and Xtend 2.15! As you can learn from the release notes (&lt;a href=&quot;https://www.eclipse.org/Xtext/releasenotes.html#/releasenotes/2018/09/04/version-2-15-0&quot;&gt;Xtext&lt;/a&gt; and &lt;a href=&quot;https://www.eclipse.org/xtend/releasenotes.html#/releasenotes/2018/09/04/version-2-15-0&quot;&gt;Xtend&lt;/a&gt;), the focus of this release was on stability, quality and performance. Especially the Xtend Gradle build could be improved significantly and the integration with Eclipse 2018-09 works like a charm, now.&lt;/span&gt;&lt;/p&gt;  
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;In the last three months, it turned out to be rather challenging to keep up with the new concept of rolling releases at Eclipse. We had to learn a lot and more than once we did this the hard way. In the end we are pretty satisfied with the outcome, though. And besides quite some fundamental groundwork on the process-side to get ready for the shorter 3 month release cadence, we did also find the time to squeeze in a few goodies that will make working with Xtext DSLs even more pleasant.&lt;/span&gt;&lt;/p&gt; 
+&lt;h2&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Bye bye Chunk 5 of 17&lt;/span&gt;&lt;/h2&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;One of the noticeable adjustments, that we made, is the improved progress reporting. We redid the logic that tracks the remaining number of files during a build in Eclipse and are now issuing more fine grained feedback to the user. This was possible due to recent changes in the Eclipse platform. We do no longer face a performance degradation when reporting on such a granularity so it was about time to provide more insights on what's going on during a full build.&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;img alt=&quot;1–Eclipse-Building–Workspace&quot; src=&quot;https://blogs.itemis.com/hs-fs/hubfs/Blog/Xtext/1%E2%80%93Eclipse-Building%E2%80%93Workspace.gif?t=1537446193710&amp;amp;width=600&amp;amp;name=1%E2%80%93Eclipse-Building%E2%80%93Workspace.gif&quot; style=&quot;width: 600px; display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;600&quot; /&gt;
+&lt;br /&gt; 
+&lt;h2&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;For the unit test addicted among us&lt;/span&gt;&lt;/h2&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Besides the fact that Xtext does now correctly mark test folders as such, when you create a new project, we are constantly working on improvements of the APIs for testing various Xtext services. This time, the infrastructure to test lexical and semantic coloring was added. It greatly simplifies testing of custom highlighting logic.&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;img alt=&quot;2–Highlightinh–Xtext&quot; src=&quot;https://blogs.itemis.com/hs-fs/hubfs/Blog/Xtext/2%E2%80%93Highlightinh%E2%80%93Xtext.png?t=1537446193710&amp;amp;width=724&amp;amp;name=2%E2%80%93Highlightinh%E2%80%93Xtext.png&quot; style=&quot;width: 724px;&quot; width=&quot;724&quot; /&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;br /&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Also Xtend is now aware of the JUnit annotations and will flag methods with an invalid return type (read: non-void) already in the editor so you get immediate feedback if the type inference has computed some undesired return type for your test method. Especially when working with fluent test APIs this may be very handy.&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;img alt=&quot;3–Xtend–JUnit&quot; src=&quot;https://blogs.itemis.com/hs-fs/hubfs/Blog/Xtext/3%E2%80%93Xtend%E2%80%93JUnit.png?t=1537446193710&amp;amp;width=724&amp;amp;name=3%E2%80%93Xtend%E2%80%93JUnit.png&quot; style=&quot;width: 724px;&quot; width=&quot;724&quot; /&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;h2&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;There is more&lt;/span&gt;&lt;/h2&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;The 2.15 release has more goodies that you can read about in the release notes of &lt;a href=&quot;https://www.eclipse.org/Xtext/releasenotes.html#/releasenotes/2018/09/04/version-2-15-0&quot;&gt;Xtext&lt;/a&gt; or &lt;a href=&quot;https://www.eclipse.org/xtend/releasenotes.html#/releasenotes/2018/09/04/version-2-15-0&quot;&gt;Xtend&lt;/a&gt;. Being it the improved support for Task markers in Eclipse, the tweaks to the handling of files, that are external to your workspace, a command-line interface for creation of projects or new APIs in the core, make sure you do not miss some interesting bit or piece.&lt;/span&gt;&lt;/p&gt; 
+&lt;h2&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We value your feedback&lt;/span&gt;&lt;/h2&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As usual, if you face any issues with Xtext 2.15 or if you do have any other feedback, please don't hesitate to get in touch with us on &lt;/span&gt;&lt;a href=&quot;https://github.com/eclipse/xtext&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;, via the &lt;a href=&quot;https://www.eclipse.org/forums/index.php?t=thread&amp;amp;frm_id=27&quot;&gt;newsgroup&lt;/a&gt; or simply drop us a comment.&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;a class=&quot;cta_button&quot; href=&quot;https://info.itemis.com/cs/ci/?pg=78567f96-0e8e-4c0b-8822-523822026eba&amp;amp;pid=761475&amp;amp;ecid=&amp;amp;hseid=&amp;amp;hsic=&quot;&gt;&lt;img align=&quot;middle&quot; alt=&quot;Contact the  itemis Xtext team&quot; class=&quot;hs-cta-img &quot; src=&quot;https://no-cache.hubspot.com/cta/default/761475/78567f96-0e8e-4c0b-8822-523822026eba.png&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;  
+&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;https://track.hubspot.com/__ptq.gif?a=761475&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fblogs.itemis.com%2Fen%2Fxtext-2.15-released&amp;amp;bu=https%253A%252F%252Fblogs.itemis.com&amp;amp;bvt=rss&quot; style=&quot;width: 1px!important;&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 20 Sep 2018 13:00:00 +0000</pubDate>
+	<author>xtext@itemis.com (Xtext-Team)</author>
+</item>
+<item>
+	<title>N4JS: Null/Undefined Analysis in N4JS</title>
+	<guid isPermaLink="false">tag:blogger.com,1999:blog-7569987920628430132.post-875574530099273704</guid>
+	<link>https://n4js.blogspot.com/2018/09/nullundefined-analysis-in-n4js_20.html</link>
+	<description>&lt;h4&gt;&lt;/h4&gt;&lt;h4&gt;&lt;b&gt;The N4JS IDE integrates validations and analyses that are quite common for IDEs of statically typed languages. However, these analyses are seldom available for dynamically typed languages like N4JS or TypeScript. In this post we present the null/undefined analysis for N4JS source code.&lt;/b&gt;&lt;/h4&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;span&gt;TypeError: Cannot read property of undefined&lt;/span&gt;&lt;/b&gt;&lt;br /&gt;&lt;div style=&quot;text-align: right;&quot;&gt;- Developer's staff of life&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;The runtime error above occurs pretty often for JavaScript programmers: A quick search on Google returned about 1.2 million for the term &lt;i&gt;TypeError: Cannot read property of undefined&lt;/i&gt;. When constraining search results to &lt;i&gt;&lt;span style=&quot;font-family: inherit;&quot;&gt;site:stackoverflow.com&lt;/span&gt;&lt;/i&gt; the query will still yield 126 thousand results. These numbers are comparable to the somewhat similar error &lt;i&gt;NullPointerException&lt;/i&gt; which has about 3 million hits on Google and about 525 thousand when constrained to stackoverflow.com. Some of these results are caused by rather simple mistakes that a null/undefined analysis could detect. As a result, the developer could restructure his code and remove these potential errors even before he runs his first test and hence save time.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Null/Undefined Analysis&lt;/h3&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;/div&gt;The N4JS IDE provides static analyses to indicate problems when it detects a property access on a variable which can be null or undefined. The analysis considers all assignments that occur either through a simple assignment expression or via destructuring. Loops, conditional expressions (e.g. &lt;span&gt;i = c? 1 : 0;&lt;/span&gt;) and declaration initializers are respected as well.&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-2MLOhdP3dEk/W3_Cnrj20zI/AAAAAAAAAIU/VD7GMOKA5RkedjFYi2nhKfW2pHKtn2BLACEwYBhgL/s1600/N4JS-IDE.png&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://4.bp.blogspot.com/-2MLOhdP3dEk/W3_Cnrj20zI/AAAAAAAAAIU/VD7GMOKA5RkedjFYi2nhKfW2pHKtn2BLACEwYBhgL/s1600/N4JS-IDE.png&quot; width=&quot;570&quot; /&gt;&lt;/a&gt;&lt;/div&gt;The screenshot above shows a first example where a potential TypeError is detected. Since there exists at least one control flow from &lt;span&gt;v.length&lt;/span&gt; backwards to all reachable definitions of &lt;span&gt;v&lt;/span&gt;,  such that one definition assigns null or undefined to &lt;span&gt;v&lt;/span&gt;, a warning is issued telling that &lt;span&gt;v&lt;/span&gt; may be undefined.&lt;br /&gt;&lt;br /&gt;To make sure that the analysis will produce fast results, it is implemented within some limitations. One is that the analysis is done separately for each body of a function, method, etc. (i.e. &lt;i&gt;intra-procedural&lt;/i&gt; analysis). Hence it lacks knowledge of variables that cross the borders of these bodies such as the return value of a nested function call. In addition, property variables (such as &lt;span&gt;v.length&lt;/span&gt;) are not analyzed since this would require the analysis to be context sensitive to the receiver object (here &lt;span&gt;v&lt;/span&gt;). However, these limitations are common for static analyses of statically typed languages and still allow to detect many problems regarding local variables and parameters.&lt;br /&gt;&lt;br /&gt;Usually, the analysis makes optimistic assumptions. For instance it can happen that a local variable receives the value of a method call or another non-local variable. In this situation the analysis assumes this value is neither null nor undefined. The same is true for function parameters. Only when there are distinct indications in the source code for a value of a local variable to be null or undefined, the analysis will issue a warning.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Guards&lt;/h3&gt;&lt;h3&gt; &lt;/h3&gt;Sometimes the programmer knows that a variable may be null or undefined and hence checks the variable explicitly, for instance using &lt;span&gt;if (v) {...}&lt;/span&gt;. As a result this check disables the warning in the then-branch that complies to the execution semantics.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-Pjtv74Dim8U/W3_CntUSe0I/AAAAAAAAAIM/ECKOxqI2d2khOrBgcpxIva02wlkcAtnhACEwYBhgL/s1600/No_Warning.png&quot; style=&quot;clear: left; float: left; margin-bottom: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-Pjtv74Dim8U/W3_CntUSe0I/AAAAAAAAAIM/ECKOxqI2d2khOrBgcpxIva02wlkcAtnhACEwYBhgL/s1600/No_Warning.png&quot; width=&quot;570&quot; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;As shown in the screenshot above, neither at the expression &lt;span&gt;w.length &amp;lt; 1&lt;/span&gt; nor at the statement &lt;span&gt;return w.length&lt;/span&gt;; a warning is shown. Of course, the else-branch of such a check would consequently always indicate a warning when a property of variable &lt;span&gt;v&lt;/span&gt; is accessed. Checks for conditional expressions and binary logical expressions (e.g. &lt;span&gt;v &amp;amp;&amp;amp; v.length&lt;/span&gt;) are also supported. A reader might think: &quot;In case &lt;span&gt;w&lt;/span&gt; i&lt;span style=&quot;font-family: inherit;&quot;&gt;s null  the e&lt;/span&gt;xpression &lt;span&gt;w.length&lt;/span&gt; would fail.&quot; True, but in this example the analysis detects the value of &lt;span&gt;w&lt;/span&gt; being undefined. In ca&lt;span style=&quot;font-family: inherit;&quot;&gt;se null might&lt;/span&gt; have been assigned to &lt;span&gt;w&lt;/span&gt; e.g. in an if-condition before, the analysis will issue a warning of &lt;span&gt;w&lt;/span&gt; being null at the two &lt;span&gt;w.length&lt;/span&gt; expressions.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Data Flow&lt;/h3&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-y8LwrCo27Lw/W3_CnoC3pZI/AAAAAAAAAIQ/2B7jVp9SjqAqz-2TU1rg4gG3iDbdATlJgCEwYBhgL/s1600/Previous_Variable.png&quot; style=&quot;clear: left; float: left; margin-bottom: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-y8LwrCo27Lw/W3_CnoC3pZI/AAAAAAAAAIQ/2B7jVp9SjqAqz-2TU1rg4gG3iDbdATlJgCEwYBhgL/s1600/Previous_Variable.png&quot; width=&quot;570&quot; /&gt;&lt;/a&gt;&lt;/div&gt;There are situations where the value of a variable is null or undefined due to a previous assignment of a variable which may have been null or undefined before, like shown in the example above. Then, the null/undefined dereference problem occurs later when a property is accessed. Since the analysis respects data flow, it can follow the subsequent assignments. Hence a warning is shown at a property access indicating the null or undefined problem. Moreover, the warning also indicates the source of the null or undefined value which would be the variable &lt;span&gt;w&lt;/span&gt; in the example above.&lt;br /&gt;&lt;br /&gt;&lt;div style=&quot;text-align: right;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;by Marcus Mews&lt;/span&gt;&lt;/div&gt;</description>
+	<pubDate>Thu, 20 Sep 2018 12:39:45 +0000</pubDate>
+	<author>noreply@blogger.com (Project N4JS)</author>
+</item>
+<item>
+	<title>EclipseCon Europe 2018: Get Acquainted With Sprotty at EclipseCon Europe</title>
+	<guid isPermaLink="false">https://www.eclipsecon.org/news/729 at https://www.eclipsecon.org</guid>
+	<link>https://www.eclipsecon.org/europe2018/news/get-acquainted-sprotty-eclipsecon-europe</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;h4&gt;by Jan Koehnlein&lt;/h4&gt;
+&lt;p&gt;Sprotty is a graphical framework that allows interactive diagrams in web-applications. It has a strong emphasis on usability, customizability and modern rendering. While being completely usable in standalone applications, Sprotty is also very easy to use in a distributed client-server environment. As such, it nicely plays the graphical counterpart in the Language Server Protocol.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-news-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/europe2018/news/get-acquainted-sprotty-eclipsecon-europe&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;img-responsive block-center&quot; height=&quot;250&quot; src=&quot;https://www.eclipsecon.org/sites/default/files/styles/solstice_news_-_default_-_thumbnail/public/news/JanK.png?itok=dlg7Lb6d&quot; width=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Thu, 20 Sep 2018 11:40:45 +0000</pubDate>
+</item>
+<item>
+	<title>EclipseCon Europe 2018: Sponsor Testimonial: Typefox</title>
+	<guid isPermaLink="false">https://www.eclipsecon.org/news/730 at https://www.eclipsecon.org</guid>
+	<link>https://www.eclipsecon.org/europe2018/news/sponsor-testimonial-typefox</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Autumn time is EclipseCon time! Eclipse has evolved from a pure Java IDE, over a platform for tool integration on the desktop, towards an incubation tank for modern cloud-based development tooling. If you search for the place where all flavors of development tools and frameworks are concentrating, it’s here. We are happy that our latest cloud-based endeavors, Theia and Sprotty, found a home under the Eclipse umbrella.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-news-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/europe2018/news/sponsor-testimonial-typefox&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;img-responsive block-center&quot; height=&quot;250&quot; src=&quot;https://www.eclipsecon.org/sites/default/files/styles/solstice_news_-_default_-_thumbnail/public/news/Typefoxtransp2.png?itok=mGcQK8s2&quot; width=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Thu, 20 Sep 2018 11:30:08 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Welcoming GlassFish to the Eclipse Foundation</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/K_nSIPDOW9Y/welcoming-glassfish-eclipse-foundation</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/K_nSIPDOW9Y/welcoming-glassfish-eclipse-foundation</link>
+	<description>A major milestone was achieved yesterday! The GlassFish code from Oracle made its home in the Eclipse Foundation's Git repositories, starting a new era of Eclipse GlassFish.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/K_nSIPDOW9Y&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Wed, 19 Sep 2018 19:30:00 +0000</pubDate>
+</item>
+<item>
+	<title>Maximilian and Jonas: EMF Forms and EMF Client Platform 1.18.0 released!</title>
+	<guid isPermaLink="false">https://eclipsesource.com/?p=39920</guid>
+	<link>https://eclipsesource.com/blogs/2018/09/19/emf-forms-and-emf-client-platform-1-18-0-released/</link>
+	<description>&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We are happy to announce that with the Eclipse Release 2018-09, we have also shipped  &lt;/span&gt;&lt;a href=&quot;http://eclipse.org/ecp/emfforms&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;EMF Forms&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; and &lt;/span&gt;&lt;a href=&quot;http://eclipse.org/ecp&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;EMF Client Platform&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; 1.18.0! &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We want to thank our continuously active team of &lt;/span&gt;&lt;b&gt;11 contributors &lt;/b&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;(&lt;/span&gt;&lt;b&gt;41 contributors&lt;/b&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; overall) for completing &lt;/span&gt;&lt;a href=&quot;https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&amp;amp;bug_status=NEW&amp;amp;bug_status=ASSIGNED&amp;amp;bug_status=REOPENED&amp;amp;bug_status=RESOLVED&amp;amp;bug_status=VERIFIED&amp;amp;bug_status=CLOSED&amp;amp;classification=Modeling&amp;amp;component=Common&amp;amp;component=Editor&amp;amp;component=EMF%20Forms&amp;amp;component=Model%20Workspace&amp;amp;component=Navigator&amp;amp;component=Validation&amp;amp;list_id=17638428&amp;amp;product=ECP&amp;amp;query_format=advanced&amp;amp;target_milestone=1.17.0&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;50 bug fixes and features&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;. EMF Forms continues to be one of the most active projects at Eclipse with a very stable development activity:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As announced during the 1.17.0 release, we have added a new service for adopters. The development team uses a defined  “Test” tag on important bug reports. In general, the “Test” keyword highlights bug reports, which should definitely be looked at and tested in detail by all adopters when updating to a new version. Please see more details in &lt;/span&gt;&lt;a href=&quot;https://eclipsesource.com/de/blogs/2018/06/28/emf-forms-and-emf-client-platform-1-17-0-released/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;this announcement&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;. All relevant “test” bug reports in 1.18.0 can be found &lt;/span&gt;&lt;a href=&quot;https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&amp;amp;bug_status=NEW&amp;amp;bug_status=ASSIGNED&amp;amp;bug_status=REOPENED&amp;amp;bug_status=RESOLVED&amp;amp;bug_status=VERIFIED&amp;amp;bug_status=CLOSED&amp;amp;classification=Modeling&amp;amp;component=Common&amp;amp;component=Editor&amp;amp;component=EMF%20Forms&amp;amp;component=Model%20Workspace&amp;amp;component=Navigator&amp;amp;component=Validation&amp;amp;keywords=test%2C%20&amp;amp;keywords_type=allwords&amp;amp;list_id=17877777&amp;amp;product=ECP&amp;amp;query_format=advanced&amp;amp;target_milestone=1.18.0&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Please note, that due to the new release cadence of the Eclipse release train, there will be 4 releases per year for EMF Forms and EMF Client Platform from now on, too. As a consequence, we will be able to publish new features and improvements faster. The next release, 2018-12 is already due in December (19th).&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Further, kindly continue to ask questions &lt;/span&gt;&lt;a href=&quot;https://www.eclipse.org/forums/index.php/f/19/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;in the newsgroup&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; and &lt;/span&gt;&lt;a href=&quot;https://bugs.eclipse.org/bugs/enter_bug.cgi?product=ecp&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;file Bug Reports&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;In case you don’t know EMF Forms: It is a framework focused on the creation of form-based UIs. EMF Client Platform is designed to support the development of applications based on an EMF data model. If you are not yet familiar with EMF Forms, please refer to &lt;/span&gt;&lt;a href=&quot;http://eclipsesource.com/blogs/tutorials/getting-started-with-EMF-Forms/&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;this tutorial&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; for an introduction.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Both of these frameworks are part of the Eclipse Modeling Tools Photon package, but you can also find the new release on our download pages:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;a href=&quot;http://eclipse.org/ecp/download.html&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Download EMF Client Platform&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;a href=&quot;http://eclipse.org/ecp/emfforms/download.html&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Download EMF Forms&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As always, we will also blog about new features of the EMF Forms / ECP 1.18.0 release in the upcoming weeks! Please follow this blog or follow us on twitter for notifications about new posts.&lt;/span&gt;&lt;/p&gt;</description>
+	<pubDate>Wed, 19 Sep 2018 15:14:15 +0000</pubDate>
+</item>
+<item>
+	<title>PapyrusUML: Papyrus IC at Models 2018</title>
+	<guid isPermaLink="false">http://papyrusuml.wordpress.com/?p=1121</guid>
+	<link>https://papyrusuml.wordpress.com/2018/09/19/papyrus-ic-at-models-2018/</link>
+	<description>&lt;p&gt;It’s official! The Papyrus IC is a sponsor of Models 2018.&lt;/p&gt;
+&lt;p&gt;It’s members and users will be there to show me to anyone interested – Please go meet them so they don’t feel too alone out there!&lt;/p&gt;
+&lt;p&gt;I do not have the details yet, but I will be sure to pressure my minions to get me their game plans so I can let you all know!&lt;/p&gt;</description>
+	<pubDate>Wed, 19 Sep 2018 14:05:56 +0000</pubDate>
+</item>
+<item>
+	<title>Jens Reimann: Apache Camel Java DSL in combination Eclipse Kura Wires</title>
+	<guid isPermaLink="false">https://dentrassi.de/?p=4021</guid>
+	<link>https://dentrassi.de/2018/09/19/apache-camel-java-dsl-eclipse-kura-wires/</link>
+	<description>&lt;p&gt;In &lt;a href=&quot;https://dentrassi.de/2018/09/14/the-power-of-apache-camel-in-eclipse-kura/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;part #1&lt;/a&gt; and &lt;a href=&quot;https://dentrassi.de/2018/09/17/sunny-weather-apache-camel-kura-wires/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;part #2&lt;/a&gt;, we saw how easy it is to interface &lt;a href=&quot;https://camel.apache.org&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Apache Camel&lt;/a&gt; with &lt;a href=&quot;https://eclipse.org/kura&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Kura&lt;/a&gt; Wires. Simply by re-using some existing functionality. A few lines of XML, Groovy and you can already build an IoT solution based on the Camel ecosystem and the Eclipse Kura runtime. This part will focus on the Java DSL of Apache Camel.&lt;/p&gt;
+&lt;p&gt;It will also take into account, that when you develop and deploy an application, you need some kind of development, test and integration environment. When you build something, no matter how big, based on Camel or Kura Wires, you do want to test it. You want to have unit tests, and the capability to automatically test if your solution works, or still works after you made changes.&lt;/p&gt;
+&lt;p&gt;Using Kura Wires alone, this can be a problem. But Camel offers you a way to easily run your solution in a local IDE, debugging the whole process. You can have extra support for debugging Camel specific constructs like routes and endpoints. Camel has support for JUnit and e.g. using the “seda” endpoints, you can in create an abstraction layer between Camel and Wires.&lt;/p&gt;
+&lt;h2&gt;The goal&lt;/h2&gt;
+&lt;p&gt;I’ll make this one up (and yes, let’s try to keep it realistic). We have a device, and his device allows to set two parameters for its operation (P1 and P2, both floating points). Now we already have the device connection set up in Kura. Maybe using Modbus, or something else. Kura can talk to it using Kura Wires and that is all that counts.&lt;/p&gt;
+&lt;p&gt;Now we do get two additional requirements. There is some kind of operating panel next to the device, which should allow viewing and setting those parameters locally. Also, those parameters should be accessible, using IEC 60870-5-104, for an additional device, right next to the Kura gateway.&lt;/p&gt;
+&lt;p&gt;All of those operations have to be local only, and still work when no connection to the cloud is possible. But of course, we don’t want to lose the ability to monitor the parameters from our cloud system.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter size-full wp-image-4023&quot; height=&quot;1389&quot; src=&quot;https://dentrassi.de/wp-content/uploads/drawing_5.png&quot; width=&quot;1680&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The operator panel will, of course, be programmed in the newest and hippest Web UI technology possible. It is super easy to fire a few HTTP API calls and encode everything in JSON. While, at the same time, the IEC 60870 layer has no idea about complex data structures. The panel application will send a full update of both parameters, while the 60870 client, due to the nature of this protocol, will only send one parameter at a time.&lt;/p&gt;
+&lt;p&gt;Doesn’t too unrealistic, does it?&lt;/p&gt;
+&lt;h2&gt;The project structure&lt;/h2&gt;
+&lt;p&gt;The full project source code is available at &lt;a href=&quot;https://github.com/ctron/kura-examples/tree/master/camel/camel-example4&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;ctron/kura-examples&lt;/a&gt;, on GitHub. So this blog post will only focus on some important spots of the whole project.&lt;/p&gt;
+&lt;p&gt;The project is a standard Maven project, and thus has the typical project structure:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Maven Camel project structure&quot; class=&quot;aligncenter size-full wp-image-4026&quot; height=&quot;525&quot; src=&quot;https://dentrassi.de/wp-content/uploads/Selection_529.png&quot; width=&quot;363&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;There are only three important differences to a standard Java Maven project:&lt;/p&gt;
+&lt;p&gt;The packaging type is &lt;code&gt;bundle&lt;/code&gt;, which requires the &lt;code&gt;maven-bundle-plugin&lt;/code&gt;. It will create an OSGi bundle JAR, instead of a plain JAR file. This is required as the Kura IoT gateway is based on OSGi.&lt;/p&gt;
+&lt;p&gt;We will create a “DP” package at the end of the build, using the &lt;a href=&quot;https://ctron.github.io/osgi-dp/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;OSGi DP Maven Plugin&lt;/a&gt;. This package can directly be uploaded to the Kura instance. As this plugin does include direct dependencies, but doesn’t include transient dependencies (on purpose), the project declares a few dependencies as “provided” to prevent them from being re-packaged in the final DP package.&lt;/p&gt;
+&lt;p&gt;The project uses the &lt;code&gt;maven-antrun-plugin&lt;/code&gt; to download and unpack the static Swagger UI resources. Swagger UI is just a convenience for playing around with the REST API later on. Camel will take care of creating the OpenAPI (Swagger) JSON description, even if the SwaggerUI part is removed. So in a production setup, you most likely would not add Swagger UI to the deployment.&lt;/p&gt;
+&lt;h2&gt;Starting it up&lt;/h2&gt;
+&lt;p&gt;The project has three entry points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CamelApplicationComponent&lt;/code&gt; is the OSGi service, which will be managed by the OSGi service component runtime (SCR) when the component is uploaded to Kura.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TestApplication&lt;/code&gt; is a local test application, which is intended to be started from the local IDE for manual testing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CamelApplicationComponentTest&lt;/code&gt; is the JUnit 4 based test for testing the Camel routes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All three entry points will have a slightly different creation process for the Camel Context. This is simply due to the fact that different environments (like plain Java, OSGI and JUnit) have different requirements.&lt;/p&gt;
+&lt;p&gt;The routes configuration, which is the same for all entry points, is located in &lt;code&gt;Routes&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s have a quick look at the OSGi startup:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;@Activate
+public void start(final BundleContext context) throws Exception {
+  this.context = new OsgiDefaultCamelContext(context, SwaggerUi.createRegistry());
+  this.context.addRoutes(new Routes(this.state));
+  this.context.start();
+
+  final Dictionary&amp;lt;String, Object&amp;gt; properties = new Hashtable&amp;lt;&amp;gt;();
+  properties.put(&quot;camel.context.id&quot;, &quot;camel.example.4&quot;);
+  this.registration = context.registerService(CamelContext.class, this.context, properties);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once the component is placed inside an OSGi container, the start method will be called and set up the Camel context. This is all pretty straightforward Camel code. As the last step, the Camel context will be registered with the OSGi service layer. Setting the service property &lt;code&gt;camel.context.id&lt;/code&gt; in the process. This property is important, as we will, later on, use it to locate the Camel context from the Kura Wires graph by it.&lt;/p&gt;
+&lt;h2&gt;The Java DSL routes&lt;/h2&gt;
+&lt;p&gt;The routes configuration is pretty simple Camel stuff. First, the REST DSL will be used to configure the REST API. For example, the “GET” operation to receive the currently active parameters:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;…
+  .get()
+  .description(&quot;Get the current parameters&quot;)
+  .outType(Parameters.class)
+  .to(&quot;direct:getParameters&quot;)
+…
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This creates a get operation, which is being redirected to the internal “direct:getParameters” endpoint. Which is a way of forwarding that call to another Camel Route. This way Camel routes can be re-used from different callers.&lt;/p&gt;
+&lt;p&gt;Like for example the `direct:updateParameters` route, which will be called by all routes which want to update the parameters, no matter if that call originated in the IEC 60870, the REST or the Kura Wires component:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;java&quot;&gt;from(&quot;direct:updateParameters&quot;)
+  .routeId(&quot;updateParameters&quot;)
+  .bean(this.state, &quot;updateCurrentParameters&quot;)
+  .multicast()
+  .to(&quot;direct:update.wires&quot;, &quot;direct:update.iec.p1&quot;, &quot;direct:update.iec.p2&quot;).end();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The route will forward the new parameters to the method &lt;code&gt;updateCurrentParameters&lt;/code&gt; of the &lt;code&gt;State&lt;/code&gt; class. This class is a plain Java class, holding the state and filling in &lt;code&gt;null&lt;/code&gt; parameters with the current state. The result of this method will be forwarded to the other routes, for updating Kura Wires and the two parameters in the IEC 60870 data layer.&lt;/p&gt;
+&lt;h2&gt;Trying it out&lt;/h2&gt;
+&lt;p&gt;If you have Java and Maven installed, then you can simply compile the package by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd camel/camel-example4
+mvn clean package
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will compile, run the unit tests and create the &lt;code&gt;.dp&lt;/code&gt; package in the folder &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can upload the package directly to your Kura instance. Please note that you do need the dependencies installed in &lt;a href=&quot;https://dentrassi.de/2018/09/14/the-power-of-apache-camel-in-eclipse-kura/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;part #1&lt;/a&gt; of the tutorial. In additional you will need to install the following dependencies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://repo1.maven.org/maven2/de/dentrassi/kura/addons/de.dentrassi.kura.addons.camel.iec60870/0.6.1/de.dentrassi.kura.addons.camel.iec60870-0.6.1.dp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://repo1.maven.org/maven2/de/dentrassi/kura/addons/de.dentrassi.kura.addons.camel.jetty/0.6.1/de.dentrassi.kura.addons.camel.jetty-0.6.1.dp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://repo1.maven.org/maven2/de/dentrassi/kura/addons/de.dentrassi.kura.addons.camel.swagger/0.6.1/de.dentrassi.kura.addons.camel.swagger-0.6.1.dp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This will install the support for REST APIs, backed by Jetty. As Kura already contains Jetty, it only makes sense to re-use those existing components.&lt;/p&gt;
+&lt;p&gt;Once the component is deployed and started, you can navigate your web browser to &lt;code&gt;http://:8090/api&lt;/code&gt;. This should bring up the Swagger UI, showing the API of the routes:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;SwaggerUI of Camel example for Kura&quot; class=&quot;aligncenter size-full wp-image-4032&quot; height=&quot;864&quot; src=&quot;https://dentrassi.de/wp-content/uploads/Selection_530.png&quot; width=&quot;806&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Next, you can create the following components in the Kura wires graph:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new “Camel consumer”, named &lt;code&gt;consumer2&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Set the ID to &lt;code&gt;camel.example.4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set the endpoint URI to &lt;code&gt;seda:wiresOutput1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a new “Logger”, named &lt;code&gt;logger2&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Set it to “verbose”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connect &lt;code&gt;consumer2&lt;/code&gt; with &lt;code&gt;logger2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click on “Apply” to activate the changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Open the console of Kura and then open the Swagger UI page with the Web browser. Click on ““Try Out” of the “PUT” operation, enter some new values for &lt;code&gt;setpoint1&lt;/code&gt; and/or &lt;code&gt;setpoint2&lt;/code&gt; and click on the blue “Execute” button.&lt;/p&gt;
+&lt;p&gt;In the console of Kura you should see the following output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2018-09-17T13:35:49,589 [Camel (camel-10) thread #27 - seda://wiresOutput1] INFO  o.e.k.i.w.l.Logger - Received WireEnvelope from org.eclipse.kura.wire.camel.CamelConsume-1537188764126-1
+2018-09-17T13:35:49,589 […] INFO  o.e.k.i.w.l.Logger - Record List content:
+2018-09-17T13:35:49,589 […] INFO  o.e.k.i.w.l.Logger -   Record content:
+2018-09-17T13:35:49,589 […] INFO  o.e.k.i.w.l.Logger -     P1 : 3.0
+2018-09-17T13:35:49,589 […] INFO  o.e.k.i.w.l.Logger -     P2 : 2.0
+2018-09-17T13:35:49,589 […] INFO  o.e.k.i.w.l.Logger -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is the result of the “Logger” component from Kura Wires. Which did receive the new parameter updates from the Camel Context, as they got triggered through the Web UI. At the same time, the &lt;a href=&quot;https://dentrassi.de/2017/02/17/iec-60870-5-104-with-apache-camel/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;IEC 60870 server&lt;/a&gt; would update all clients being subscribed to those data items.&lt;/p&gt;
+&lt;h2&gt;Wrapping it up&lt;/h2&gt;
+&lt;p&gt;The last part of this tutorial showed that, if the prep-prepared XML router component of Eclipse Kura, is not enough, then you can drop in your own and powerful replacements. Developing with all the bells and whistles of Apache Camel, and still integrate with Kura Wires if necessary.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://dentrassi.de/2018/09/19/apache-camel-java-dsl-eclipse-kura-wires/&quot; rel=&quot;nofollow&quot;&gt;Apache Camel Java DSL in combination Eclipse Kura Wires&lt;/a&gt; appeared first on &lt;a href=&quot;https://dentrassi.de&quot; rel=&quot;nofollow&quot;&gt;ctron's blog&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Wed, 19 Sep 2018 08:30:33 +0000</pubDate>
+</item>
+<item>
+	<title>Tanja Obradovic: Welcoming GlassFish to the Eclipse Foundation</title>
+	<guid isPermaLink="false">https://blogs.eclipse.org/6641 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/tanja-obradovic/welcoming-glassfish-eclipse-foundation</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;A major milestone was achieved yesterday! The GlassFish code from Oracle made its home in the Eclipse Foundation's Git repositories (&lt;a href=&quot;https://github.com/eclipse-ee4j/glassfish&quot;&gt;https://github.com/eclipse-ee4j/glassfish&lt;/a&gt;), starting a new era of Eclipse GlassFish. This is another step in making Jakarta EE a vehicle for innovation in cloud-native application development.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;The Eclipse GlassFish application server is still based on the Java EE specification, and we have a ways to go to finalize our work on defining necessary processes and approaches when working with open source TCKs. With the arrival of this codebase, we can start contemplating our first steps once we open up Jakarta EE for community contributions.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;You can use the PMC’s &lt;a href=&quot;https://www.eclipse.org/ee4j/status.php&quot;&gt;project status page&lt;/a&gt; to track the progress we’re making in migrating all of the projects related to Jakarta EE.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Thanks to all involved in this effort, especially the Oracle team behind this move.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/eclipse-foundation&quot;&gt;Eclipse Foundation&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/jakarta-ee&quot;&gt;Jakarta EE&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/glassfish&quot;&gt;GlassFish&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/eclipse-glassfish&quot;&gt;Eclipse GlassFish&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Wed, 19 Sep 2018 00:45:49 +0000</pubDate>
+</item>
+<item>
+	<title>PapyrusUML: Papyrus UMLLight is go!</title>
+	<guid isPermaLink="false">http://papyrusuml.wordpress.com/?p=1119</guid>
+	<link>https://papyrusuml.wordpress.com/2018/09/18/papyrus-umllight-is-go/</link>
+	<description>&lt;p&gt;There were already a few posts [&lt;a href=&quot;https://papyrusuml.wordpress.com/2018/06/19/new-papyrus-based-tool/&quot;&gt;here&lt;/a&gt;] and [&lt;a href=&quot;https://papyrusuml.wordpress.com/2018/07/26/eclipse-newsletter-on-papyrus-uml-light/&quot;&gt;here&lt;/a&gt;] in which we talked about the new &lt;strong&gt;Papyrus UMLLight&lt;/strong&gt; variant. Well – it is one step closer to completion.&lt;/p&gt;
+&lt;p&gt;My sources tell me that the scope has been defined and that requirements have been written, and that a request for quotation has been created and will soon be published!&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;UPDATE: The scope should be similar to of OMG’s OCUP2 Foundation level content.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Stay tuned for more information through official channels!&lt;/p&gt;
+&lt;p&gt;And of course, you will know about it here!&lt;/p&gt;</description>
+	<pubDate>Tue, 18 Sep 2018 12:57:26 +0000</pubDate>
+</item>
+<item>
+	<title>EclipseCon Europe 2018: Special B2B Event at ECE</title>
+	<guid isPermaLink="false">https://www.eclipsecon.org/news/721 at https://www.eclipsecon.org</guid>
+	<link>https://www.eclipsecon.org/europe2018/news/special-b2b-event-ece</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;An &lt;a href=&quot;https://www.eclipse.org/membership/&quot; target=&quot;_blank&quot;&gt;Eclipse Foundation membership&lt;/a&gt; is a unique opportunity for smaller businesses. To encourage these organizations to join the Foundation, we are offering a special membership-plus-conference-attendance package.&lt;/p&gt;
+
+&lt;p&gt;Part of the package is a special business-to-business (B2B) event at the conference that offers a way for companies to expand both their commercial and development networks.&lt;/p&gt;
+
+&lt;p&gt;To learn more about this offering, &lt;a href=&quot;mailto:marc.vloemans@eclipse-foundation.org?subject=ECE 2018 B2B Opportunity&quot;&gt;please email Marc Vloemans&lt;/a&gt;, Eclipse Foundation Director, Ecosystem Development.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-news-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/europe2018/news/special-b2b-event-ece&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;img-responsive block-center&quot; height=&quot;250&quot; src=&quot;https://www.eclipsecon.org/sites/default/files/styles/solstice_news_-_default_-_thumbnail/public/news/B2B.png?itok=ykjBUU6G&quot; width=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Mon, 17 Sep 2018 19:36:46 +0000</pubDate>
+</item>
+<item>
+	<title>EclipseCon Europe 2018: Call for BoFs</title>
+	<guid isPermaLink="false">https://www.eclipsecon.org/news/719 at https://www.eclipsecon.org</guid>
+	<link>https://www.eclipsecon.org/europe2018/news/call-bofs</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Birds of a Feather (BoF) sessions will be on Tuesday, 23 October, in the evening. If you are thinking of organizing a BoF, please &lt;a href=&quot;https://www.eclipsecon.org/europe2018/propose-bof&quot; target=&quot;_blank&quot;&gt;visit this page&lt;/a&gt; for more information, and for access to the submission form for pre-scheduled  BoFs.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-news-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/europe2018/news/call-bofs&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;img-responsive block-center&quot; height=&quot;250&quot; src=&quot;https://www.eclipsecon.org/sites/default/files/styles/solstice_news_-_default_-_thumbnail/public/news/BoF_Board_square.jpg?itok=GoRX-4ju&quot; width=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Mon, 17 Sep 2018 18:03:17 +0000</pubDate>
+</item>
+<item>
+	<title>Jens Reimann: Sunny weather with Apache Camel and Kura Wires</title>
+	<guid isPermaLink="false">https://dentrassi.de/?p=4009</guid>
+	<link>https://dentrassi.de/2018/09/17/sunny-weather-apache-camel-kura-wires/</link>
+	<description>&lt;p&gt;&lt;a href=&quot;https://dentrassi.de/2018/09/14/the-power-of-apache-camel-in-eclipse-kura/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Part #1&lt;/a&gt; of the &lt;a href=&quot;https://camel.apache.org&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Apache Camel&lt;/a&gt; to &lt;a href=&quot;https://eclipse.org/kura&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Kura&lt;/a&gt; Wires integration tutorial did focus on pushing data from Kura Wires to Camel and processing it there. But part #1 already mentioned that it is also possible to pull in data from Camel into Kura Wires.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Apache Camel consumer node in Kura Wires&quot; class=&quot;aligncenter size-full wp-image-3999&quot; height=&quot;429&quot; src=&quot;https://dentrassi.de/wp-content/uploads/drawing_2.png&quot; width=&quot;1680&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Preparations&lt;/h2&gt;
+&lt;p&gt;For the next step, you again need to install a Camel package, for interfacing with &lt;a href=&quot;https://openweathermap.org/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Open Weather Map&lt;/a&gt;:  &lt;code&gt;https://repo1.maven.org/maven2/de/dentrassi/kura/addons/de.dentrassi.kura.addons.camel.weather/0.6.0/de.dentrassi.kura.addons.camel.weather-0.6.0.dp&lt;/code&gt; The installation follows the same way as already described in part #1.&lt;/p&gt;
+&lt;p&gt;In addition to the installation of the package, you will also need to create an account at &lt;a href=&quot;https://openweathermap.org/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;https://openweathermap.org/&lt;/a&gt; and create an API key. You can select the free tier plan, it is more than enough for our example.&lt;/p&gt;
+&lt;h2&gt;Back to Wires&lt;/h2&gt;
+&lt;p&gt;Next, create a new Camel context, like before, and give it the ID “camel2”. Add the required component &lt;code&gt;weather&lt;/code&gt;, the required language &lt;code&gt;groovy&lt;/code&gt; and set the following XML router content (be sure to replace &amp;lt;appid&amp;gt; with your API token):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;routes xmlns=&quot;http://camel.apache.org/schema/spring&quot;&amp;gt;
+
+  &amp;lt;route&amp;gt;
+
+    &amp;lt;from uri=&quot;weather:dummy?appid=&amp;lt;YOUR API TOKEN&amp;gt;&amp;amp;amp;lat=48.1351&amp;amp;amp;lon=11.5820&quot;/&amp;gt;
+    &amp;lt;to uri=&quot;stream:out&quot;/&amp;gt;
+
+    &amp;lt;unmarshal&amp;gt;&amp;lt;json library=&quot;Gson&quot;&amp;gt;&amp;lt;/json&amp;gt;&amp;lt;/unmarshal&amp;gt;
+    &amp;lt;transform&amp;gt;&amp;lt;simple&amp;gt;${body[&quot;main&quot;][&quot;temp&quot;]}&amp;lt;/simple&amp;gt;&amp;lt;/transform&amp;gt;
+    &amp;lt;convertBodyTo type=&quot;java.lang.Double&quot;/&amp;gt;
+    &amp;lt;to uri=&quot;stream:out&quot;/&amp;gt;
+
+    &amp;lt;transform&amp;gt;&amp;lt;groovy&amp;gt;[&quot;TEMP&quot;: request.body-273.15]&amp;lt;/groovy&amp;gt;&amp;lt;/transform&amp;gt;
+    &amp;lt;to uri=&quot;stream:out&quot;/&amp;gt;
+    &amp;lt;to uri=&quot;seda:output1&quot;/&amp;gt;
+
+  &amp;lt;/route&amp;gt;
+
+&amp;lt;/routes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After applying the changes, you can create two new components in the Wire graph:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new “Camel Consumer”, name it &lt;code&gt;consumer1&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Set the Camel context ID &lt;code&gt;camel2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set the endpoint URI &lt;code&gt;seda:output1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a new “Logger”, name it &lt;code&gt;logger1&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Set it to “verbose”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connect &lt;code&gt;consumer1&lt;/code&gt; with &lt;code&gt;logger1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click on “Apply” to activate the changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;What does it do?&lt;/h2&gt;
+&lt;p&gt;What this Camel context does, is to first start polling information from the Open Weather Map API. It requests with a manually provided GPS location, Munich.&lt;/p&gt;
+&lt;p&gt;It then parses the JSON, so that we can work with the data. Then it extracts the current temperature from the rather complex Open Weather Map structure. Of course, we could also use a different approach and extract additional or other information.&lt;/p&gt;
+&lt;p&gt;The extracted value could still be a number, represented internally by a string. So we ask Camel to ensure that the body of the message gets converted to a Double. If the body already is a double, then nothing will be done. But, if necessary, Camel will pull in its type converter system and optionally convert e.g. a string to a double by parsing it.&lt;/p&gt;
+&lt;p&gt;Now the body contains the raw value, as a Java double. But we still have two issues with that. The first one is, that the value is in degree Kelvin. Living in Germany, I would expect degree Celsius &lt;img alt=&quot;😉&quot; class=&quot;wp-smiley&quot; src=&quot;https://s.w.org/images/core/emoji/11/72x72/1f609.png&quot; style=&quot;height: 1em;&quot; /&gt; The second issue is, that Kura Wires requires some kind of key to that value, like a Map structure.&lt;/p&gt;
+&lt;p&gt;Fortunately, we easily can solve both issues with a short snippet of Groovy: &lt;code class=&quot;groovy&quot;&gt;[&quot;TEMP&quot;: request.body-273.15]&lt;/code&gt;. This will take the message (request) body, convert it to degree Celsius, and using this as a value for the key &lt;code&gt;TEMP&lt;/code&gt; in the newly created map.&lt;/p&gt;
+&lt;h2&gt;Checking the result&lt;/h2&gt;
+&lt;p&gt;As soon as you apply the changes, you should see some output on the console, which shows the incoming weather data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;{&quot;coord&quot;:{&quot;lon&quot;:11.58,&quot;lat&quot;:48.14},&quot;weather&quot;:[{&quot;id&quot;:801,&quot;main&quot;:&quot;Clouds&quot;,&quot;description&quot;:&quot;few clouds&quot;,&quot;icon&quot;:&quot;02d&quot;}],&quot;base&quot;:&quot;stations&quot;,&quot;main&quot;:{&quot;temp&quot;:297.72,&quot;pressure&quot;:1021,&quot;humidity&quot;:53,&quot;temp_min&quot;:295.15,&quot;temp_max&quot;:299.15},&quot;visibility&quot;:10000,&quot;wind&quot;:{&quot;speed&quot;:1.5},&quot;clouds&quot;:{&quot;all&quot;:20},&quot;dt&quot;:1537190400,&quot;sys&quot;:{&quot;type&quot;:1,&quot;id&quot;:4914,&quot;message&quot;:0.0022,&quot;country&quot;:&quot;DE&quot;,&quot;sunrise&quot;:1537160035,&quot;sunset&quot;:1537204873},&quot;id&quot;:2867714,&quot;name&quot;:&quot;Muenchen&quot;,&quot;cod&quot;:200}
+297.72
+{TEMP=24.57000000000005}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Every change, which should happen every second, shows three lines. First the raw JSON data, directly from the Open Weather Map API. Then the raw temperature in degree Kelvin, parsed by Camel and converted into a Java type already. Followed by the custom Map structure, created by the Groovy script. The beauty here is again, that you don’t need to fiddle around with custom data structures of the Kura Wires system, but can rely on standard data structures likes plain Java maps.&lt;/p&gt;
+&lt;p&gt;Looking at the Kura log file, which is by default &lt;code&gt;/var/log/kura.log&lt;/code&gt;, you should see some output like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;2018-09-17T13:57:10,117 [Camel (camel-15) thread #31 - seda://output1] INFO  o.e.k.i.w.l.Logger - Received WireEnvelope from org.eclipse.kura.wire.camel.CamelConsume-1537188764126-1
+2018-09-17T13:57:10,117 [Camel (camel-15) thread #31 - seda://output1] INFO  o.e.k.i.w.l.Logger - Record List content:
+2018-09-17T13:57:10,118 [Camel (camel-15) thread #31 - seda://output1] INFO  o.e.k.i.w.l.Logger -   Record content:
+2018-09-17T13:57:10,118 [Camel (camel-15) thread #31 - seda://output1] INFO  o.e.k.i.w.l.Logger -     TEMP : 24.57000000000005
+2018-09-17T13:57:10,118 [Camel (camel-15) thread #31 - seda://output1] INFO  o.e.k.i.w.l.Logger -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This shows the same value, as processed by the Camel context but received by Kura Wires. &lt;/p&gt;
+&lt;h2&gt;Wrapping it up&lt;/h2&gt;
+&lt;p&gt;Now, of course, a simple logger component isn’t really useful. But as you might now, Kura has the ability to connect to a GPS receiver. So you could also take the current position as an input to the Open Weather Map request. And instead of using my static GPS coordinates of Munich, you could query for the nearby weather information. So this might allow you to create some amazing IoT applications.&lt;/p&gt;
+&lt;p&gt;Stay tuned for &lt;a href=&quot;https://dentrassi.de/2018/09/19/apache-camel-java-dsl-eclipse-kura-wires/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Part #3&lt;/a&gt;, where we will look at a Camel based solution, which can run inside of Kura, as well as outside. Including actual unit tests, ready for continuous delivery.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://dentrassi.de/2018/09/17/sunny-weather-apache-camel-kura-wires/&quot; rel=&quot;nofollow&quot;&gt;Sunny weather with Apache Camel and Kura Wires&lt;/a&gt; appeared first on &lt;a href=&quot;https://dentrassi.de&quot; rel=&quot;nofollow&quot;&gt;ctron's blog&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Mon, 17 Sep 2018 14:48:37 +0000</pubDate>
+</item>
+<item>
+	<title>Jens Reimann: Leveraging the power of Apache Camel in Eclipse Kura</title>
+	<guid isPermaLink="false">https://dentrassi.de/?p=3969</guid>
+	<link>https://dentrassi.de/2018/09/14/the-power-of-apache-camel-in-eclipse-kura/</link>
+	<description>&lt;p&gt;With the upcoming version of &lt;a href=&quot;https://eclipse.org/kura&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Eclipse Kura&lt;/a&gt; 4, we will see some nice new features for the embedded &lt;a href=&quot;https://camel.apache.org&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Apache Camel&lt;/a&gt; runtime. This tutorial walks you through the Camel integration of Kura wires, which allows you to bridge both technologies, and leverage the power of Apache Camel for your solutions on the IoT gateway.&lt;/p&gt;
+&lt;p&gt;Kura Wires is a graph-oriented programming model of Eclipse Kura. It allows wiring up different components, like a Modbus client to the internal Kura Cloud Service. It is similar to &lt;a href=&quot;https://nodered.org/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Node-RED&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Apache Camel is a message-oriented integration platform with a rule-based routing approach. It has a huge eco-system of components, allowing to integrate numerous messaging endpoints, data formats, and scripting languages.&lt;/p&gt;
+&lt;p&gt;A graphical approach, like Kura Wires may be interesting for a single instance, which is manually administered. But assume that you want to re-deploy the same solution multiple times. In this case you would want to locally develop and test it. Have proper tooling like validation and debugging. And then you want to automatically package it and run a set of unit and integration tests. And only after that you would want to deploy this. This model is supported when you are using Apache Camel. There is a lot of tooling available, tutorials, training, books on how to work with Apache Camel. And you can make use of the over 100 components which Camel itself provides. In addition to that, you have a whole ecosystem around Apache Camel, which can extend this even more. So it is definitely worth a look.&lt;/p&gt;
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;As a prerequisite, you will need an instance of Kura 4. As this is currently not yet released, you can also use a snapshot build of Kura 3.3, which will later become Kura 4.&lt;/p&gt;
+&lt;p&gt;If you don’t want to set up a dedicated device just for playing around, you can always use the Kura container image and it e.g. with Docker. There is a short introduction on how to get started with this at the DockerHub repository: &lt;a href=&quot;https://hub.docker.com/r/ctron/kura/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;https://hub.docker.com/r/ctron/kura/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Starting a new Kura instance is as easy as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -ti ctron/kura:develop -p 8080:8080&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The following tutorial assumes that you have already set up Kura, and started with a fresh instance.&lt;/p&gt;
+&lt;h2&gt;Baby Steps&lt;/h2&gt;
+&lt;p&gt;The first step we take is to create a very simple, empty, Camel Context and hook and directly hook up a Camel endpoint without further configuration.&lt;/p&gt;
+&lt;h3&gt;New Camel Context&lt;/h3&gt;
+&lt;p&gt;As a first step, we create a new XML Router Camel context:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open the Kura Web UI&lt;/li&gt;
+&lt;li&gt;Click on the “+” button next to the services search box&lt;/li&gt;
+&lt;li&gt;Select the &lt;code&gt;org.eclipse.kura.camel.xml.XmlRouterComponent&lt;/code&gt; factory&lt;/li&gt;
+&lt;li&gt;Enter the name &lt;code&gt;camel1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Press “Submit”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&quot;New Camel Context Component&quot; class=&quot;aligncenter size-full wp-image-3990&quot; height=&quot;320&quot; src=&quot;https://dentrassi.de/wp-content/uploads/Selection_524.png&quot; width=&quot;619&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;A new service should appear in the left side navigation area. Sometimes it happens that the service does not show up, but reloading the Web UI will reveal the newly created service.&lt;/p&gt;
+&lt;p&gt;Now select the service and edit the newly created context. Clear out the “Router XML” and only leave the root element:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;routes xmlns=&quot;http://camel.apache.org/schema/spring&quot;&amp;gt;
+&amp;lt;/routes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the field “Required Camel Components” add the &lt;code&gt;stream&lt;/code&gt; component. Click on “Apply” to activate the changes. This will configure the Camel context to have no routes, but wait for the &lt;code&gt;stream&lt;/code&gt; component to be present in the OSGi runtime. The &lt;code&gt;stream&lt;/code&gt; component is a default component, provided by the Eclipse Kura Camel runtime. The Camel context should be ready immediately and will be registered as an OSGi service for others to consume.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter size-full wp-image-3993&quot; height=&quot;608&quot; src=&quot;https://dentrassi.de/wp-content/uploads/Selection_525.png&quot; width=&quot;824&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;The Wires Graph&lt;/h3&gt;
+&lt;p&gt;The next step is to configure the Kura Wires graph:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Switch to “Wire Graph” in the navigation pane&lt;/li&gt;
+&lt;li&gt;Add a new “Timer” component named &lt;code&gt;timer1&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure the component to fire every second&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add a new “Camel Producer” named &lt;code&gt;producer1&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Set the Context ID field of the component to &lt;code&gt;camel1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set the endpoint URI to &lt;code&gt;stream:out&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connect the nodes &lt;code&gt;timer1&lt;/code&gt; and &lt;code&gt;producer1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;Apply&lt;/code&gt; to activate the changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter size-full wp-image-3994&quot; height=&quot;506&quot; src=&quot;https://dentrassi.de/wp-content/uploads/Selection_526.png&quot; width=&quot;1092&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;If you look at the console of the Kura instance, then you should see something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;org.eclipse.kura.wire.WireEnvelope@bdc823c
+org.eclipse.kura.wire.WireEnvelope@5b1f50f4
+org.eclipse.kura.wire.WireEnvelope@50851555
+org.eclipse.kura.wire.WireEnvelope@34cce95d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you are running Kura on an actual device, then the output might be in the file &lt;code&gt;/var/log/kura-console.log&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;What is happening is, that the Kura wires timer component will trigger a Wires event every second. That event is passed along to the Camel endpoint &lt;code&gt;stream:out&lt;/code&gt; in the Camel context &lt;code&gt;camel1&lt;/code&gt;. This isn’t using any Camel routes yet. But this is a basic integration, which allows you to access all available Camel endpoints directly from Kura Wires.&lt;/p&gt;
+&lt;h2&gt;Producer, Consumer, Processor&lt;/h2&gt;
+&lt;p&gt;In addition to the “Producer” component, it is also possible to use the “Consumer”, or the “Processor”. The Consumer takes events from the Camel context and forwards them to the Kura Wires graph. While the “Processor” takes an event from the Wire Graph, processes it using Camel, and passes along the result to Wires again:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter size-full wp-image-3996&quot; height=&quot;429&quot; src=&quot;https://dentrassi.de/wp-content/uploads/drawing_1.png&quot; width=&quot;1680&quot; /&gt;&lt;br /&gt;
+&lt;img alt=&quot;&quot; class=&quot;aligncenter size-full wp-image-3999&quot; height=&quot;429&quot; src=&quot;https://dentrassi.de/wp-content/uploads/drawing_2.png&quot; width=&quot;1680&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;For Producer and Consumer, this would be a unidirectional message exchange from a Camel point of view. The Processor component would use an “in”/”out” message exchange, which is more like “request/response”. Of course that only makes sense when you have an endpoint which actually hands back a response, like the HTTP client endpoint.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter size-full wp-image-4000&quot; height=&quot;737&quot; src=&quot;https://dentrassi.de/wp-content/uploads/drawing_3.png&quot; width=&quot;1680&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;In the following sections, we will see that in most cases there will be a more complex route set up that the Camel Wire component would interact with, proxied by a &lt;code&gt;seda&lt;/code&gt; Camel component. Still, the “in”, “out” flow of the Camel message exchange would be end-to-end between whatever endpoint you have and the Wires graph.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;aligncenter size-full wp-image-4001&quot; height=&quot;601&quot; src=&quot;https://dentrassi.de/wp-content/uploads/drawing_4.png&quot; width=&quot;1680&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Getting professional&lt;/h2&gt;
+&lt;p&gt;Apache Camel mostly uses the concept of routes. And while accessing an endpoint directly from the Kura Camel component technically works, I wouldn’t recommend it. Mainly due to the fact that you would be missing an abstraction layer, there is no way to inject anything between the Kura Wires component and the final destination at the Camel endpoint. You directly hook up Kura Wires with the endpoint and thus lose all ways that Camel allows you to work with your data.&lt;/p&gt;
+&lt;p&gt;So as a first step, let’s decouple the Camel endpoint from Kura Wires and provide an API for our Camel Context.&lt;/p&gt;
+&lt;p&gt;In the &lt;code&gt;camel1&lt;/code&gt; configurations screen, change the “Router XML” to:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;routes xmlns=&quot;http://camel.apache.org/schema/spring&quot;&amp;gt;
+    &amp;lt;route&amp;gt;
+        &amp;lt;from uri=&quot;seda:input1&quot;/&amp;gt;
+        &amp;lt;to uri=&quot;stream:out&quot;/&amp;gt;
+    &amp;lt;/route&amp;gt;
+&amp;lt;/routes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then configure the &lt;code&gt;producer1&lt;/code&gt; component in the Wire Graph to use the “Endpoint URI” &lt;code&gt;seda:input1&lt;/code&gt; instead of directly using &lt;code&gt;stream:out&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If everything is right, then you should still see the same output on the Kura console, but now Wires and Camel are decoupled and properly interfaced using an internal event queue, which allows us to use Camel routes for the following steps.&lt;/p&gt;
+&lt;p&gt;One benefit of this approach also is that you can now take the XML route definitions outside of Kura and test them in your local IDE. There are various IDE extensions for Eclipse, IntelliJ and Visual Studio, which can help to work with Camel XML route definitions. And of course, there are the JBoss Tools as well ;-). So you can easily test the routes outside of a running Kura instance and feed in emulated Kura Wires events using the &lt;code&gt;seda&lt;/code&gt; endpoints.&lt;/p&gt;
+&lt;h2&gt;To JSON&lt;/h2&gt;
+&lt;p&gt;This first example already shows a common problem, when working with data, and even so for IoT use cases. The output of &lt;code&gt;org.eclipse.kura.wire.WireEnvelope@3e0cef10&lt;/code&gt; is definitely not what is of much use. But Camel is great a converting data, so let’s make use of that.&lt;/p&gt;
+&lt;p&gt;As a first step we need to enable the JSON support for Camel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to “Packages”&lt;/li&gt;
+&lt;li&gt;Click on “Install/Upgrade”&lt;/li&gt;
+&lt;li&gt;Enter the URL: &lt;code&gt;https://repo1.maven.org/maven2/de/dentrassi/kura/addons/de.dentrassi.kura.addons.camel.gson/0.6.0/de.dentrassi.kura.addons.camel.gson-0.6.0.dp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click on “Submit”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After a while, the package &lt;code&gt;de.dentrassi.kura.addons.gson&lt;/code&gt; should appear in the list of installed packages. It may happen that the list doesn’t properly refresh. Clicking on “refresh” or reloading the Web page will help.&lt;/p&gt;
+&lt;p&gt;Instead of downloading the package directly to the Kura installation you can also download the file to your local machine and then upload it by providing the file in the “Install/Upgrade” dialog box.&lt;/p&gt;
+&lt;p&gt;As a next step, you need to change the “Router XML” of the Camel context &lt;code&gt;camel1&lt;/code&gt; to the following configuration:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;routes xmlns=&quot;http://camel.apache.org/schema/spring&quot;&amp;gt;
+    &amp;lt;route&amp;gt;
+        &amp;lt;from uri=&quot;seda:input1&quot;/&amp;gt;
+        &amp;lt;marshal&amp;gt;&amp;lt;json library=&quot;Gson&quot;/&amp;gt;&amp;lt;/marshal&amp;gt;
+        &amp;lt;transform&amp;gt;&amp;lt;simple&amp;gt;${body}\n&amp;lt;/simple&amp;gt;&amp;lt;/transform&amp;gt;
+        &amp;lt;to uri=&quot;stream:out&quot;/&amp;gt;
+    &amp;lt;/route&amp;gt;
+&amp;lt;/routes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the Kura console you will now see that we successfully transformed the internal Kura Wires data format to simple JSON:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;json&quot;&gt;{&quot;value&quot;:[{&quot;properties&quot;:{&quot;TIMER&quot;:{}}}],&quot;identification&quot;:&quot;org.eclipse.kura.wire.Timer-1536913933101-5&quot;,&quot;scope&quot;:&quot;WIRES&quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This change did intercept the internal Kura wires objects and serialized them into proper JSON structures. The following step simply appends the content with a “newline” character in order to have a more readable output on the command line.&lt;/p&gt;
+&lt;h2&gt;Transforming data&lt;/h2&gt;
+&lt;p&gt;Depending on your IoT use case, transforming data can become rather complex. Camel is good at handling this. Transforming, filtering, splitting, aggregating, … for this tutorial I want to stick to a rather simple example, in order to focus in the integration between Kura and Camel, and less on the powers of Camel itself.&lt;/p&gt;
+&lt;p&gt;As the next step will use the “Groovy” script language to transform data, we will need to install an additional package using the same way as before: &lt;code&gt;https://repo1.maven.org/maven2/de/dentrassi/kura/addons/de.dentrassi.kura.addons.camel.groovy/0.6.0/de.dentrassi.kura.addons.camel.groovy-0.6.0.dp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then go ahead and modify the “Router XML” to include a transformation step, add the following content before the JSON conversion:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;transform&amp;gt;&amp;lt;groovy&amp;gt;
+return  [&quot;value&quot;: new Random().nextInt(10), &quot;timer&quot;: request.body.identification ];
+&amp;lt;/groovy&amp;gt;&amp;lt;/transform&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The full XML context should now be:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;routes xmlns=&quot;http://camel.apache.org/schema/spring&quot;&amp;gt;
+    &amp;lt;route&amp;gt;
+        &amp;lt;from uri=&quot;seda:input1&quot;/&amp;gt;
+        &amp;lt;transform&amp;gt;&amp;lt;groovy&amp;gt;
+        return  [&quot;value&quot;: new Random().nextInt(10), &quot;timer&quot;: request.body.identification ];
+        &amp;lt;/groovy&amp;gt;&amp;lt;/transform&amp;gt;
+        &amp;lt;marshal&amp;gt;&amp;lt;json library=&quot;Gson&quot;/&amp;gt;&amp;lt;/marshal&amp;gt;
+        &amp;lt;transform&amp;gt;&amp;lt;simple&amp;gt;${body}\n&amp;lt;/simple&amp;gt;&amp;lt;/transform&amp;gt;
+        &amp;lt;to uri=&quot;stream:out&quot;/&amp;gt;
+    &amp;lt;/route&amp;gt;
+&amp;lt;/routes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After applying the changes, the output on the console should change to something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;json&quot;&gt;{&quot;value&quot;:2,&quot;timer&quot;:&quot;org.eclipse.kura.wire.Timer-1536913933101-5&quot;}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see, we now created a new data structure, based on generated content and based on the original Kura Wires event information.&lt;/p&gt;
+&lt;h2&gt;Off to the Eclipse Hono HTTP Adapter&lt;/h2&gt;
+&lt;p&gt;Printing out JSON to the console is nice, but let’s get a bit more professional. Yes, Kura allows you to use its Kura specific MQTT data format. But what we want to send this piece of JSON to some HTTP endpoint, like the &lt;a href=&quot;https://www.eclipse.org/hono&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Eclipse Hono&lt;/a&gt; HTTP protocol adapter?&lt;/p&gt;
+&lt;p&gt;Camel has a huge variety of endpoints for connecting to various APIs, transport mechanisms and protocols. I doubt you directly would like your IoT gateway to contact Salesforce or Twitter, but using &lt;a href=&quot;https://dentrassi.de/2017/04/27/opc-ua-with-apache-camel/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;OPC UA&lt;/a&gt;, MQTT, HTTP, &lt;a href=&quot;https://dentrassi.de/2017/02/17/iec-60870-5-104-with-apache-camel/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;IEC 60870&lt;/a&gt;, might be a reasonable use case for IoT.&lt;/p&gt;
+&lt;p&gt;As a first step, we need to install Camel HTTP endpoint support: &lt;code&gt;https://repo1.maven.org/maven2/de/dentrassi/kura/addons/de.dentrassi.kura.addons.camel.http/0.6.0/de.dentrassi.kura.addons.camel.http-0.6.0.dp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The next step requires an instance of Eclipse Hono, thankfully there is a &lt;a href=&quot;https://www.eclipse.org/hono/sandbox/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Hono sandbox server&lt;/a&gt; running at &lt;code&gt;hono.eclipse.org&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In the XML Router we need two steps for this. You can add them after the &lt;code&gt;to&lt;/code&gt; element, so that we still see the JSON on the command line:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;setHeader headerName=”Content-Type”&amp;gt;&amp;lt;constant&amp;gt;application/json&amp;lt;/constant&amp;gt;&amp;lt;/setHeader&amp;gt;
+&amp;lt;to uri=&quot;https4://hono.eclipse.org:28080/telemetry?authenticationPreemptive=true&amp;amp;amp;authUsername=sensor1@DEFAULT_TENANT&amp;amp;amp;authPassword=hono-secret&quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first step sets the content type to &lt;code&gt;application/json&lt;/code&gt;, which is passed along by Hono to the AMQP network.&lt;/p&gt;
+&lt;p&gt;Yes, it really is &lt;code&gt;http4://&lt;/code&gt;, this is not a typo but the Camel endpoint using Apache HttpClient 4.&lt;/p&gt;
+&lt;p&gt;You may need to register the device with Hono before actually publishing data to the instance. Also, it is necessary that a consumer is attached, which receives the data. Hono rejects devices publish data if no consumer is attached. Also see: &lt;a href=&quot;https://www.eclipse.org/hono/getting-started/#publishing-data&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;https://www.eclipse.org/hono/getting-started/#publishing-data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you are using a custom deployment of Hono using the &lt;a href=&quot;https://www.eclipse.org/hono/deployment/openshift_s2i/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;OpenShift S2I&lt;/a&gt; approach, then the &lt;code&gt;to&lt;/code&gt; URL would look more like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;xml&quot;&gt;&amp;lt;to uri=&quot;https4://hono-adapter-http-vertx-sec-hono.my.openshift.cluster/telemetry?authenticationPreemptive=true&amp;amp;amp;authUsername=sensor1@DEFAULT_TENANT&amp;amp;amp;authPassword=hono-secret&quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Wrapping it up&lt;/h2&gt;
+&lt;p&gt;What we have seen so far is that, with a few lines of XML, it is possible to interface with Kura Wires, and start processing data that was originally not supported by Kura, sending to a target that also isn’t supported by Kura. On for that we only used a few lines of XML.&lt;/p&gt;
+&lt;p&gt;In addition to that, you can test and develop everything in a local, confined space. Without having to worry too much about actually running a Kura instance.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;https://dentrassi.de/2018/09/17/sunny-weather-apache-camel-kura-wires/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Part #2&lt;/a&gt;, we will have a look at ways to get data from Camel back into Kura Wires. And in &lt;a href=&quot;https://dentrassi.de/2018/09/19/apache-camel-java-dsl-eclipse-kura-wires/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Part #3&lt;/a&gt; of this tutorial, we will continue with this approach and develop a Camel based solution, which can run inside of Kura, as well as outside, including actual unit tests.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://dentrassi.de/2018/09/14/the-power-of-apache-camel-in-eclipse-kura/&quot; rel=&quot;nofollow&quot;&gt;Leveraging the power of Apache Camel in Eclipse Kura&lt;/a&gt; appeared first on &lt;a href=&quot;https://dentrassi.de&quot; rel=&quot;nofollow&quot;&gt;ctron's blog&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Fri, 14 Sep 2018 13:52:25 +0000</pubDate>
+</item>
+<item>
+	<title>EclipseCon Europe 2018: Sponsor testimonial: Jonas Helming on EclipseSource @ EclipseCon</title>
+	<guid isPermaLink="false">https://www.eclipsecon.org/news/717 at https://www.eclipsecon.org</guid>
+	<link>https://www.eclipsecon.org/europe2018/news/sponsor-testimonial-jonas-helming-eclipsesource-eclipsecon</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;em&gt;Learn more about the EclipseSource contributions to the program on themes such as the Eclipse Theia platform, modeling tools, Eclipse 4 and general web-related topics.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Q - If you had to choose a theme to watch at the conference, what would it be?&lt;/p&gt;
+
+&lt;p&gt;A new trending topic at EclipseCon is definitely the growing interest into web-based tools. It is interesting for projects, whether web-based tooling is already a valid alternative and if so when and how to migrate. A lot of this interest is focussed around Eclipse Theia ..&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-news-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/europe2018/news/sponsor-testimonial-jonas-helming-eclipsesource-eclipsecon&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;img-responsive block-center&quot; height=&quot;250&quot; src=&quot;https://www.eclipsecon.org/sites/default/files/styles/solstice_news_-_default_-_thumbnail/public/news/Jonas600.png?itok=wbTEv6zr&quot; width=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Fri, 14 Sep 2018 11:54:27 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: An $8.7 Billion Shared Investment: Sizing the Economic Value of Eclipse Community Collaboration</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/33mHMN-pth4/87-billion-shared-investment-sizing-economic-value-eclipse-community</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/33mHMN-pth4/87-billion-shared-investment-sizing-economic-value-eclipse-community</link>
+	<description>What is the value of the code contributed by the Eclipse community? We estimate that the roughly 162 million total physical source lines of code in Eclipse repositories represent a $8.7 billion USD shared technology investment by our community.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/33mHMN-pth4&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 13 Sep 2018 14:30:00 +0000</pubDate>
+</item>
+
+</channel>
+</rss>
