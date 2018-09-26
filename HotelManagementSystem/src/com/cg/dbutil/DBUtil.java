@@ -33,7 +33,7 @@ public class DBUtil {
 	}
 	
 	public static Properties loadDBInfo() throws IOException{
-		FileInputStream inStream = new FileInputStream("D:/MiniProject/HotelManagementApp/HotelManagementSystem/dbInfo.properties");
+		FileInputStream inStream = new FileInputStream("D:/HotelManagementApp/HotelManagementSystem/dbInfo.properties");
 		Properties prop = new Properties();
 		prop.load(inStream);
 			return prop;

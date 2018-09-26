@@ -1,5 +1,6 @@
 package com.cg.dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,7 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.cg.dbutil.DBUtil;
-import com.cg.entities.Hotel;
 import com.cg.entities.Users;
 
 public class UserDaoImpl implements UserDao{
@@ -20,7 +20,24 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public int registerUser(Users user) {
-		// TODO Auto-generated method stub
+		try
+		{
+			con = DBUtil.getConn();
+			String query="INSERT INTO Users VALUES(users.nextval,?,?,?,?,?,?,?)";
+			pst=con.prepareStatement(query);
+			pst.setString(1, user.getPassword());
+			pst.setString(2, user.getRole());
+			pst.setString(3, user.getUser_name());
+			pst.setString(4, user.getMobile_no());
+			pst.setString(5, user.getPhone());
+			pst.setString(6, user.getAddress());
+			pst.setString(7, user.getEmail());
+			return pst.executeUpdate();
+		}
+		catch(SQLException | IOException e)
+		{
+			e.printStackTrace();
+		}
 		return 0;
 	}
 

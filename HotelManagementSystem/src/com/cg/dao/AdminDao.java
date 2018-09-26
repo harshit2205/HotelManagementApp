@@ -16,5 +16,5 @@ public interface AdminDao {
 	public void addRooms(RoomDetails roominfo);
 	public void updateRoomInfo(RoomDetails roominfo);
 	public void removeRoom(String room_id);
-	public List<RoomDetails> fetchAllRooms();
+	public List<RoomDetails> fetchAllRooms(String hotel_id);
 }

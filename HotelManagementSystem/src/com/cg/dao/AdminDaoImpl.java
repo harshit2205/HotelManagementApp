@@ -49,7 +49,6 @@ public class AdminDaoImpl implements AdminDao
 		}
 		catch(Exception e)
 		{
-			
 //			throw new HotelException(e.getMessage());
 			e.printStackTrace();
 		}
@@ -169,7 +168,7 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public List<RoomDetails> fetchAllRooms() {
+	public List<RoomDetails> fetchAllRooms(String hotel_id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

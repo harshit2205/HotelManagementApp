@@ -71,9 +71,9 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public List<RoomDetails> fetchAllRooms() {
+	public List<RoomDetails> fetchAllRooms(String hotel_id) {
 		// TODO Auto-generated method stub
-		return adminDaoImpl.fetchAllRooms();
+		return adminDaoImpl.fetchAllRooms(hotel_id);
 	}
 
 }
