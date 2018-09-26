@@ -134,36 +134,8 @@ public class AdminDaoImpl implements AdminDao
 
 	@Override
 	public Hotel searchHotel(String hotel_id) {
-		Hotel hotel = new Hotel();
-		try {
-			con = DBUtil.getConn();
-			String searchQuery = "SELECT * FROM hotel WHERE hotel_id="+hotel_id;
-			st=con.createStatement();
-			rs=st.executeQuery(searchQuery);
-			while(rs.next()) {
-				hotel.setHotel_id(rs.getString("hotel_id"));
-				hotel.setCity(rs.getString("city"));
-				hotel.setHotel_name(rs.getString("hotel_name"));
-				hotel.setAddress(rs.getString("address"));
-				hotel.setDescription(rs.getString("description"));
-				hotel.setAvg_rate_per_night(rs.getFloat("avg_rate_per_night"));
-				hotel.setPhone_no(rs.getString("phone_no1"));
-				hotel.setPhone_no2(rs.getString("phone_no2"));
-				hotel.setRating(rs.getString("rating"));
-				hotel.setEmail(rs.getString("email"));
-				hotel.setFax(rs.getString("fax"));
-			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		finally {
-			rs.close();
-			con.close();
-			st.close();
-		}
-		
-		return hotel;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
