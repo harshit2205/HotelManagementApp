@@ -66,7 +66,7 @@ public class AdminDaoImpl implements AdminDao
 		// TODO Auto-generated method stub
 		try
 		{
-			con = DBUtil.getConn();
+			con=DBUtil.getConn();
 			String insertHotelQuery="INSERT INTO hotel VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 			pst=con.prepareStatement(insertHotelQuery);
 			pst.setString(1, hotel.getHotel_id());
@@ -82,7 +82,7 @@ public class AdminDaoImpl implements AdminDao
 			pst.setString(11, hotel.getFax());
 			pst.executeUpdate();
 		}
-		catch(SQL Exception e)
+		catch(IO Exception e)
 		{
 			e.printStackTrace();
 		}
