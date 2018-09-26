@@ -1,4 +1,4 @@
-package com.cg.dbutil;
+package com.cg.DBUtil;
 
 
 import java.io.FileInputStream;
