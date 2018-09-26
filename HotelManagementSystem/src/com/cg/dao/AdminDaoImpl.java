@@ -21,7 +21,21 @@ public class AdminDaoImpl implements AdminDao{
 
 	@Override
 	public void updateHotelInfo(Hotel hotel) {
-		// TODO Auto-generated method stub
+		con = DBUtil.getConn();
+		String updateQuery = "UPDATE hotel SET city=?,hotel_name=?,address=?,description=?,avg_rate_per_night=?,phone_no1=?,phone_no2=?,rating=?,email=?,fax=? WHERE hotel_id=?";
+		pst = con.prepareStatement(updateQuery);
+		pst.setString(1, hotel.getCity());
+		pst.setString(2, hotel.getHotel_name());
+		pst.setString(3, hotel.getAddress());
+		pst.setString(4, hotel.getDescription());
+		pst.setFloat(5, hotel.getAvg_rate_per_night());
+		pst.setString(6, hotel.getPhone_no());
+		pst.setString(7, hotel.getPhone_no2());
+		pst.setString(8, hotel.getRating());
+		pst.setString(9, hotel.getEmail());
+		pst.setString(10, hotel.getFax());
+		pst.setString(11, hotel.getHotel_id());
+		pst.executeUpdate();
 		
 	}
 
