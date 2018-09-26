@@ -1,5 +1,0 @@
-#oracle database information
-dbUrl=jdbc:oracle:thin:@10.51.103.201:1521:ORCL11G
-dbUser=Lab1btrg3
-dbPassword=lab1boracle
-dbDriver=oracle.jdbc.driver.OracleDriver
