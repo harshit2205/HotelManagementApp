@@ -9,12 +9,12 @@ public class RoomDetails {
 	private String room_no;
 	private String room_type;
 	private float per_night_rate;
-	private boolean availability;
+	private int availability;
 	private File imageFile;
 	
 	//constructors parameterized and non parameterized....
 	public RoomDetails(String hotel_id, String room_id, String room_no,
-			String room_type, float per_night_rate, boolean availability,
+			String room_type, float per_night_rate, int availability,
 			File imageFile) {
 		super();
 		this.hotel_id = hotel_id;
@@ -80,11 +80,11 @@ public class RoomDetails {
 		this.per_night_rate = per_night_rate;
 	}
 
-	public boolean isAvailability() {
+	public int isAvailability() {
 		return availability;
 	}
 
-	public void setAvailability(boolean availability) {
+	public void setAvailability(int availability) {
 		this.availability = availability;
 	}
 

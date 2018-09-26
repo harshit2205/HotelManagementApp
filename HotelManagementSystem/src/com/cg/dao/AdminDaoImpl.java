@@ -108,7 +108,7 @@ public class AdminDaoImpl implements AdminDao
 			con = DBUtil.getConn();
 			String updateQuery = "UPDATE hotel SET city=?,hotel_name=?,address=?,description=?,avg_rate_per_night=?,phone_no1=?,phone_no2=?,rating=?,email=?,fax=? WHERE hotel_id=?";
 			pst = con.prepareStatement(updateQuery);
-			pst.setString(1, hotel.getCity());
+			pst.setString(1, hotel.getCity ());
 			pst.setString(2, hotel.getHotel_name());
 			pst.setString(3, hotel.getAddress());
 			pst.setString(4, hotel.getDescription());
@@ -152,8 +152,26 @@ public class AdminDaoImpl implements AdminDao
 
 	@Override
 	public void addRooms(RoomDetails roominfo) {
-		// TODO Auto-generated method stub
 		
+		try
+		{
+			con = DBUtil.getConn();
+			String insertRoomQuery="INSERT INTO roomdetails VALUES(?,?,?,?,?,?,?)";
+			pst=con.prepareStatement(insertRoomQuery);
+			pst.setString(1, roominfo.getHotel_id());
+			pst.setString(2, roominfo.getRoom_id());
+			pst.setString(3, roominfo.getRoom_no());
+			pst.setString(4, roominfo.getRoom_type());
+			pst.setFloat(5, roominfo.getPer_night_rate());
+			pst.setInt(6, roominfo.isAvailability());
+			pst.setString(7, null);
+			
+			pst.executeUpdate();
+		}
+		catch(SQLException | IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	@Override

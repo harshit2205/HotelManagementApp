@@ -12,6 +12,7 @@ static AdminService admSer=null;;
 		System.out.println("hello world");
 		admSer=new AdminServiceImpl();
 		Client.addHotel();
+		
 	}
 
 private static void addHotel()
