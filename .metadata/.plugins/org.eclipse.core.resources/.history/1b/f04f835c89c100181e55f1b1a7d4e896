@@ -157,17 +157,9 @@ public class AdminDaoImpl implements AdminDao
 			e.printStackTrace();
 		}
 		finally {
-			
-			try {
-				
-				rs.close();
-				st.close();
-				con.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
+			rs.close();
+			con.close();
+			st.close();
 		}
 		
 		return hotel;
