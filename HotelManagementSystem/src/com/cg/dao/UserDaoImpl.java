@@ -45,7 +45,6 @@ public class UserDaoImpl implements UserDao{
 	public Users LoginUser(String user_name, String password) {
 		
 		Users user = null;
-		
 		try 
 		{
 			con=DBUtil.getConn();
