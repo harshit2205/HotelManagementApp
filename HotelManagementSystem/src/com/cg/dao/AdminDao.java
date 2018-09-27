@@ -9,7 +9,7 @@ public interface AdminDao {
 	
 	public List<Hotel> fetchHotelList();
 	public int addNewhotel(Hotel hotel);
-	public void updateHotelInfo(Hotel hotel);
+	public int updateHotelInfo(Hotel hotel);
 	public Hotel searchHotel(String hotel_id);
 	public List<RoomDetails> fetchAvailableRooms(String hotel_id);
 	public List<RoomDetails> fetchBookedRooms(String hotel_id);

@@ -29,9 +29,9 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void updateHotelInfo(Hotel hotel) {
+	public int updateHotelInfo(Hotel hotel) {
 		// TODO Auto-generated method stub
-		adminDaoImpl.updateHotelInfo(hotel);
+		return adminDaoImpl.updateHotelInfo(hotel);
 	}
 
 	@Override

@@ -100,7 +100,8 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public void updateHotelInfo(Hotel hotel) {
+	public int updateHotelInfo(Hotel hotel) {
+		int rowsAffected=0;
 		try 
 		{
 			con = DBUtil.getConn();
@@ -117,28 +118,26 @@ public class AdminDaoImpl implements AdminDao
 			pst.setString(9, hotel.getEmail());
 			pst.setString(10, hotel.getFax());
 			pst.setString(11, hotel.getHotel_id());
-			pst.executeUpdate();	
-		} catch (SQLException e) 
+			rowsAffected = pst.executeUpdate();	
+		} catch (SQLException | IOException e) 
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
+		} 
+		return rowsAffected;
 	}
 
 	@Override
 	public Hotel searchHotel(String hotel_id) {
-		Hotel hotel = new Hotel();
+		Hotel hotel = null;
 		try {
+			System.out.println("Inside Search");
 			con = DBUtil.getConn();
-			String searchQuery = "SELECT * FROM hotel WHERE hotel_id="+hotel_id;
+			String Query = "SELECT * FROM hotel WHERE hotel_id='"+hotel_id+"'";
 			st=con.createStatement();
-			rs=st.executeQuery(searchQuery);
+			rs=st.executeQuery(Query);
 			while(rs.next()) {
+				hotel = new Hotel();
 				hotel.setHotel_id(rs.getString("hotel_id"));
 				hotel.setCity(rs.getString("city"));
 				hotel.setHotel_name(rs.getString("hotel_name"));

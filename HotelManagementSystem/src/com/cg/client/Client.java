@@ -142,8 +142,37 @@ public class Client {
 
 
 	private static void modifyHotel() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Enter Hotel Id");
+		String hotelId=scan.next();
+		 if(admSer.searchHotel(hotelId) == null){
+			 System.out.println("Invalid Hotel Id! Enter Again");
+			 modifyHotel();
+		 } else	{
+			Hotel hotel = new Hotel(); 
+			hotel.setHotel_id(hotelId);
+			System.out.println("\nENTER HOTEL DETAILS.");
+			System.out.print("Enter Hotel Name: ");
+			hotel.setHotel_name(scan.next());
+			System.out.print("Enter Hotel Address: ");
+			hotel.setAddress(scan.next());
+			System.out.print("Enter Corresponding City: ");
+			hotel.setCity(scan.next());
+			System.out.print("Enter Hotel Rating: ");
+			hotel.setRating(scan.next());
+			System.out.print("Enter Average Rooms Rate Per Night: ");
+			hotel.setAvg_rate_per_night(scan.nextFloat());
+			System.out.print("Enter Customer Contact Number: \n1: ");
+			hotel.setPhone_no(scan.next());
+			System.out.print("2: ");
+			hotel.setPhone_no2(scan.next());
+			System.out.print("Enter Hotel Public Mail: ");
+			hotel.setEmail(scan.next());
+			System.out.print("Enter Hotel Fax: ");
+			hotel.setFax(scan.next());
+			if(admSer.updateHotelInfo(hotel)==1){
+				System.out.println("Hotel Details Updated");
+			}
+			}
 	}
 
 
@@ -153,48 +182,6 @@ public class Client {
 	}
 
 
-//	private static void addHotel()
-//	{
-//		 String hotel_id;
-//		 String city;
-//		 String hotel_name;
-//		 String address;
-//		 String description;
-//		 float avg_rate_per_night;
-//		 String phone_no;
-//		 String phone_no2;
-//		 String rating;
-//		 String email;
-//		 String fax;
-//		 System.out.println("Enter hotelid");
-//		 hotel_id=scan.next();
-//		 city=scan.next();
-//		 hotel_name=scan.next();
-//		 address=scan.next();
-//		 description=scan.next();
-//		 avg_rate_per_night=scan.nextFloat();
-//		 phone_no=scan.next();
-//		 phone_no2=scan.next();
-//		 rating=scan.next();
-//		 email=scan.next();
-//		 fax=scan.next();
-//		 Hotel hotel=new Hotel(hotel_id,
-//				 city,hotel_name,
-//				 address,
-//				 description,
-//				 avg_rate_per_night,
-//				 phone_no,
-//				 phone_no2,
-//				 rating,
-//				 email,
-//				 fax);
-//	     try{
-//	    	int data= admSer.addNewhotel(hotel);
-//	    	 System.out.println(data+"Inserted");
-//	     }catch(Exception e){
-//	    	 e.printStackTrace();
-//	     }
-//	
-//	}
+
 }
 

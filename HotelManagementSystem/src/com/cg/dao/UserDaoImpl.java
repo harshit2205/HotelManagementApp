@@ -6,8 +6,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import com.cg.dbutil.DBUtil;
+import com.cg.entities.BookingDetails;
+import com.cg.entities.RoomDetails;
 import com.cg.entities.Users;
 
 public class UserDaoImpl implements UserDao{
@@ -85,6 +88,24 @@ public class UserDaoImpl implements UserDao{
 			}
 		}
 		return user;
+	}
+
+	@Override
+	public List<RoomDetails> fetchAvailableRooms(String hotel_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookingDetails bookRoom(String room_id, BookingDetails bookDet) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookingDetails viewBookingStatus(String booking_id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

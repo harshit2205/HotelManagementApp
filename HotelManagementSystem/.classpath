@@ -2,12 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/classes12.jar"/>
-	<classpathentry kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/easymock-2.5.jar"/>
-	<classpathentry kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/junit-4.4.jar"/>
-	<classpathentry kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/log4j-1.2.9.jar"/>
-	<classpathentry kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/ojdbc5.jar"/>
-	<classpathentry kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/ojdbc6_g.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/classes12.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/easymock-2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/junit-4.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/log4j-1.2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/ojdbc5.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/Nishant Joshi Modules/Junit-Log4j Jar Files/ojdbc6_g.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
