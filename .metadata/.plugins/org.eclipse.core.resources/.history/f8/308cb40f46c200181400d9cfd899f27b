@@ -333,51 +333,9 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public List<RoomDetails> fetchAllRooms(String hotel_id)
-	{
-	
-        List<RoomDetails> AllRoomList=new ArrayList<RoomDetails>();
-        try 
-        {
-            con=DBUtil.getConn();
-            String selectqry="SELECT * FROM RoomDetails";
-            st=con.createStatement();
-            rs=st.executeQuery(selectqry);      
-            
-            while(rs.next())
-            {
-                AllRoomList.add(new RoomDetails(rs.getString("hotel_id"),
-                        rs.getString("room_id"),
-                        rs.getString("room_no"),
-                        rs.getString("room_type"),
-                        rs.getFloat("per_night_rate"),
-                        rs.getInt("availability"),
-                        rs.getBlob("imageFile")));
-            }
-        }
-            
-        catch(Exception e)
-        {
-            
-//          throw new HotelException(e.getMessage());
-            e.printStackTrace();
-        }
-        finally 
-        {
-            try
-            {
-                st.close();
-                rs.close();
-                con.close();
-            }
-            catch(SQLException e)
-            {
-//              throw  new HotelException(e.getMessage());
-                e.printStackTrace();
-            }
-        }
-        
-        return AllRoomList;
+	public List<RoomDetails> fetchAllRooms(String hotel_id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
  
 }

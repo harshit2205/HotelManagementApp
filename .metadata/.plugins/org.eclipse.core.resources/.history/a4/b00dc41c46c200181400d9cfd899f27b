@@ -333,9 +333,8 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public List<RoomDetails> fetchAllRooms(String hotel_id)
-	{
-	
+	public List<RoomDetails> fetchAllRooms(String hotel_id) {
+		// TODO Auto-generated method stub
         List<RoomDetails> AllRoomList=new ArrayList<RoomDetails>();
         try 
         {
