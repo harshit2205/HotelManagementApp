@@ -6,4 +6,5 @@ public interface UserDao {
 	
 	public int registerUser(Users user);
 	public Users LoginUser(String user_name, String password);
+	public List<RoomDetalis>
 }

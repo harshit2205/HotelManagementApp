@@ -77,19 +77,18 @@ public class AdminDaoImpl implements AdminDao
 		try
 		{
 			con = DBUtil.getConn();
-			String insertHotelQuery="INSERT INTO hotel VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+			String insertHotelQuery="INSERT INTO hotel VALUES(hotel_id_generator.nextval,?,?,?,?,?,?,?,?,?,?)";
 			pst=con.prepareStatement(insertHotelQuery);
-			pst.setString(1, hotel.getHotel_id());
-			pst.setString(2, hotel.getCity());
-			pst.setString(3, hotel.getHotel_name());
-			pst.setString(4, hotel.getAddress());
-			pst.setString(5, hotel.getDescription());
-			pst.setFloat(6, hotel.getAvg_rate_per_night());
-			pst.setString(7, hotel.getPhone_no());
-			pst.setString(8, hotel.getPhone_no2());
-			pst.setString(9, hotel.getRating());
-			pst.setString(10, hotel.getEmail());
-			pst.setString(11, hotel.getFax());
+			pst.setString(1, hotel.getCity());
+			pst.setString(2, hotel.getHotel_name());
+			pst.setString(3, hotel.getAddress());
+			pst.setString(4, hotel.getDescription());
+			pst.setFloat(5, hotel.getAvg_rate_per_night());
+			pst.setString(6, hotel.getPhone_no());
+			pst.setString(7, hotel.getPhone_no2());
+			pst.setString(8, hotel.getRating());
+			pst.setString(9, hotel.getEmail());
+			pst.setString(10, hotel.getFax());
 			
 			return pst.executeUpdate();
 		}
@@ -157,9 +156,14 @@ public class AdminDaoImpl implements AdminDao
 			e.printStackTrace();
 		}
 		finally {
-			rs.close();
-			con.close();
-			st.close();
+			try {
+				rs.close();
+				con.close();
+				st.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		return hotel;
