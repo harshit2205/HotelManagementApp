@@ -1,5 +1,6 @@
 package com.cg.client;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.cg.entities.Hotel;
@@ -21,8 +22,8 @@ public class Client {
 		admSer = new AdminServiceImpl();
 		userSer = new UserServiceImpl();
 		
-		System.out.println("Welcome to sadbhavna Hotels");
-		System.out.println("1.Login\n2.Register");
+		System.out.println("Welcome to SADBHAVNA HOTELS");
+		System.out.println("1.Login\t2.Register");
 		choice = scan.nextInt();
 		
 		switch(choice){
@@ -30,7 +31,8 @@ public class Client {
 			break;
 		case 2:Register();
 			break;
-		default: System.out.println("incorrect input");
+		default: System.out.println("incorrect input!");
+	
 		}
 
 		
@@ -65,15 +67,23 @@ public class Client {
 
 	private static void Login() {
 		String user_name, password;
+		int choice = 0;
 		System.out.println("LOGIN PORTAL\n");
+		System.out.println("Login as- \n1. Admin\t2. User/Employee");
+		choice = scan.nextInt();
+		
 		System.out.print("username:   ");
 		user_name = scan.next();
 		System.out.print("password:   ");
 		password = scan.next();
 		
-		if(user_name.equals("secret123") || password.equals("secret123")){
+		switch(choice){
+		case 1:
+			if(user_name.equals("secret123") || password.equals("secret123")){
 			showAdminDashboard(user_name);
-		}else{
+			}
+			break;
+		case 2:
 			Users currentUser = userSer.LoginUser(user_name, password);
 			if(currentUser == null){
 				System.out.println("Invalid User Login Again!");
@@ -81,6 +91,10 @@ public class Client {
 			}else{
 				showUserDashboard(currentUser);
 			}
+			break;
+		default:
+			System.out.println("Invalid Input Try Again!");
+			Login();
 		}
 		
 		
@@ -89,7 +103,6 @@ public class Client {
 
 
 	private static void showUserDashboard(Users currentUser) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -125,9 +138,12 @@ public class Client {
 		hotel.setCity(scan.next());
 		System.out.print("Enter Hotel Rating: ");
 		hotel.setRating(scan.next());
+		System.out.println("Enter Description of Hotel");
+		scan.nextLine();
+		hotel.setDescription(scan.nextLine());
 		System.out.print("Enter Average Rooms Rate Per Night: ");
 		hotel.setAvg_rate_per_night(scan.nextFloat());
-		System.out.print("Enter Customer Contact Number: \n1: ");
+		System.out.print("Enter Contact Number: \n1: ");
 		hotel.setPhone_no(scan.next());
 		System.out.print("2: ");
 		hotel.setPhone_no2(scan.next());
@@ -135,7 +151,6 @@ public class Client {
 		hotel.setEmail(scan.next());
 		System.out.print("Enter Hotel Fax: ");
 		hotel.setFax(scan.next());
-		
 		admSer.addNewhotel(hotel);
 		
 	}
@@ -177,7 +192,11 @@ public class Client {
 
 
 	private static void fetchHotel() {
-		// TODO Auto-generated method stub
+		System.out.println("\nGet All Hotel List.");
+		List<Hotel> hotelList = admSer.fetchHotelList();
+		for(Hotel hotel: hotelList){
+			System.out.println(hotel);
+		}
 		
 	}
 
@@ -185,3 +204,6 @@ public class Client {
 
 }
 
+
+	
+	

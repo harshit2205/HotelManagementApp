@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.cg.dbutil.DBUtil;
@@ -15,6 +16,9 @@ import com.cg.entities.Users;
 
 public class UserDaoImpl implements UserDao{
 	
+	
+	static int BOOKED=0;
+	static int AVAILABLE=1;
 	Connection con=null;
 	Statement st= null;
 	PreparedStatement pst = null;
@@ -92,20 +96,104 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public List<RoomDetails> fetchAvailableRooms(String hotel_id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<RoomDetails> roomsList = new ArrayList<RoomDetails>();
+		try {
+			con = DBUtil.getConn();
+			String query="SELECT * FROM roomdetails WHERE hotel_id='"+hotel_id+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(query);	
+			
+			while(rs.next()){
+				RoomDetails room = new RoomDetails(
+				rs.getString("hotel_id"),
+				rs.getString("room_id"),
+				rs.getString("room_no"),
+				rs.getString("room_type"),
+				rs.getFloat("per_night_rate"),
+				rs.getInt("availability"),
+				rs.getBlob("photo"));
+				roomsList.add(room);
+			}
+		} catch (SQLException | IOException e) {
+			e.printStackTrace();
+		} finally{
+			try
+			{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e)
+			{
+//				throw  new HotelException(e.getMessage());
+				e.printStackTrace();
+			}
+		}
+		return roomsList;
 	}
 
 	@Override
 	public BookingDetails bookRoom(String room_id, BookingDetails bookDet) {
-		// TODO Auto-generated method stub
+		
+		try {
+			con = DBUtil.getConn();
+			String query="UPDATE roomdetails SET availability=";//to be executed
+			pst=con.prepareStatement(query);
+			
+		} catch (SQLException | IOException e) {
+			e.printStackTrace();
+		} finally{
+			try{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e){
+//				throw  new HotelException(e.getMessage());
+				e.printStackTrace();
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public BookingDetails viewBookingStatus(String booking_id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		BookingDetails bookdetail= null;
+		try {
+			con = DBUtil.getConn();
+			String query="SELECT * FROM bookingdetails WHERE booking_id ='"+booking_id+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(query);	
+			
+			while(rs.next()){
+				bookdetail = new BookingDetails(
+						rs.getString("booking_id"),
+						rs.getString("room_id"),
+						rs.getString("user_id"),
+						rs.getDate("booked_from"),
+						rs.getDate("booked_to"),
+						rs.getInt("no_of_adults"),
+						rs.getInt("no_of_children"),
+						rs.getFloat("amount"));
+			}
+			}catch (SQLException | IOException e) {
+				e.printStackTrace();
+			} finally{
+				try
+				{
+					st.close();
+					rs.close();
+					con.close();
+				}
+				catch(SQLException e)
+				{
+//					throw  new HotelException(e.getMessage());
+					e.printStackTrace();
+				}
+			}
+		return bookdetail;
 	}
 
 }

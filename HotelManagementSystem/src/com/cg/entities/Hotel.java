@@ -40,12 +40,12 @@ public class Hotel {
 	//to string function....
 	@Override
 	public String toString() {
-		return "Hotel [hotel_id=" + hotel_id + ", city=" + city
-				+ ", hotel_name=" + hotel_name + ", address=" + address
-				+ ", description=" + description + ", avg_rate_per_night="
-				+ avg_rate_per_night + ", phone_no=" + phone_no
-				+ ", phone_no2=" + phone_no2 + ", rating=" + rating
-				+ ", email=" + email + ", fax=" + fax + "]";
+		return   hotel_id + "\t" + hotel_name.toUpperCase() + "\n" + address
+				+ "\t " + city + "\n About = " + description + "\n\nRs. "
+				+ avg_rate_per_night + "/pernight \t Contact No. " + phone_no
+				+ " " + phone_no2 + "\n This Hotel is Rated " + rating
+				+ "Star \t email = " + email + ",\n fax = " + fax+"\n" ;
+		 
 	}
 
 	//getter and setter functions....
