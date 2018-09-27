@@ -33,6 +33,9 @@ public class Client {
 		default: System.out.println("incorrect input");
 		}
 
+		System.out.println("hello world");
+		admSer=new AdminServiceImpl();
+		Client.addHotel();
 		
 
 	}
