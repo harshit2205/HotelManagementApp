@@ -136,11 +136,13 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public BookingDetails bookRoom(String room_id, BookingDetails bookDet) {
 		
+		int rowsAffected = 0;
+		
 		try {
 			con = DBUtil.getConn();
 			String query = "UPDATE roomdetails SET availability="+UserDaoImpl.BOOKED+" WHERE roomi_id='"+room_id+"'";
 			pst = con.prepareStatement(query);
-			pst.executeUpdate();
+			rowsAffected = pst.executeUpdate();
 			
 			query="SELECT booking_id_generator.nextval FROM dual";
 			st=con.createStatement();
@@ -158,7 +160,7 @@ public class UserDaoImpl implements UserDao{
 			pst.setInt(5, bookDet.getNo_of_adults());
 			pst.setInt(6, bookDet.getNo_of_children());
 			pst.setFloat(7, bookDet.getAmount());
-			pst.executeUpdate();
+			rowsAffected = pst.executeUpdate();
 			
 			query = "SELECT * FROM bookingdetails WHERE booking_id='"+booking_id+"'";
 			st = con.createStatement();

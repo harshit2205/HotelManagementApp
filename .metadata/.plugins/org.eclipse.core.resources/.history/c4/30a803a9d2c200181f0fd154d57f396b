@@ -197,6 +197,7 @@ public class Client {
 		for(Hotel hotel: hotelList){
 			System.out.println(hotel);
 		}
+		
 	}
 
 
