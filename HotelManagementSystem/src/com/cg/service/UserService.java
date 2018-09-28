@@ -1,5 +1,6 @@
 package com.cg.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import com.cg.entities.BookingDetails;
@@ -13,4 +14,5 @@ public interface UserService {
 	public List<RoomDetails> fetchAvailableRooms(String hotel_id);
 	public BookingDetails bookRoom(String room_id,BookingDetails bookDet);
 	public BookingDetails viewBookingStatus(String booking_id);
+	public float amountCalculator(Date bookedFrom,Date bookedTo,Float avgRatePerNight);
 }

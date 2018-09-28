@@ -1,6 +1,5 @@
 package com.cg.entities;
 
-import java.io.File;
 import java.sql.Blob;
 
 public class RoomDetails {

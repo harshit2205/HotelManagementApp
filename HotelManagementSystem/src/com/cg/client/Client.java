@@ -1,7 +1,10 @@
 package com.cg.client;
 
+import java.sql.Date;
+import java.util.List;
 import java.util.Scanner;
 
+import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
 import com.cg.entities.Users;
 import com.cg.service.AdminServiceImpl;
@@ -21,8 +24,8 @@ public class Client {
 		admSer = new AdminServiceImpl();
 		userSer = new UserServiceImpl();
 		
-		System.out.println("Welcome to sadbhavna Hotels");
-		System.out.println("1.Login\n2.Register");
+		System.out.println("Welcome to SADBHAVNA HOTELS");
+		System.out.println("1.Login\t2.Register");
 		choice = scan.nextInt();
 		
 		switch(choice){
@@ -30,7 +33,8 @@ public class Client {
 			break;
 		case 2:Register();
 			break;
-		default: System.out.println("incorrect input");
+		default: System.out.println("incorrect input!");
+	
 		}
 
 		
@@ -65,15 +69,23 @@ public class Client {
 
 	private static void Login() {
 		String user_name, password;
+		int choice = 0;
 		System.out.println("LOGIN PORTAL\n");
+		System.out.println("Login as- \n1. Admin\t2. User/Employee");
+		choice = scan.nextInt();
+		
 		System.out.print("username:   ");
 		user_name = scan.next();
 		System.out.print("password:   ");
 		password = scan.next();
 		
-		if(user_name.equals("secret123") || password.equals("secret123")){
+		switch(choice){
+		case 1:
+			if(user_name.equals("secret123") || password.equals("secret123")){
 			showAdminDashboard(user_name);
-		}else{
+			}
+			break;
+		case 2:
 			Users currentUser = userSer.LoginUser(user_name, password);
 			if(currentUser == null){
 				System.out.println("Invalid User Login Again!");
@@ -81,6 +93,10 @@ public class Client {
 			}else{
 				showUserDashboard(currentUser);
 			}
+			break;
+		default:
+			System.out.println("Invalid Input Try Again!");
+			Login();
 		}
 		
 		
@@ -89,8 +105,61 @@ public class Client {
 
 
 	private static void showUserDashboard(Users currentUser) {
+		int choice=0;
+		System.out.println("Welcome \n"+currentUser+"\n");
+		System.out.println("1. Book Room.");
+		System.out.println("2. View Booking Status.");
+		System.out.println("3. Fetch Available Rooms.");
+		choice=scan.nextInt();
+		switch (choice) {
+		case 1: bookRoom(currentUser.getUser_id());
+			
+			break;
+		case 2: viewBookingStatus();
+			    break;
+		case 3: fetchAvailableRooms();
+		        break;
+		
+		default: System.out.println("Invalid Input! Please Try Again.");
+		         showUserDashboard(currentUser);
+		         
+			
+		}
+	}
+
+
+	private static void fetchAvailableRooms() {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	private static void viewBookingStatus() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private static void bookRoom(String userId) {
+		BookingDetails bookingDetails=new BookingDetails();
+		System.out.println("Enter Room Id.");
+		bookingDetails.setRoom_id(scan.next());
+		bookingDetails.setUser_id(userId);
+		System.out.println("Enter Check-In Date.");
+		bookingDetails.setBooked_from(Date.valueOf(scan.next()));
+		System.out.println("Enter Check-Out Date.");
+		bookingDetails.setBooked_from(Date.valueOf(scan.next()));
+		System.out.println("Enter Number of Adults.");
+		bookingDetails.setNo_of_adults(scan.nextInt());
+		System.out.println("Enter Number of Children.");
+		bookingDetails.setNo_of_children(scan.nextInt());
+		
+		float avgRate = userSer.amountCalculator(bookingDetails.getBooked_from(), 
+				bookingDetails.getBooked_to(), 
+				500.00f);
+		bookingDetails.setAmount(avgRate);
+		bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
+	    System.out.println(bookingDetails);
 	}
 
 
@@ -125,9 +194,12 @@ public class Client {
 		hotel.setCity(scan.next());
 		System.out.print("Enter Hotel Rating: ");
 		hotel.setRating(scan.next());
+		System.out.println("Enter Description of Hotel");
+		scan.nextLine();
+		hotel.setDescription(scan.nextLine());
 		System.out.print("Enter Average Rooms Rate Per Night: ");
 		hotel.setAvg_rate_per_night(scan.nextFloat());
-		System.out.print("Enter Customer Contact Number: \n1: ");
+		System.out.print("Enter Contact Number: \n1: ");
 		hotel.setPhone_no(scan.next());
 		System.out.print("2: ");
 		hotel.setPhone_no2(scan.next());
@@ -135,7 +207,6 @@ public class Client {
 		hotel.setEmail(scan.next());
 		System.out.print("Enter Hotel Fax: ");
 		hotel.setFax(scan.next());
-		
 		admSer.addNewhotel(hotel);
 		
 	}
@@ -177,11 +248,17 @@ public class Client {
 
 
 	private static void fetchHotel() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("\nGet All Hotel List.");
+		List<Hotel> hotelList = admSer.fetchHotelList();
+		for(Hotel hotel: hotelList){
+			System.out.println(hotel);
+		}
 	}
 
 
 
 }
 
+
+	
+	

@@ -1,7 +1,5 @@
 package com.cg.entities;
-
 import java.sql.Date;
-
 public class BookingDetails {
 
 	private String booking_id;
@@ -106,7 +104,4 @@ public class BookingDetails {
 	public void setAmount(Float amount) {
 		this.amount = amount;
 	}
-	
-	
-	
 }

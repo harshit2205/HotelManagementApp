@@ -317,13 +317,67 @@ public class AdminDaoImpl implements AdminDao
 	@Override
 	public void removeRoom(String room_id) {
 		// TODO Auto-generated method stub
-		
+		try
+		{
+			con=DBUtil.getConn();
+			String removeRoomQuery="DELETE FROM RoomDetails WHERE room_id=?"+room_id;
+			pst=con.prepareStatement(removeRoomQuery);
+			pst.setString(1,room_id);
+			rs=pst.executeQuery();
+			rs.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	@Override
-	public List<RoomDetails> fetchAllRooms(String hotel_id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<RoomDetails> fetchAllRooms(String hotel_id)
+	{
+	
+        List<RoomDetails> AllRoomList=new ArrayList<RoomDetails>();
+        try 
+        {
+            con=DBUtil.getConn();
+            String selectqry="SELECT * FROM RoomDetails";
+            st=con.createStatement();
+            rs=st.executeQuery(selectqry);      
+            
+            while(rs.next())
+            {
+                AllRoomList.add(new RoomDetails(rs.getString("hotel_id"),
+                        rs.getString("room_id"),
+                        rs.getString("room_no"),
+                        rs.getString("room_type"),
+                        rs.getFloat("per_night_rate"),
+                        rs.getInt("availability"),
+                        rs.getBlob("imageFile")));
+            }
+        }
+            
+        catch(Exception e)
+        {
+            
+//          throw new HotelException(e.getMessage());
+            e.printStackTrace();
+        }
+        finally 
+        {
+            try
+            {
+                st.close();
+                rs.close();
+                con.close();
+            }
+            catch(SQLException e)
+            {
+//              throw  new HotelException(e.getMessage());
+                e.printStackTrace();
+            }
+        }
+        
+        return AllRoomList;
 	}
  
 }
