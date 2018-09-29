@@ -396,7 +396,40 @@ public class AdminDaoImpl implements AdminDao
 
 	@Override
 	public List<BookingDetails> fetchSpecificDateBooking(Date date) {
-		return null;
+		List<BookingDetails> BList=new ArrayList<BookingDetails>();
+		try{
+			con=DBUtil.getConn();
+			String selectqry="SELECT * FROM bookingdetails WHERE '"+date+"' BETWEEN booked_from AND booked_to";
+			st=con.createStatement();
+			rs=st.executeQuery(selectqry);
+			
+			while(rs.next())
+			{
+				BList.add(new BookingDetails(rs.getString("booking_id"),
+				rs.getString("room_id"),
+				rs.getString("user_id"),
+				rs.getDate("booked_from"),
+				rs.getDate("booked_to"),
+				rs.getInt("no_of_adults"),
+				rs.getInt("no_of_children"),
+				rs.getFloat("amount")
+				));
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			try{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e){
+				e.printStackTrace();
+			}
+		}
+		return BList;
 	}
 
 	@Override
