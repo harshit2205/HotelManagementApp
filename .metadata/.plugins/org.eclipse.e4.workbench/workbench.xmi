@@ -185,7 +185,7 @@
           </menus>
         </children>
         <children xsi:type="basic:Part" xmi:id="__W96usOtEeih_utVqdWMOw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="AdminDaoImpl.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AdminDaoImpl.java&quot; partName=&quot;AdminDaoImpl.java&quot; title=&quot;AdminDaoImpl.java&quot; tooltip=&quot;HotelManagementSystem/src/com/cg/dao/AdminDaoImpl.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/HotelManagementSystem/src/com/cg/dao/AdminDaoImpl.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;11419&quot; selectionTopPixel=&quot;5127&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AdminDaoImpl.java&quot; partName=&quot;AdminDaoImpl.java&quot; title=&quot;AdminDaoImpl.java&quot; tooltip=&quot;HotelManagementSystem/src/com/cg/dao/AdminDaoImpl.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/HotelManagementSystem/src/com/cg/dao/AdminDaoImpl.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;10805&quot; selectionTopPixel=&quot;5439&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -376,7 +376,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="__W97fcOtEeih_utVqdWMOw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_aGJYp8O2EeiBa6mnBv9vLQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="__W-FmMOtEeih_utVqdWMOw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_R7U218O3EeiQnN8uG1myVQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="__W-FmMOtEeih_utVqdWMOw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="__W97isOtEeih_utVqdWMOw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -409,7 +409,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="__W974MOtEeih_utVqdWMOw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_aGJYscO2EeiBa6mnBv9vLQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="__W-FQcOtEeih_utVqdWMOw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_R7U24cO3EeiQnN8uG1myVQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="__W-FQcOtEeih_utVqdWMOw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="__W9768OtEeih_utVqdWMOw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
