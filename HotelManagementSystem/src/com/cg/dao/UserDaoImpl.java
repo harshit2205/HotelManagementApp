@@ -18,8 +18,8 @@ import com.cg.entities.Users;
 public class UserDaoImpl implements UserDao{
 	
 	
-	static int BOOKED=0;
-	static int AVAILABLE=1;
+	public static final int BOOKED=0;
+	public static final int AVAILABLE=1;
 	Connection con=null;
 	Statement st= null;
 	PreparedStatement pst = null;
@@ -270,6 +270,45 @@ public class UserDaoImpl implements UserDao{
 		}
 		
 		return hotels;
+	}
+
+	@Override
+	public Float fetchPerNightRate(String room_id) {
+		Float perNightRate=0f;
+		try 
+		{
+			con=DBUtil.getConn();
+			String query="SELECT per_night_rate FROM roomdetails where room_id='"+room_id+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(query);		
+			
+			while(rs.next())
+			{
+				perNightRate = rs.getFloat("per_night_rate");
+			}
+		}
+		catch(Exception e)
+		{
+			
+//			throw new HotelException(e.getMessage());
+			e.printStackTrace();
+		}
+		finally 
+		{
+			try
+			{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e)
+			{
+//				throw  new HotelException(e.getMessage());
+				e.printStackTrace();
+			}
+		}
+
+		return perNightRate;
 	}
 
 }

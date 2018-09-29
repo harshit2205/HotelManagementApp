@@ -61,4 +61,9 @@ public class UserServiceImpl implements UserService{
 		return userDaoImpl.searchHotelByCity(city);
 	}
 
+	@Override
+	public Float fetchPerNightRate(String room_id) {
+		return userDaoImpl.fetchPerNightRate(room_id);
+	}
+
 }

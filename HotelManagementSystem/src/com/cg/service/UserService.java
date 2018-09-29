@@ -17,4 +17,5 @@ public interface UserService {
 	public BookingDetails viewBookingStatus(String booking_id);
 	public List<Hotel> searchHotelByCity(String city);
 	public float amountCalculator(Date bookedFrom,Date bookedTo,Float avgRatePerNight);
+	public Float fetchPerNightRate(String room_id);
 }

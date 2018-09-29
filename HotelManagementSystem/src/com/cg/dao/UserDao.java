@@ -15,4 +15,5 @@ public interface UserDao {
 	public BookingDetails bookRoom(String room_id,BookingDetails bookDet);
 	public BookingDetails viewBookingStatus(String booking_id);
 	public List<Hotel> searchHotelByCity(String city);
+	public Float fetchPerNightRate(String room_id);
 }

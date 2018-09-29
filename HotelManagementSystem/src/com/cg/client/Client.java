@@ -4,6 +4,8 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import com.cg.dao.AdminDaoImpl;
+import com.cg.dao.UserDaoImpl;
 import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
@@ -22,6 +24,7 @@ public class Client {
 		admSer = new AdminServiceImpl();
 		userSer = new UserServiceImpl();
 		loadIndex();
+		
 	}
 
 	//index or the main base page for the application....
@@ -136,7 +139,7 @@ public class Client {
 			break;
 		case 2: bookRoom(currentUser);
 			break;
-		case 3: viewBookingStatus();
+		case 3: viewBookingStatus(currentUser);
 		    break;
 		case 4: loadIndex();
 		 	break;
@@ -170,9 +173,10 @@ public class Client {
 	}
 
 
-	private static void viewBookingStatus() {
+	private static void viewBookingStatus(Users currentUser) {
 		System.out.println("Enter Your Booking Id: ");
-		
+		System.out.println("\n"+userSer.viewBookingStatus(scan.next()));
+		showUserDashboard(currentUser);
 		
 	}
 
@@ -207,7 +211,7 @@ public class Client {
 			
 			float avgRate = userSer.amountCalculator(bookingDetails.getBooked_from(), 
 					bookingDetails.getBooked_to(), 
-					500.00f);
+					userSer.fetchPerNightRate(bookingDetails.getRoom_id()));
 			bookingDetails.setAmount(avgRate);
 			bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
 		    System.out.println(bookingDetails);
@@ -236,11 +240,11 @@ public class Client {
 			break;
 		case 3: fetchHotel(user_name);
 			break;
-		case 4: addNewRooms();
+		case 4: addNewRooms(user_name);
 			break;
-		case 5:	updateroomdetail();
+		case 5:	updateroomdetail(user_name);
 			break;
-		case 6:	deleteRoom();
+		case 6:	deleteRoom(user_name);
 			break;
 		case 7: loadIndex();
 			break;
@@ -249,20 +253,106 @@ public class Client {
 	}
 
 
-	private static void deleteRoom() {
-		// TODO Auto-generated method stub
-		
+	private static void deleteRoom(String user_name) {
+		System.out.println("Enter Room Id.");
+		String room_id = scan.next();
+		RoomDetails roomDetails = admSer.searchRoom(room_id);
+		if(roomDetails == null){
+			System.out.println("Room Id provided is invalid!");
+			deleteRoom(user_name);
+			return;
+		}else{
+		admSer.removeRoom(room_id);
+		showAdminDashboard(user_name);
+		}
 	}
 
 
-	private static void updateroomdetail() {
-		// TODO Auto-generated method stub
-		
+	private static void updateroomdetail(String user_name) {
+		System.out.println("\nUpdate Room:");
+		System.out.print("Enter Room Id For Updation: ");
+		RoomDetails roomDetails = admSer.searchRoom(scan.next());
+		if(roomDetails == null){
+			System.out.println("Room Id provided is invalid!");
+			updateroomdetail(user_name);
+			return;
+		}else{
+			int choice = 0;
+			System.out.print("Enter Hotel Id: ");
+			roomDetails.setHotel_id(scan.next());
+			System.out.println("Select Room Type:");
+			System.out.println("1. "+AdminDaoImpl.STAN_NON_AC_ROOM+
+					"\n2. "+AdminDaoImpl.STAN_AC_ROOM+
+					"\n3. "+AdminDaoImpl.EXEC_AC_ROOM+
+					"\n4. "+AdminDaoImpl.DELUXE_AC_ROOM);
+			switch(choice)
+			{
+			case 1: roomDetails.setRoom_type(AdminDaoImpl.STAN_NON_AC_ROOM);
+				break;
+			case 2: roomDetails.setRoom_type(AdminDaoImpl.STAN_AC_ROOM);
+				break;
+			case 3: roomDetails.setRoom_type(AdminDaoImpl.EXEC_AC_ROOM);
+				break;
+			case 4: roomDetails.setRoom_type(AdminDaoImpl.DELUXE_AC_ROOM);
+				break;
+				default: System.out.println("Incorrect Input!");
+				           updateroomdetail(user_name);
+				           return;
+			}
+			System.out.print("Enter Per Night Rate: ");
+			roomDetails.setPer_night_rate(scan.nextFloat());
+			roomDetails.setAvailability(UserDaoImpl.AVAILABLE);
+			if(admSer.updateRoomInfo(roomDetails) == 1){
+				System.out.println("Room Details Successfully Altered.");
+				showAdminDashboard(user_name);
+			}
+			else{
+				System.out.println("Could not alter Information. "
+						+ "\nRedirecting to form resubmission");
+				updateroomdetail(user_name);
+				return;
+			}
+			
+		}
 	}
 
 
-	private static void addNewRooms() {
-		// TODO Auto-generated method stub
+	private static void addNewRooms(String user_name) {
+		RoomDetails roomDetails = new RoomDetails();
+		int choice = 0;
+		System.out.println("Enter Hotel Id.");
+		roomDetails.setHotel_id(scan.next());
+		System.out.println("Select Room Type.");
+		System.out.println("1. "+AdminDaoImpl.STAN_NON_AC_ROOM+
+				"\n2. "+AdminDaoImpl.STAN_AC_ROOM+
+				"\n3. "+AdminDaoImpl.EXEC_AC_ROOM+
+				"\n4. "+AdminDaoImpl.DELUXE_AC_ROOM);
+		switch(choice)
+		{
+		case 1: roomDetails.setRoom_type(AdminDaoImpl.STAN_NON_AC_ROOM);
+			break;
+		case 2: roomDetails.setRoom_type(AdminDaoImpl.STAN_AC_ROOM);
+			break;
+		case 3: roomDetails.setRoom_type(AdminDaoImpl.EXEC_AC_ROOM);
+			break;
+		case 4: roomDetails.setRoom_type(AdminDaoImpl.DELUXE_AC_ROOM);
+			break;
+			default: System.out.println("Incorrect Input!");
+			           addNewRooms(user_name);
+			           return;
+		}
+		System.out.println("Enter Per Night Rate.");
+		roomDetails.setPer_night_rate(scan.nextFloat());
+		roomDetails.setAvailability(UserDaoImpl.AVAILABLE);
+		if(admSer.addRooms(roomDetails) == 1)
+		{
+			System.out.println("Room Successfully Added.");
+			showAdminDashboard(user_name);
+		}
+		else
+		{
+		  System.out.println("Could not add Room ");	
+		}
 		
 	}
 

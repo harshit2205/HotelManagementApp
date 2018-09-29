@@ -17,7 +17,7 @@ public interface AdminDao {
 	public List<RoomDetails> fetchAvailableRooms(String hotel_id);
 	public List<RoomDetails> fetchBookedRooms(String hotel_id);
 	public int addRooms(RoomDetails roominfo);
-	public int updateRoomInfo(RoomDetails roominfo);
+	public int updateRoomInfo(RoomDetails roomDetail);
 	public void removeRoom(String room_id);
 	public List<RoomDetails> fetchAllRooms(String hotel_id);
 	public List<BookingDetails> fetchSpecificDateBooking(Date date);
@@ -25,4 +25,6 @@ public interface AdminDao {
 	public List<Users> guestForHotel(String hotel_id); 
 	public void deleteHotel(String hotel_id);
 	public int updateAvgRate(String hotel_id);
+	public String maxRoomNoFinder(String hotel_id);
+	public RoomDetails searchRoom(String room_id);
 }

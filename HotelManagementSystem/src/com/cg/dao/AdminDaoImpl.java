@@ -18,10 +18,15 @@ import com.cg.entities.Users;
 
 public class AdminDaoImpl implements AdminDao
 {
+	public static final String STAN_AC_ROOM = "STAN_AC_ROOM";
+	public static final String STAN_NON_AC_ROOM = "STAN_NON_AC_ROOM";
+	public static final String EXEC_AC_ROOM = "EXEC_AC_ROOM";
+	public static final String DELUXE_AC_ROOM = "DELUXE_AC_ROOM";
 	Connection con=null;
 	Statement st= null;
 	PreparedStatement pst = null;
 	ResultSet rs=null;
+	
 	
 	
 	@Override
@@ -268,11 +273,11 @@ public class AdminDaoImpl implements AdminDao
 		try
 		{
 			con = DBUtil.getConn();
-			String insertRoomQuery="INSERT INTO roomdetails VALUES(?,?,?,?,?,?,?)";
+			String insertRoomQuery="INSERT INTO roomdetails VALUES(?,room_id_generator,?,?,?,?,?)";
 			pst=con.prepareStatement(insertRoomQuery);
 			pst.setString(1, roominfo.getHotel_id());
-			pst.setString(2, roominfo.getRoom_id());
-			pst.setString(3, roominfo.getRoom_no());
+			
+			pst.setString(3, maxRoomNoFinder(roominfo.getHotel_id()));
 			pst.setString(4, roominfo.getRoom_type());
 			pst.setFloat(5, roominfo.getPer_night_rate());
 			pst.setInt(6, roominfo.isAvailability());
@@ -288,19 +293,19 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public int updateRoomInfo(RoomDetails roominfo) {
+	public int updateRoomInfo(RoomDetails roomInfo) {
 		int rowsAffected = 0;
 		try 
 		{
 			con = DBUtil.getConn();
 			String updateRoomQuery = "UPDATE RoomDetails SET room_no=?,room_type=?,per_night_rate=?,availability=?,photo=? WHERE room_id=?";
 			pst = con.prepareStatement(updateRoomQuery);
-			pst.setString(1, roominfo.getRoom_no());
-			pst.setString(2, roominfo.getRoom_type());
-			pst.setFloat(3, roominfo.getPer_night_rate());
-			pst.setInt(4, roominfo.isAvailability());
-			pst.setBlob(5, roominfo.getImageFile());
-			pst.setString(6, roominfo.getRoom_id());
+			pst.setString(1, roomInfo.getRoom_no());
+			pst.setString(2, roomInfo.getRoom_type());
+			pst.setFloat(3, roomInfo.getPer_night_rate());
+			pst.setInt(4, roomInfo.isAvailability());
+			pst.setBlob(5, roomInfo.getImageFile());
+			pst.setString(6, roomInfo.getRoom_id());
 			rowsAffected = pst.executeUpdate();	
 		}
 		catch (SQLException | IOException e) 
@@ -316,16 +321,29 @@ public class AdminDaoImpl implements AdminDao
 		try
 		{
 			con=DBUtil.getConn();
-			String removeRoomQuery="DELETE FROM RoomDetails WHERE room_id=?"+room_id;
+			String removeRoomQuery="DELETE FROM RoomDetails WHERE room_id= ?";
 			pst=con.prepareStatement(removeRoomQuery);
 			pst.setString(1,room_id);
 			rs=pst.executeQuery();
-			rs.close();
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
+		finally 
+        {
+            try
+            {   
+                rs.close();
+                pst.close();
+                con.close();
+            }
+            catch(SQLException e)
+            {
+//              throw  new HotelException(e.getMessage());
+                e.printStackTrace();
+            }
+        }
 	}
 
 	@Override
@@ -481,6 +499,67 @@ public class AdminDaoImpl implements AdminDao
 			}
 		}
 		return rowsAffected;
+	}
+
+	@Override
+	public String maxRoomNoFinder(String hotel_id) {
+		
+		int maxValue=1; 
+		try
+		{
+			con=DBUtil.getConn();
+			String query="Select Max(room_no) from roomdetails where hotel_id='"+hotel_id+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(query);
+			while(rs.next()) maxValue = rs.getInt(1);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return Integer.toString(maxValue);
+	}
+
+	@Override
+	public RoomDetails searchRoom(String room_id) {
+		RoomDetails roomDetails = null;
+		try
+		{
+			con=DBUtil.getConn();
+			String query="Select * from roomdetails where room_id='"+room_id+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(query);
+			while(rs.next()){
+				roomDetails = new RoomDetails();
+				roomDetails.setHotel_id(rs.getString("hotel_id"));
+				roomDetails.setRoom_id(rs.getString("room_id"));
+				roomDetails.setRoom_no(rs.getString("room_no"));
+				roomDetails.setRoom_type(rs.getString("room_type"));
+				roomDetails.setPer_night_rate(rs.getFloat("per_night_rate"));
+				roomDetails.setAvailability(rs.getInt("availability"));
+			}
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return roomDetails;
 	}
 
  

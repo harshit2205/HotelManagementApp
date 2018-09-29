@@ -1,10 +1,13 @@
 package com.cg.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import com.cg.dao.AdminDaoImpl;
+import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
+import com.cg.entities.Users;
 
 public class AdminServiceImpl implements AdminService{
 	
@@ -53,15 +56,15 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void addRooms(RoomDetails roominfo) {
+	public int addRooms(RoomDetails roominfo) {
 		// TODO Auto-generated method stub
-		adminDaoImpl.addRooms(roominfo);
+		return adminDaoImpl.addRooms(roominfo);
 	}
 
 	@Override
-	public void updateRoomInfo(RoomDetails roominfo) {
+	public int updateRoomInfo(RoomDetails roomDetail) {
 		// TODO Auto-generated method stub
-		adminDaoImpl.updateRoomInfo(roominfo);
+		return adminDaoImpl.updateRoomInfo(roomDetail);
 	}
 
 	@Override
@@ -74,6 +77,41 @@ public class AdminServiceImpl implements AdminService{
 	public List<RoomDetails> fetchAllRooms(String hotel_id) {
 		// TODO Auto-generated method stub
 		return adminDaoImpl.fetchAllRooms(hotel_id);
+	}
+
+	@Override
+	public String maxRoomNoFinder(String hotel_id) {
+		return adminDaoImpl.maxRoomNoFinder(hotel_id);
+	}
+
+	@Override
+	public List<BookingDetails> fetchSpecificDateBooking(Date date) {
+		return adminDaoImpl.fetchSpecificDateBooking(date);
+	}
+
+	@Override
+	public List<BookingDetails> bookingForSpecificHotel(String hotel_id) {
+		return adminDaoImpl.bookingForSpecificHotel(hotel_id);
+	}
+
+	@Override
+	public List<Users> guestForHotel(String hotel_id) {
+		return adminDaoImpl.guestForHotel(hotel_id);
+	}
+
+	@Override
+	public void deleteHotel(String hotel_id) {
+	    adminDaoImpl.deleteHotel(hotel_id);
+	}
+
+	@Override
+	public int updateAvgRate(String hotel_id) {
+		return adminDaoImpl.updateAvgRate(hotel_id);
+	}
+
+	@Override
+	public RoomDetails searchRoom(String room_id) {
+		return adminDaoImpl.searchRoom(room_id);
 	}
 
 }
