@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
+import com.cg.entities.RoomDetails;
 import com.cg.entities.Users;
 import com.cg.service.AdminServiceImpl;
 import com.cg.service.UserServiceImpl;
@@ -19,13 +20,19 @@ public class Client {
 	public static void main(String[] args) {
 
 		
-		int choice = 0;
+		
 		scan = new Scanner(System.in);
 		admSer = new AdminServiceImpl();
 		userSer = new UserServiceImpl();
-		
+		loadIndex();
+	}
+
+
+	//index or the main base page for the application....
+	private static void loadIndex() {
+		int choice = 0;
 		System.out.println("Welcome to SADBHAVNA HOTELS");
-		System.out.println("1.Login\t2.Register");
+		System.out.println("1.Login\t2.Register\t3.Exit");
 		choice = scan.nextInt();
 		
 		switch(choice){
@@ -36,12 +43,11 @@ public class Client {
 		default: System.out.println("incorrect input!");
 	
 		}
-
 		
-
 	}
 
 
+	
 	private static void Register() {
 		int user_role;
 		Users user = new Users();
@@ -58,12 +64,16 @@ public class Client {
 		System.out.println("Enter Phone Number");
 		user.setPhone(scan.next());
 		System.out.println("Enter Address");
-		user.setAddress(scan.next());
+		scan.nextLine();
+		user.setAddress(scan.nextLine());
 		System.out.println("Enter Email Address");
 		user.setEmail(scan.next());
-		
 		int rowsAffected = userSer.registerUser(user);
-		System.out.println(rowsAffected);
+		if(rowsAffected == 1)	showUserDashboard(user);
+		else{	
+			System.out.println("Invalid input problem resgistering, Register again");
+			loadIndex();
+		}
 	}
 
 
@@ -106,60 +116,89 @@ public class Client {
 
 	private static void showUserDashboard(Users currentUser) {
 		int choice=0;
-		System.out.println("Welcome \n"+currentUser+"\n");
-		System.out.println("1. Book Room.");
-		System.out.println("2. View Booking Status.");
-		System.out.println("3. Fetch Available Rooms.");
+		System.out.println("\nWelcome "+currentUser);
+		System.out.println("1. Find Hotel by City.");
+		System.out.println("2. Book Rooms.");
+		System.out.println("3. View Booking Status.");
+		System.out.println();
 		choice=scan.nextInt();
 		switch (choice) {
-		case 1: bookRoom(currentUser.getUser_id());
-			
+		case 1:	findHotelByCity(currentUser);
+			showUserDashboard(currentUser);
 			break;
-		case 2: viewBookingStatus();
-			    break;
-		case 3: fetchAvailableRooms();
-		        break;
-		
+		case 2: bookRoom(currentUser);
+			break;
+		case 3: viewBookingStatus();
+		    break;
 		default: System.out.println("Invalid Input! Please Try Again.");
 		         showUserDashboard(currentUser);
-		         
-			
 		}
 	}
 
 
-	private static void fetchAvailableRooms() {
-		// TODO Auto-generated method stub
-		
+	private static void findHotelByCity(Users currentUser) {
+		String city;
+		System.out.print("\n Enter City Name : ");
+		city = scan.next();
+		List<Hotel> hotels = userSer.searchHotelByCity(city);
+		if(hotels == null){
+			System.out.println("Could not Find Hotel in the corresponding city!"
+					+ "\nYou can try another city.\n");
+		}else{
+			for(Hotel hotel: hotels){
+				System.out.println(hotel);
+				
+				System.out.println("Showing available Rooms.\n");
+				List<RoomDetails> rooms = userSer.fetchAvailableRooms(hotel.getHotel_id());
+				for(RoomDetails room : rooms){
+					System.out.println(room);
+				}
+			}
+		}
 	}
 
 
 	private static void viewBookingStatus() {
-		// TODO Auto-generated method stub
+		System.out.println("Enter Your Booking Id: ");
+		
 		
 	}
 
 
-	private static void bookRoom(String userId) {
+	private static void bookRoom(Users currentUser) {
+		String option = "";
+		System.out.println("\nBook Room.\n");
 		BookingDetails bookingDetails=new BookingDetails();
-		System.out.println("Enter Room Id.");
-		bookingDetails.setRoom_id(scan.next());
-		bookingDetails.setUser_id(userId);
-		System.out.println("Enter Check-In Date.");
-		bookingDetails.setBooked_from(Date.valueOf(scan.next()));
-		System.out.println("Enter Check-Out Date.");
-		bookingDetails.setBooked_from(Date.valueOf(scan.next()));
-		System.out.println("Enter Number of Adults.");
-		bookingDetails.setNo_of_adults(scan.nextInt());
-		System.out.println("Enter Number of Children.");
-		bookingDetails.setNo_of_children(scan.nextInt());
 		
-		float avgRate = userSer.amountCalculator(bookingDetails.getBooked_from(), 
-				bookingDetails.getBooked_to(), 
-				500.00f);
-		bookingDetails.setAmount(avgRate);
-		bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
-	    System.out.println(bookingDetails);
+		System.out.println("Do you have Room Id for Booking: (Y/N)");
+		option = scan.next();
+		if(option.equals("N")) {
+			System.out.println("Find Hotel And Rooms By City.\n");
+			findHotelByCity(currentUser);
+		}else if(option.equals("Y")){
+			System.out.println("Enter Room Id.");
+			bookingDetails.setRoom_id(scan.next());
+			bookingDetails.setUser_id(currentUser.getUser_id());
+			System.out.println("Enter Check-In Date.");
+			bookingDetails.setBooked_from(Date.valueOf(scan.next()));
+			System.out.println("Enter Check-Out Date.");
+			bookingDetails.setBooked_from(Date.valueOf(scan.next()));
+			System.out.println("Enter Number of Adults.");
+			bookingDetails.setNo_of_adults(scan.nextInt());
+			System.out.println("Enter Number of Children.");
+			bookingDetails.setNo_of_children(scan.nextInt());
+			
+			float avgRate = userSer.amountCalculator(bookingDetails.getBooked_from(), 
+					bookingDetails.getBooked_to(), 
+					500.00f);
+			bookingDetails.setAmount(avgRate);
+			bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
+		    System.out.println(bookingDetails);
+		}else{
+			System.out.println("Incorrect Input. Please Try Again.");
+			bookRoom(currentUser);
+		}
+		
 	}
 
 
@@ -169,6 +208,9 @@ public class Client {
 		System.out.println("1. Add New Hotel.");
 		System.out.println("2. Modify Hotel Details.");
 		System.out.println("3. Show All Hotels Info.");
+		System.out.println("4. Add Rooms.");
+		System.out.println("5. Update Room Details.");
+		System.out.println("6. Delete Room.");
 		choice = scan.nextInt();
 		
 		switch(choice){

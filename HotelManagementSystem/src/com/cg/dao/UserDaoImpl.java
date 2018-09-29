@@ -11,6 +11,7 @@ import java.util.List;
 
 import com.cg.dbutil.DBUtil;
 import com.cg.entities.BookingDetails;
+import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 import com.cg.entities.Users;
 
@@ -100,7 +101,7 @@ public class UserDaoImpl implements UserDao{
 		List<RoomDetails> roomsList = new ArrayList<RoomDetails>();
 		try {
 			con = DBUtil.getConn();
-			String query="SELECT * FROM roomdetails WHERE hotel_id='"+hotel_id+"'";
+			String query="SELECT * FROM roomdetails WHERE hotel_id='"+hotel_id+"' AND availability="+UserDaoImpl.AVAILABLE;
 			st=con.createStatement();
 			rs=st.executeQuery(query);	
 			
@@ -227,6 +228,48 @@ public class UserDaoImpl implements UserDao{
 				}
 			}
 		return bookdetail;
+	}
+
+	@Override
+	public List<Hotel> searchHotelByCity(String city) {
+		List<Hotel> hotels = null;
+		try {
+			con = DBUtil.getConn();
+			String Query = "SELECT * FROM hotel WHERE city='"+city+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(Query);
+			if(rs != null)	hotels = new ArrayList<>();
+			while(rs.next()) {
+				Hotel hotel = new Hotel();
+				hotel = new Hotel();
+				hotel.setHotel_id(rs.getString("hotel_id"));
+				hotel.setCity(rs.getString("city"));
+				hotel.setHotel_name(rs.getString("hotel_name"));
+				hotel.setAddress(rs.getString("address"));
+				hotel.setDescription(rs.getString("description"));
+				hotel.setAvg_rate_per_night(rs.getFloat("avg_rate_per_night"));
+				hotel.setPhone_no(rs.getString("phone_no1"));
+				hotel.setPhone_no2(rs.getString("phone_no2"));
+				hotel.setRating(rs.getString("rating"));
+				hotel.setEmail(rs.getString("email"));
+				hotel.setFax(rs.getString("fax"));
+				hotels.add(hotel);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				rs.close();
+				con.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return hotels;
 	}
 
 }

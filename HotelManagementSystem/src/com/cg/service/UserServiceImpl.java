@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.cg.dao.UserDaoImpl;
 import com.cg.entities.BookingDetails;
+import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 import com.cg.entities.Users;
 
@@ -53,6 +54,11 @@ public class UserServiceImpl implements UserService{
 		int diffInDays = (int)( (bookedFrom.getTime() - bookedTo.getTime()) 
                 / (1000 * 60 * 60 * 24) );
 		return (diffInDays*avgRatePerNight);
+	}
+
+	@Override
+	public List<Hotel> searchHotelByCity(String city) {
+		return userDaoImpl.searchHotelByCity(city);
 	}
 
 }

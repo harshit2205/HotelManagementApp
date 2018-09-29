@@ -2,6 +2,7 @@ package com.cg.dao;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,8 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.cg.dbutil.DBUtil;
+import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
+import com.cg.entities.Users;
 
 public class AdminDaoImpl implements AdminDao
 {
@@ -72,8 +75,6 @@ public class AdminDaoImpl implements AdminDao
 
 	@Override
 	public int addNewhotel(Hotel hotel) {
-		// TODO Auto-generated method stub
-		
 		try
 		{
 			con = DBUtil.getConn();
@@ -131,7 +132,6 @@ public class AdminDaoImpl implements AdminDao
 	public Hotel searchHotel(String hotel_id) {
 		Hotel hotel = null;
 		try {
-			System.out.println("Inside Search");
 			con = DBUtil.getConn();
 			String Query = "SELECT * FROM hotel WHERE hotel_id='"+hotel_id+"'";
 			st=con.createStatement();
@@ -263,8 +263,8 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public void addRooms(RoomDetails roominfo) {
-		
+	public int addRooms(RoomDetails roominfo) {
+		int rowsAffected = 0;
 		try
 		{
 			con = DBUtil.getConn();
@@ -278,17 +278,18 @@ public class AdminDaoImpl implements AdminDao
 			pst.setInt(6, roominfo.isAvailability());
 			pst.setString(7, null);
 			
-			pst.executeUpdate();
+			rowsAffected = pst.executeUpdate();
 		}
 		catch(SQLException | IOException e)
 		{
 			e.printStackTrace();
 		}
+		return rowsAffected;
 	}
 
 	@Override
-	public void updateRoomInfo(RoomDetails roominfo) {
-		// TODO Auto-generated method stub
+	public int updateRoomInfo(RoomDetails roominfo) {
+		int rowsAffected = 0;
 		try 
 		{
 			con = DBUtil.getConn();
@@ -300,23 +301,18 @@ public class AdminDaoImpl implements AdminDao
 			pst.setInt(4, roominfo.isAvailability());
 			pst.setBlob(5, roominfo.getImageFile());
 			pst.setString(6, roominfo.getRoom_id());
-			pst.executeUpdate();	
+			rowsAffected = pst.executeUpdate();	
 		}
-		catch (SQLException e) 
+		catch (SQLException | IOException e) 
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		catch (IOException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		return rowsAffected;
 	}
 
 	@Override
 	public void removeRoom(String room_id) {
-		// TODO Auto-generated method stub
 		try
 		{
 			con=DBUtil.getConn();
@@ -379,5 +375,29 @@ public class AdminDaoImpl implements AdminDao
         
         return AllRoomList;
 	}
+
+	@Override
+	public List<BookingDetails> fetchSpecificDateBooking(Date date) {
+		return null;
+	}
+
+	@Override
+	public List<BookingDetails> bookingForSpecificHotel(String hotel_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Users> guestForHotel(String hotel_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteHotel(String hotel_id) {
+		// TODO Auto-generated method stub
+		
+	}
+
  
 }
