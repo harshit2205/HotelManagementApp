@@ -1,0 +1,370 @@
+package com.cg.client;
+
+import java.sql.Date;
+import java.util.List;
+import java.util.Scanner;
+
+import com.cg.entities.BookingDetails;
+import com.cg.entities.Hotel;
+import com.cg.entities.RoomDetails;
+import com.cg.entities.Users;
+import com.cg.service.AdminServiceImpl;
+import com.cg.service.UserServiceImpl;
+
+public class Client {
+	static AdminServiceImpl admSer = null;
+	static UserServiceImpl userSer = null;
+	
+	static Scanner scan;
+
+	public static void main(String[] args) {
+
+		
+		
+		scan = new Scanner(System.in);
+		admSer = new AdminServiceImpl();
+		userSer = new UserServiceImpl();
+		loadIndex();
+	}
+
+
+	//index or the main base page for the application....
+	private static void loadIndex() {
+		int choice = 0;
+		System.out.println("Welcome to SADBHAVNA HOTELS");
+		System.out.println("1. Login   2. Register   3. Exit");
+		choice = scan.nextInt();
+		
+		switch(choice){
+		case 1:Login();
+			break;
+		case 2:Register();
+			break;
+		case 3:System.exit(0);
+			break;
+		default: System.out.println("incorrect input!");
+		loadIndex();
+		}
+		
+	}
+
+
+	
+	private static void Register() {
+		System.out.println("\nREGISTRATION PORTAL");
+		int user_role;
+		Users user = new Users();
+		System.out.print("Enter User Name: ");
+		user.setUser_name(scan.next());
+		System.out.print("Enter Password: ");
+		user.setPassword(scan.next());
+		System.out.println("choose role\n1.user\n2.Employee");
+		user_role = scan.nextInt();
+		if(user_role == 1) user.setRole("user");
+		else user.setRole("employee");
+		System.out.print("Enter Mobile Number: ");
+		user.setMobile_no(scan.next());
+		System.out.print("Enter Phone Number: ");
+		user.setPhone(scan.next());
+		System.out.print("Enter Address: ");
+		scan.nextLine();
+		user.setAddress(scan.nextLine());
+		System.out.print("Enter Email Address: ");
+		user.setEmail(scan.next());
+		int rowsAffected = userSer.registerUser(user);
+		if(rowsAffected == 1)	showUserDashboard(user);
+		else{	
+			System.out.println("Invalid input problem resgistering, Register again");
+			loadIndex();
+		}
+	}
+
+
+	private static void Login() {
+		String user_name, password;
+		int choice = 0;
+		System.out.println("\nLOGIN PORTAL");
+		System.out.println("Login as- \n1. Admin\t2. User/Employee\t3. New User.");
+		choice = scan.nextInt();
+		
+		switch(choice){
+		case 1:
+			System.out.println("\nEnter Admin Credentials. ");
+			System.out.print("username:   ");
+			user_name = scan.next();
+			System.out.print("password:   ");
+			password = scan.next();
+			if(user_name.equals("secret123") || password.equals("secret123")){
+			showAdminDashboard(user_name);
+			}
+			break;
+		case 2:
+			System.out.println("\nEnter User Credentials. ");
+			System.out.print("username:   ");
+			user_name = scan.next();
+			System.out.print("password:   ");
+			password = scan.next();
+			Users currentUser = userSer.LoginUser(user_name, password);
+			if(currentUser == null){
+				System.out.println("Invalid User Login Again!");
+				Login();
+			}else{
+				showUserDashboard(currentUser);
+			}
+			break;
+		case 3:
+			Register();
+			break;
+		default:
+			System.out.println("Invalid Input Try Again!");
+			Login();
+		}
+		
+		
+		
+	}
+
+
+	private static void showUserDashboard(Users currentUser) {
+		int choice=0;
+		System.out.println("\nWelcome "+currentUser.getUser_name());
+		System.out.println("\nDASHBOARD");
+		System.out.println("1. Find Hotel by City.");
+		System.out.println("2. Book Rooms.");
+		System.out.println("3. View Booking Status.");
+		System.out.println("4. Loggout.");
+		choice=scan.nextInt();
+		switch (choice) {
+		case 1:	findHotelByCity(currentUser);
+			showUserDashboard(currentUser);
+			break;
+		case 2: bookRoom(currentUser);
+			break;
+		case 3: viewBookingStatus();
+		    break;
+		case 4: loadIndex();
+		 	break;
+		default: System.out.println("Invalid Input! Please Try Again.");
+		         showUserDashboard(currentUser);
+		}
+	}
+
+
+	private static void findHotelByCity(Users currentUser) {
+		String city;
+		System.out.println("\nFind Hotel And Rooms By City.");
+		System.out.print("Enter City Name : ");
+		city = scan.next();
+		System.out.println();
+		List<Hotel> hotels = userSer.searchHotelByCity(city);
+		if(hotels.size() == 0){
+			System.out.println("Could not Find Hotel in the corresponding city!"
+					+ "\nYou can try another city.\n");
+		}else{
+			for(Hotel hotel: hotels){
+				System.out.println(hotel);
+				
+				System.out.println("Showing available Rooms.\n");
+				List<RoomDetails> rooms = userSer.fetchAvailableRooms(hotel.getHotel_id());
+				for(RoomDetails room : rooms){
+					System.out.println(room);
+				}
+			}
+		}
+	}
+
+
+	private static void viewBookingStatus() {
+		System.out.println("Enter Your Booking Id: ");
+		
+		
+	}
+
+
+	private static void bookRoom(Users currentUser) {
+		String option = "";
+		System.out.println("\nBook Room.\n");
+		BookingDetails bookingDetails=new BookingDetails();
+		
+		System.out.println("Do you have Room Id for Booking: (Y/N)");
+		option = scan.next();
+		if(option.equals("N")) {
+			findHotelByCity(currentUser);
+		}else if(option.equals("Y")){
+		}else{
+			System.out.println("Incorrect Input! Redirecting to Find Hotle By City Name.");
+			findHotelByCity(currentUser);
+		}
+			System.out.println("Enter Room Id.");
+			bookingDetails.setRoom_id(scan.next());
+			bookingDetails.setUser_id(currentUser.getUser_id());
+			System.out.println("Enter Check-In Date. (format: yyyy-mm-dd)");
+			bookingDetails.setBooked_from(Date.valueOf(scan.next()));
+			System.out.println(bookingDetails.getBooked_from().getTime());
+			System.out.println("Enter Check-Out Date. (format: yyyy-mm-dd)");
+			bookingDetails.setBooked_to(Date.valueOf(scan.next()));
+			System.out.println(bookingDetails.getBooked_to().getTime());
+			System.out.println("Enter Number of Adults.");
+			bookingDetails.setNo_of_adults(scan.nextInt());
+			System.out.println("Enter Number of Children.");
+			bookingDetails.setNo_of_children(scan.nextInt());
+			
+			float avgRate = userSer.amountCalculator(bookingDetails.getBooked_from(), 
+					bookingDetails.getBooked_to(), 
+					500.00f);
+			bookingDetails.setAmount(avgRate);
+			bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
+		    System.out.println(bookingDetails);
+		showUserDashboard(currentUser);
+		
+	}
+
+
+	private static void showAdminDashboard(String user_name) {
+		int choice = 0;
+		System.out.println("\nWelcome "+user_name);
+		System.out.println("\nDASHBOARD");
+		System.out.println("1. Add New Hotel.");
+		System.out.println("2. Modify Hotel Details.");
+		System.out.println("3. Show All Hotels Info.");
+		System.out.println("4. Add New Room.");
+		System.out.println("5. Update Room Details.");
+		System.out.println("6. Delete Room.");
+		System.out.println("7. Loggout.");
+		choice = scan.nextInt();
+		
+		switch(choice){
+		case 1: addNewhotel(user_name);
+			break;
+		case 2: modifyHotel();
+			break;
+		case 3: fetchHotel(user_name);
+			break;
+		case 4: addNewRooms();
+			break;
+		case 5:	updateroomdetail();
+			break;
+		case 6:	deleteRoom();
+			break;
+		case 7: loadIndex();
+			break;
+		default:System.out.println("Invalid Input! Please Try Again.");
+		}
+	}
+
+
+	private static void deleteRoom() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private static void updateroomdetail() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private static void addNewRooms() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	private static void addNewhotel(String user_name) {
+		Hotel hotel = new Hotel();
+		int rowsAffected = 0;
+		System.out.println("\nENTER HOTEL DETAILS.");
+		System.out.print("Enter Hotel Name: ");
+		scan.nextLine();
+		hotel.setHotel_name(scan.nextLine());
+		System.out.print("Enter Hotel Address: ");
+		hotel.setAddress(scan.nextLine());
+		System.out.print("Enter Corresponding City: ");
+		hotel.setCity(scan.next());
+		System.out.print("Enter Hotel Rating: ");
+		hotel.setRating(scan.next());
+		System.out.println("Enter Description of Hotel");
+		scan.nextLine();
+		hotel.setDescription(scan.nextLine());
+		System.out.print("Enter Average Rooms Rate Per Night: ");
+		hotel.setAvg_rate_per_night(scan.nextFloat());
+		System.out.print("Enter Contact Number: \n1: ");
+		hotel.setPhone_no(scan.next());
+		System.out.print("2: ");
+		hotel.setPhone_no2(scan.next());
+		System.out.print("Enter Hotel Public Mail: ");
+		hotel.setEmail(scan.next());
+		System.out.print("Enter Hotel Fax: ");
+		hotel.setFax(scan.next());
+		rowsAffected = admSer.addNewhotel(hotel);
+		if(rowsAffected == 1)	System.out.println("New Hotel Added!");
+		else	System.out.println("Invalid Input");
+		
+		showAdminDashboard(user_name);
+		
+	}
+
+
+	private static void modifyHotel() {
+		System.out.println("Enter Hotel Id");
+		String hotelId=scan.next();
+		 if(admSer.searchHotel(hotelId) == null){
+			 System.out.println("Invalid Hotel Id! Enter Again");
+			 modifyHotel();
+		 } else	{
+			Hotel hotel = new Hotel(); 
+			hotel.setHotel_id(hotelId);
+			System.out.println("\nENTER HOTEL DETAILS.");
+			System.out.print("Enter Hotel Name: ");
+			hotel.setHotel_name(scan.next());
+			System.out.print("Enter Hotel Address: ");
+			hotel.setAddress(scan.next());
+			System.out.print("Enter Corresponding City: ");
+			hotel.setCity(scan.next());
+			System.out.print("Enter Hotel Rating: ");
+			hotel.setRating(scan.next());
+			System.out.print("Enter Average Rooms Rate Per Night: ");
+			hotel.setAvg_rate_per_night(scan.nextFloat());
+			System.out.print("Enter Customer Contact Number: \n1: ");
+			hotel.setPhone_no(scan.next());
+			System.out.print("2: ");
+			hotel.setPhone_no2(scan.next());
+			System.out.print("Enter Hotel Public Mail: ");
+			hotel.setEmail(scan.next());
+			System.out.print("Enter Hotel Fax: ");
+			hotel.setFax(scan.next());
+			if(admSer.updateHotelInfo(hotel)==1){
+				System.out.println("Hotel Details Updated");
+			}
+			}
+	}
+
+
+	private static void fetchHotel(String user_name) {
+		int choice = 0;
+		System.out.println("\nGet All Hotel List.");
+		List<Hotel> hotelList = admSer.fetchHotelList();
+		for(Hotel hotel: hotelList){
+			System.out.println(hotel);
+		}
+		System.out.println("\n1. Goback to Dashboard.   2. Add rooms.");
+		choice = scan.nextInt();
+		switch(choice){
+		case 1:
+			showAdminDashboard(user_name);
+			break;
+		case 2:
+			break;
+		default: System.out.println("Invalid Input! Redirecting to DashBoard.");
+			showAdminDashboard(user_name);
+		}
+	}
+
+
+
+}
+
+
+	
+	

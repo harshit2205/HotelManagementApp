@@ -17,16 +17,12 @@ public class Client {
 	
 	static Scanner scan;
 
-	public static void main(String[] args) {
-
-		
-		
+	public static void main(String[] args) {	
 		scan = new Scanner(System.in);
 		admSer = new AdminServiceImpl();
 		userSer = new UserServiceImpl();
 		loadIndex();
 	}
-
 
 	//index or the main base page for the application....
 	private static void loadIndex() {
@@ -191,13 +187,19 @@ public class Client {
 		if(option.equals("N")) {
 			findHotelByCity(currentUser);
 		}else if(option.equals("Y")){
+		}else{
+			System.out.println("Incorrect Input! Redirecting to Find Hotle By City Name.");
+			findHotelByCity(currentUser);
+		}
 			System.out.println("Enter Room Id.");
 			bookingDetails.setRoom_id(scan.next());
 			bookingDetails.setUser_id(currentUser.getUser_id());
-			System.out.println("Enter Check-In Date.");
+			System.out.println("Enter Check-In Date. (format: yyyy-mm-dd)");
 			bookingDetails.setBooked_from(Date.valueOf(scan.next()));
-			System.out.println("Enter Check-Out Date.");
-			bookingDetails.setBooked_from(Date.valueOf(scan.next()));
+			System.out.println(bookingDetails.getBooked_from().getTime());
+			System.out.println("Enter Check-Out Date. (format: yyyy-mm-dd)");
+			bookingDetails.setBooked_to(Date.valueOf(scan.next()));
+			System.out.println(bookingDetails.getBooked_to().getTime());
 			System.out.println("Enter Number of Adults.");
 			bookingDetails.setNo_of_adults(scan.nextInt());
 			System.out.println("Enter Number of Children.");
@@ -209,10 +211,7 @@ public class Client {
 			bookingDetails.setAmount(avgRate);
 			bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
 		    System.out.println(bookingDetails);
-		}else{
-			System.out.println("Incorrect Input. Please Try Again.");
-			bookRoom(currentUser);
-		}
+		showUserDashboard(currentUser);
 		
 	}
 

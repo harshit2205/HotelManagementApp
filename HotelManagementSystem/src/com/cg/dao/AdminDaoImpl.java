@@ -277,8 +277,8 @@ public class AdminDaoImpl implements AdminDao
 			pst.setFloat(5, roominfo.getPer_night_rate());
 			pst.setInt(6, roominfo.isAvailability());
 			pst.setString(7, null);
-			
 			rowsAffected = pst.executeUpdate();
+			updateAvgRate(roominfo.getHotel_id());
 		}
 		catch(SQLException | IOException e)
 		{
@@ -383,8 +383,40 @@ public class AdminDaoImpl implements AdminDao
 
 	@Override
 	public List<BookingDetails> bookingForSpecificHotel(String hotel_id) {
-		// TODO Auto-generated method stub
-		return null;
+		List<BookingDetails> BList=new ArrayList<BookingDetails>();
+		try{
+			con=DBUtil.getConn();
+			String selectqry="SELECT * FROM bookingdetails WHERE room_id IN (SELECT room_id FROM roomdetails WHERE hotel_id='"+hotel_id+"')";
+			st=con.createStatement();
+			rs=st.executeQuery(selectqry);		
+			
+			while(rs.next())
+			{
+				BList.add(new BookingDetails(rs.getString("booking_id"),
+				rs.getString("room_id"),
+				rs.getString("user_id"),
+				rs.getDate("booked_from"),
+				rs.getDate("booked_to"),
+				rs.getInt("no_of_adults"),
+				rs.getInt("no_of_children"),
+				rs.getFloat("amount")
+				));
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			try{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e){
+				e.printStackTrace();
+			}
+		}
+		return BList;
 	}
 
 	@Override
@@ -395,8 +427,60 @@ public class AdminDaoImpl implements AdminDao
 
 	@Override
 	public void deleteHotel(String hotel_id) {
-		// TODO Auto-generated method stub
+		try
+		{
+			con=DBUtil.getConn();
+			String deleteQuery="DELETE FROM Hotel WHERE hotel_id=?";
+			pst=con.prepareStatement(deleteQuery);
+			pst.setString(1,hotel_id);
+			rs=pst.executeQuery();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				rs.close();
+				pst.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 		
+	}
+
+	@Override
+	public int updateAvgRate(String hotel_id) {
+		Float average = 0f;
+		int rowsAffected = 0;
+		try
+		{
+			con=DBUtil.getConn();
+			String query="SELECT AVG(per_night_rate) FROM roomdetails WHERE hotel_id='"+hotel_id+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(query);
+			while(rs.next()) average = rs.getFloat("avg(per_night_rate)");
+			
+			Hotel hotel = searchHotel(hotel_id);
+			hotel.setAvg_rate_per_night(average);
+			rowsAffected = updateHotelInfo(hotel);
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally{
+			try {
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return rowsAffected;
 	}
 
  

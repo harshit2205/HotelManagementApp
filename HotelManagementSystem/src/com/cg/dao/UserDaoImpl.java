@@ -139,7 +139,7 @@ public class UserDaoImpl implements UserDao{
 		
 		try {
 			con = DBUtil.getConn();
-			String query = "UPDATE roomdetails SET availability="+UserDaoImpl.BOOKED+" WHERE roomi_id='"+room_id+"'";
+			String query = "UPDATE roomdetails SET availability="+UserDaoImpl.BOOKED+" WHERE room_id='"+room_id+"'";
 			pst = con.prepareStatement(query);
 			pst.executeUpdate();
 			
@@ -148,17 +148,18 @@ public class UserDaoImpl implements UserDao{
 			rs = st.executeQuery(query);
 			rs.next();
 			String booking_id = rs.getString("nextval");
+			System.out.println(booking_id);
 			
 			query = "INSERT INTO bookingdetails VALUES(?,?,?,?,?,?,?,?)";
 			pst = con.prepareStatement(query);
 			pst.setString(1, booking_id);
-			pst.setString(1, room_id);
-			pst.setString(2, bookDet.getUser_id());
-			pst.setDate(3, bookDet.getBooked_from());
-			pst.setDate(4, bookDet.getBooked_to());
-			pst.setInt(5, bookDet.getNo_of_adults());
-			pst.setInt(6, bookDet.getNo_of_children());
-			pst.setFloat(7, bookDet.getAmount());
+			pst.setString(2, room_id);
+			pst.setString(3, bookDet.getUser_id());
+			pst.setDate(4, bookDet.getBooked_from());
+			pst.setDate(5, bookDet.getBooked_to());
+			pst.setInt(6, bookDet.getNo_of_adults());
+			pst.setInt(7, bookDet.getNo_of_children());
+			pst.setFloat(8, bookDet.getAmount());
 			pst.executeUpdate();
 			
 			query = "SELECT * FROM bookingdetails WHERE booking_id='"+booking_id+"'";

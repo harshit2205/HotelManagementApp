@@ -24,4 +24,5 @@ public interface AdminDao {
 	public List<BookingDetails> bookingForSpecificHotel(String hotel_id);
 	public List<Users> guestForHotel(String hotel_id); 
 	public void deleteHotel(String hotel_id);
+	public int updateAvgRate(String hotel_id);
 }

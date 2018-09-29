@@ -1,0 +1,26 @@
+D:/HotelManagementApp/HotelManagementSystem/dbInfo.properties
+
+
+all sequences in database;
+
+1. user id generator:
+
+user_sequence
+
+2. hotel id generator:
+
+hotel_id_generator
+
+3. Room id generator:
+
+room_id_generator
+
+4. Room number generator:
+
+room_no_generator
+
+5. Booking id generator:
+
+booking_id_generator
+
+
