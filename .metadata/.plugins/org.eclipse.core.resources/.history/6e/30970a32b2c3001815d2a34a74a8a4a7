@@ -232,12 +232,13 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public List<Hotel> searchHotelByCity(String city) {
-		List<Hotel> hotels =  new ArrayList<>();
+		List<Hotel> hotels = null;
 		try {
 			con = DBUtil.getConn();
 			String Query = "SELECT * FROM hotel WHERE city='"+city+"'";
 			st=con.createStatement();
 			rs=st.executeQuery(Query);
+			if(rs != null)	hotels = new ArrayList<>();
 			while(rs.next()) {
 				Hotel hotel = new Hotel();
 				hotel = new Hotel();

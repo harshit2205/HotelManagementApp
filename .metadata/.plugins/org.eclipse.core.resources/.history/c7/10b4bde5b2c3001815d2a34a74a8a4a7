@@ -40,8 +40,6 @@ public class Client {
 			break;
 		case 2:Register();
 			break;
-		case 3:System.exit(0);
-			break;
 		default: System.out.println("incorrect input!");
 		loadIndex();
 		}
@@ -89,7 +87,6 @@ public class Client {
 		
 		switch(choice){
 		case 1:
-			System.out.println("\nEnter Admin Credentials. ");
 			System.out.print("username:   ");
 			user_name = scan.next();
 			System.out.print("password:   ");
@@ -99,7 +96,6 @@ public class Client {
 			}
 			break;
 		case 2:
-			System.out.println("\nEnter User Credentials. ");
 			System.out.print("username:   ");
 			user_name = scan.next();
 			System.out.print("password:   ");
@@ -132,7 +128,7 @@ public class Client {
 		System.out.println("1. Find Hotel by City.");
 		System.out.println("2. Book Rooms.");
 		System.out.println("3. View Booking Status.");
-		System.out.println("4. Loggout.");
+		System.out.println("4 Loggout.");
 		choice=scan.nextInt();
 		switch (choice) {
 		case 1:	findHotelByCity(currentUser);
@@ -219,64 +215,34 @@ public class Client {
 
 	private static void showAdminDashboard(String user_name) {
 		int choice = 0;
-		System.out.println("\nWelcome "+user_name);
-		System.out.println("\nDASHBOARD");
+		System.out.println("Welcome "+user_name+"\n");
 		System.out.println("1. Add New Hotel.");
 		System.out.println("2. Modify Hotel Details.");
 		System.out.println("3. Show All Hotels Info.");
-		System.out.println("4. Add New Room.");
+		System.out.println("4. Add Rooms.");
 		System.out.println("5. Update Room Details.");
 		System.out.println("6. Delete Room.");
-		System.out.println("7. Loggout.");
 		choice = scan.nextInt();
 		
 		switch(choice){
-		case 1: addNewhotel(user_name);
+		case 1: addNewhotel();
 			break;
 		case 2: modifyHotel();
 			break;
-		case 3: fetchHotel(user_name);
-			break;
-		case 4: addNewRooms();
-			break;
-		case 5:	updateroomdetail();
-			break;
-		case 6:	deleteRoom();
-			break;
-		case 7: loadIndex();
+		case 3: fetchHotel();
 			break;
 		default:System.out.println("Invalid Input! Please Try Again.");
 		}
 	}
 
 
-	private static void deleteRoom() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private static void updateroomdetail() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private static void addNewRooms() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private static void addNewhotel(String user_name) {
+	private static void addNewhotel() {
 		Hotel hotel = new Hotel();
-		int rowsAffected = 0;
 		System.out.println("\nENTER HOTEL DETAILS.");
 		System.out.print("Enter Hotel Name: ");
-		scan.nextLine();
-		hotel.setHotel_name(scan.nextLine());
+		hotel.setHotel_name(scan.next());
 		System.out.print("Enter Hotel Address: ");
-		hotel.setAddress(scan.nextLine());
+		hotel.setAddress(scan.next());
 		System.out.print("Enter Corresponding City: ");
 		hotel.setCity(scan.next());
 		System.out.print("Enter Hotel Rating: ");
@@ -294,11 +260,7 @@ public class Client {
 		hotel.setEmail(scan.next());
 		System.out.print("Enter Hotel Fax: ");
 		hotel.setFax(scan.next());
-		rowsAffected = admSer.addNewhotel(hotel);
-		if(rowsAffected == 1)	System.out.println("New Hotel Added!");
-		else	System.out.println("Invalid Input");
-		
-		showAdminDashboard(user_name);
+		admSer.addNewhotel(hotel);
 		
 	}
 
@@ -338,23 +300,11 @@ public class Client {
 	}
 
 
-	private static void fetchHotel(String user_name) {
-		int choice = 0;
+	private static void fetchHotel() {
 		System.out.println("\nGet All Hotel List.");
 		List<Hotel> hotelList = admSer.fetchHotelList();
 		for(Hotel hotel: hotelList){
 			System.out.println(hotel);
-		}
-		System.out.println("\n1. Goback to Dashboard.   2. Add rooms.");
-		choice = scan.nextInt();
-		switch(choice){
-		case 1:
-			showAdminDashboard(user_name);
-			break;
-		case 2:
-			break;
-		default: System.out.println("Invalid Input! Redirecting to DashBoard.");
-			showAdminDashboard(user_name);
 		}
 	}
 

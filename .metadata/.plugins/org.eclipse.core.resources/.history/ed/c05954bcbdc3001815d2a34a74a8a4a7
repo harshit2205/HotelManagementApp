@@ -224,7 +224,7 @@ public class Client {
 		System.out.println("1. Add New Hotel.");
 		System.out.println("2. Modify Hotel Details.");
 		System.out.println("3. Show All Hotels Info.");
-		System.out.println("4. Add New Room.");
+		System.out.println("4. Add Rooms.");
 		System.out.println("5. Update Room Details.");
 		System.out.println("6. Delete Room.");
 		System.out.println("7. Loggout.");
@@ -235,36 +235,12 @@ public class Client {
 			break;
 		case 2: modifyHotel();
 			break;
-		case 3: fetchHotel(user_name);
-			break;
-		case 4: addNewRooms();
-			break;
-		case 5:	updateroomdetail();
-			break;
-		case 6:	deleteRoom();
+		case 3: fetchHotel();
 			break;
 		case 7: loadIndex();
 			break;
 		default:System.out.println("Invalid Input! Please Try Again.");
 		}
-	}
-
-
-	private static void deleteRoom() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private static void updateroomdetail() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	private static void addNewRooms() {
-		// TODO Auto-generated method stub
-		
 	}
 
 
@@ -338,24 +314,13 @@ public class Client {
 	}
 
 
-	private static void fetchHotel(String user_name) {
-		int choice = 0;
+	private static void fetchHotel() {
 		System.out.println("\nGet All Hotel List.");
 		List<Hotel> hotelList = admSer.fetchHotelList();
 		for(Hotel hotel: hotelList){
 			System.out.println(hotel);
 		}
-		System.out.println("\n1. Goback to Dashboard.   2. Add rooms.");
-		choice = scan.nextInt();
-		switch(choice){
-		case 1:
-			showAdminDashboard(user_name);
-			break;
-		case 2:
-			break;
-		default: System.out.println("Invalid Input! Redirecting to DashBoard.");
-			showAdminDashboard(user_name);
-		}
+		
 	}
 
 
