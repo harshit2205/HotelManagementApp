@@ -399,7 +399,7 @@ public class AdminDaoImpl implements AdminDao
 		List<BookingDetails> BList=new ArrayList<BookingDetails>();
 		try{
 			con=DBUtil.getConn();
-			String selectqry="SELECT * FROM bookingdetails WHERE '"+date+"'>=booked_from AND '"+date+"'<booked_to";
+			String selectqry="SELECT * FROM bookingdetails WHERE '"+date+"' BETWEEN booked_from AND booked_to";
 			st=con.createStatement();
 			rs=st.executeQuery(selectqry);
 			

@@ -295,7 +295,7 @@ public class Client {
 	}
 
 	private static void bookingForSpecificDate(String user_name) {
-		System.out.println("Enter the ");
+		
 	}
 
 	private static void deleteRoom(String user_name) {
@@ -352,7 +352,7 @@ public class Client {
 				showAdminDashboard(user_name);
 			}
 			else{
-				System.out.println("Could not update Information."
+				System.out.println("Could not alter Information. "
 						+ "\nRedirecting to form resubmission");
 				updateroomdetail(user_name);
 				return;

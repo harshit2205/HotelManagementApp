@@ -295,7 +295,7 @@ public class Client {
 	}
 
 	private static void bookingForSpecificDate(String user_name) {
-		System.out.println("Enter the ");
+		System.out.println();
 	}
 
 	private static void deleteRoom(String user_name) {

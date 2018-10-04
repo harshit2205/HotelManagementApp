@@ -46,8 +46,8 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public float amountCalculator(Date bookedFrom, Date bookedTo,
 			Float avgRatePerNight) {
-		int diffInDays = (int)( (bookedTo.getTime() - bookedFrom.getTime()) 
-                / (1000 * 60 * 60 * 24));
+		int diffInDays = (int)( (bookedFrom.getTime() - bookedTo.getTime()) 
+                / (1000 * 60 * 60 * 24) );
 		return (diffInDays*avgRatePerNight);
 	}
 

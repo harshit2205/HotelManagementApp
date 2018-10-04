@@ -108,7 +108,7 @@ public class Client {
 			password = scan.next();
 			Users currentUser = userSer.LoginUser(user_name, password);
 			if(currentUser == null){
-				System.out.println("Invalid credentials! Please try again.\n");
+				System.out.println("Invalid User Login Again!");
 				loadIndex();
 			}else{
 				showUserDashboard(currentUser);
@@ -162,7 +162,6 @@ public class Client {
 		if(hotels.size() == 0){
 			System.out.println("Could not Find Hotel in the corresponding city!"
 					+ "\nYou can try another city.\n");
-			findHotelByCity(currentUser);
 		}else{
 			for(Hotel hotel: hotels){
 				System.out.println(hotel);
@@ -282,7 +281,7 @@ public class Client {
 		}else{
 			List<BookingDetails> allbookings = 
 				admSer.bookingForSpecificHotel(hotel_id);
-			if(allbookings.size() == 0){
+			if(allbookings == null){
 				System.out.println("there is no bookings for perticular hotel.");
 				showAdminDashboard(user_name);
 			}
@@ -295,7 +294,7 @@ public class Client {
 	}
 
 	private static void bookingForSpecificDate(String user_name) {
-		System.out.println("Enter the ");
+		
 	}
 
 	private static void deleteRoom(String user_name) {
@@ -352,7 +351,7 @@ public class Client {
 				showAdminDashboard(user_name);
 			}
 			else{
-				System.out.println("Could not update Information."
+				System.out.println("Could not alter Information. "
 						+ "\nRedirecting to form resubmission");
 				updateroomdetail(user_name);
 				return;
