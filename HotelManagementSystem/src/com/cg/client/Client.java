@@ -135,7 +135,7 @@ public class Client {
 		choice=scan.nextInt();
 		switch (choice) {
 		case 1:	findHotelByCity(currentUser);
-			showUserDashboard(currentUser);
+				showUserDashboard(currentUser);
 			break;
 		case 2: bookRoom(currentUser);
 			break;
@@ -230,13 +230,16 @@ public class Client {
 		System.out.println("4. Add New Room.");
 		System.out.println("5. Update Room Details.");
 		System.out.println("6. Delete Room.");
-		System.out.println("7. Loggout.");
+		System.out.println("7. Show bookings for specific date.");
+		System.out.println("8. Fetch bookings for specfied hotel.");
+		System.out.println("9. Find Guest List for specified hotel.");
+		System.out.println("10. Loggout.");
 		choice = scan.nextInt();
 		
 		switch(choice){
 		case 1: addNewhotel(user_name);
 			break;
-		case 2: modifyHotel();
+		case 2: modifyHotel(user_name);
 			break;
 		case 3: fetchHotel(user_name);
 			break;
@@ -246,12 +249,50 @@ public class Client {
 			break;
 		case 6:	deleteRoom(user_name);
 			break;
-		case 7: loadIndex();
+		case 7: bookingForSpecificDate(user_name);
+			break;
+		case 8: bookingForSpecificHotel(user_name);
+			break;
+		case 9: guestListForHotel(user_name);
+			break;
+		case 10: loadIndex();
 			break;
 		default:System.out.println("Invalid Input! Please Try Again.");
 		}
 	}
 
+
+	private static void guestListForHotel(String user_name) {
+		
+	}
+
+	private static void bookingForSpecificHotel(String user_name) {
+		String hotel_id = "";
+		System.out.println("Enter the Hotel Id"
+				+ "\nif u dont have Hotel Id press 1"
+				+ "\n to view List of hotels:");
+		hotel_id = scan.next();
+		if(hotel_id.equals("1")){
+			fetchHotel(user_name);
+			return;
+		}else{
+			List<BookingDetails> allbookings = 
+				admSer.bookingForSpecificHotel(hotel_id);
+			if(allbookings == null){
+				System.out.println("there is no bookings for perticular hotel.");
+				showAdminDashboard(user_name);
+			}
+			for(BookingDetails booking: allbookings){
+				System.out.println(booking);
+				System.out.println();
+			}
+			showAdminDashboard(user_name);
+		}
+	}
+
+	private static void bookingForSpecificDate(String user_name) {
+		
+	}
 
 	private static void deleteRoom(String user_name) {
 		System.out.println("Enter Room Id.");
@@ -327,6 +368,7 @@ public class Client {
 				"\n2. "+AdminDaoImpl.STAN_AC_ROOM+
 				"\n3. "+AdminDaoImpl.EXEC_AC_ROOM+
 				"\n4. "+AdminDaoImpl.DELUXE_AC_ROOM);
+		choice = scan.nextInt();
 		switch(choice)
 		{
 		case 1: roomDetails.setRoom_type(AdminDaoImpl.STAN_NON_AC_ROOM);
@@ -343,6 +385,7 @@ public class Client {
 		}
 		System.out.println("Enter Per Night Rate.");
 		roomDetails.setPer_night_rate(scan.nextFloat());
+		admSer.updateAvgRate(roomDetails.getHotel_id());
 		roomDetails.setAvailability(UserDaoImpl.AVAILABLE);
 		if(admSer.addRooms(roomDetails) == 1)
 		{
@@ -373,8 +416,6 @@ public class Client {
 		System.out.println("Enter Description of Hotel");
 		scan.nextLine();
 		hotel.setDescription(scan.nextLine());
-		System.out.print("Enter Average Rooms Rate Per Night: ");
-		hotel.setAvg_rate_per_night(scan.nextFloat());
 		System.out.print("Enter Contact Number: \n1: ");
 		hotel.setPhone_no(scan.next());
 		System.out.print("2: ");
@@ -392,12 +433,12 @@ public class Client {
 	}
 
 
-	private static void modifyHotel() {
+	private static void modifyHotel(String user_name) {
 		System.out.println("Enter Hotel Id");
 		String hotelId=scan.next();
 		 if(admSer.searchHotel(hotelId) == null){
 			 System.out.println("Invalid Hotel Id! Enter Again");
-			 modifyHotel();
+			 modifyHotel(user_name);
 		 } else	{
 			Hotel hotel = new Hotel(); 
 			hotel.setHotel_id(hotelId);
@@ -424,6 +465,7 @@ public class Client {
 				System.out.println("Hotel Details Updated");
 			}
 			}
+		 showAdminDashboard(user_name);
 	}
 
 
@@ -434,21 +476,19 @@ public class Client {
 		for(Hotel hotel: hotelList){
 			System.out.println(hotel);
 		}
-		System.out.println("\n1. Goback to Dashboard.   2. Add rooms.");
+		System.out.println("\n1. Go back to Dashboard.   2. Add rooms.");
 		choice = scan.nextInt();
 		switch(choice){
 		case 1:
 			showAdminDashboard(user_name);
 			break;
 		case 2:
+			addNewRooms(user_name);
 			break;
 		default: System.out.println("Invalid Input! Redirecting to DashBoard.");
 			showAdminDashboard(user_name);
 		}
 	}
-
-
-
 }
 
 
