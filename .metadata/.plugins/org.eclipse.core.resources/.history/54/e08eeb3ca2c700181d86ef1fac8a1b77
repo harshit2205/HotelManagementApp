@@ -1,0 +1,8 @@
+package com.cg.service;
+
+import com.cg.entities.Users;
+
+public interface ValidationService 
+{
+	public String UserValidation(Users user);
+}
