@@ -9,11 +9,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.omg.CORBA.UserException;
+
 import com.cg.dbutil.DBUtil;
 import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 import com.cg.entities.Users;
+import com.cg.exception.BookingsNotFoundException;
+import com.cg.exception.HotelNotFoundException;
+import com.cg.exception.RoomsNotFoundException;
+import com.cg.exception.UserCreationException;
+import com.cg.exception.UserNotFoundException;
 
 public class UserDaoImpl implements UserDao{
 	
@@ -27,7 +34,8 @@ public class UserDaoImpl implements UserDao{
 	
 
 	@Override
-	public int registerUser(Users user) {
+	public int registerUser(Users user) throws UserCreationException{
+		int rowsAffected = 0;
 		try
 		{
 			con = DBUtil.getConn();
@@ -40,17 +48,22 @@ public class UserDaoImpl implements UserDao{
 			pst.setString(5, user.getPhone());
 			pst.setString(6, user.getAddress());
 			pst.setString(7, user.getEmail());
-			return pst.executeUpdate();
-		}
-		catch(SQLException | IOException e)
-		{
-			e.printStackTrace();
+			rowsAffected =  pst.executeUpdate();
+			if(rowsAffected == 0){
+				throw new UserCreationException("Id Cannot be created! Please try again.");
+			}
+			return rowsAffected;
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
 		}
 		return 0;
 	}
 
 	@Override
-	public Users LoginUser(String user_name, String password) {
+	public Users LoginUser(String user_name, String password) 
+			throws UserNotFoundException{
 		
 		Users user = null;
 		try 
@@ -71,15 +84,14 @@ public class UserDaoImpl implements UserDao{
 						rs.getString("address"),
 						rs.getString("email"));
 			}
-		}
-		catch(Exception e)
-		{
-			
-//			throw new HotelException(e.getMessage());
-			e.printStackTrace();
-		}
-		finally 
-		{
+			if(user == null){
+				throw new UserNotFoundException("Invalid username and password");
+			}
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
+		} finally {
 			try
 			{
 				st.close();
@@ -88,7 +100,6 @@ public class UserDaoImpl implements UserDao{
 			}
 			catch(SQLException e)
 			{
-//				throw  new HotelException(e.getMessage());
 				e.printStackTrace();
 			}
 		}
@@ -96,7 +107,8 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public List<RoomDetails> fetchAvailableRooms(String hotel_id) {
+	public List<RoomDetails> fetchAvailableRooms(String hotel_id) 
+			throws RoomsNotFoundException{
 		
 		List<RoomDetails> roomsList = new ArrayList<RoomDetails>();
 		try {
@@ -116,8 +128,14 @@ public class UserDaoImpl implements UserDao{
 				rs.getBlob("photo"));
 				roomsList.add(room);
 			}
-		} catch (SQLException | IOException e) {
-			e.printStackTrace();
+			if(roomsList.size() == 0){
+				throw new RoomsNotFoundException("There are no rooms available with the given hotel id.");
+			}
+
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
 		} finally{
 			try
 			{
@@ -127,7 +145,6 @@ public class UserDaoImpl implements UserDao{
 			}
 			catch(SQLException e)
 			{
-//				throw  new HotelException(e.getMessage());
 				e.printStackTrace();
 			}
 		}
@@ -135,13 +152,17 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public BookingDetails bookRoom(String room_id, BookingDetails bookDet) {
-		
+	public BookingDetails bookRoom(String room_id, BookingDetails bookDet) 
+			throws BookingsNotFoundException, RoomsNotFoundException{
+		int rowsAffected = 0;
 		try {
 			con = DBUtil.getConn();
 			String query = "UPDATE roomdetails SET availability="+UserDaoImpl.BOOKED+" WHERE room_id='"+room_id+"'";
 			pst = con.prepareStatement(query);
-			pst.executeUpdate();
+			rowsAffected = pst.executeUpdate();
+			if(rowsAffected == 0){
+				throw new RoomsNotFoundException("Availability of room could not be changed.");
+			}
 			
 			query="SELECT booking_id_generator.nextval FROM dual";
 			st=con.createStatement();
@@ -150,6 +171,7 @@ public class UserDaoImpl implements UserDao{
 			String booking_id = rs.getString("nextval");
 			System.out.println(booking_id);
 			
+			rowsAffected = 0;
 			query = "INSERT INTO bookingdetails VALUES(?,?,?,?,?,?,?,?)";
 			pst = con.prepareStatement(query);
 			pst.setString(1, booking_id);
@@ -160,11 +182,16 @@ public class UserDaoImpl implements UserDao{
 			pst.setInt(6, bookDet.getNo_of_adults());
 			pst.setInt(7, bookDet.getNo_of_children());
 			pst.setFloat(8, bookDet.getAmount());
-			pst.executeUpdate();
-			
+			rowsAffected = pst.executeUpdate();
+			if(rowsAffected == 0){
+				throw new BookingsNotFoundException("Booking could not be processed. Please try again.");
+			}
 			query = "SELECT * FROM bookingdetails WHERE booking_id='"+booking_id+"'";
 			st = con.createStatement();
 			rs =st.executeQuery(query);
+			if(rs == null){
+				throw new BookingsNotFoundException("Could not fetch booking details");
+			}
 			while(rs.next()){
 				bookDet = new BookingDetails(
 						rs.getString("booking_id"),
@@ -176,8 +203,11 @@ public class UserDaoImpl implements UserDao{
 						rs.getInt("no_of_children"),
 						rs.getFloat("amount"));
 			}
-		} catch (SQLException | IOException e) {
-			e.printStackTrace();
+
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
 		} finally{
 			try{
 				st.close();
@@ -193,7 +223,8 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public BookingDetails viewBookingStatus(String booking_id) {
+	public BookingDetails viewBookingStatus(String booking_id) 
+			throws BookingsNotFoundException{
 		
 		BookingDetails bookdetail= null;
 		try {
@@ -201,7 +232,6 @@ public class UserDaoImpl implements UserDao{
 			String query="SELECT * FROM bookingdetails WHERE booking_id ='"+booking_id+"'";
 			st=con.createStatement();
 			rs=st.executeQuery(query);	
-			
 			while(rs.next()){
 				bookdetail = new BookingDetails(
 						rs.getString("booking_id"),
@@ -213,9 +243,15 @@ public class UserDaoImpl implements UserDao{
 						rs.getInt("no_of_children"),
 						rs.getFloat("amount"));
 			}
-			}catch (SQLException | IOException e) {
-				e.printStackTrace();
-			} finally{
+			if(bookdetail == null){
+				throw new BookingsNotFoundException("There is no booking detail available for"
+						+ "\nthe following Id");
+			}
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
+		} finally{
 				try
 				{
 					st.close();
@@ -232,7 +268,8 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public List<Hotel> searchHotelByCity(String city) {
+	public List<Hotel> searchHotelByCity(String city) 
+			throws HotelNotFoundException{
 		List<Hotel> hotels =  new ArrayList<>();
 		try {
 			con = DBUtil.getConn();
@@ -255,11 +292,15 @@ public class UserDaoImpl implements UserDao{
 				hotel.setFax(rs.getString("fax"));
 				hotels.add(hotel);
 			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		finally {
+			if(hotels.size() == 0){
+				throw new HotelNotFoundException("\nThere are no hotels in the following city.");
+				
+			}
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
+		}finally {
 			try {
 				rs.close();
 				con.close();
@@ -273,26 +314,27 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	public Float fetchPerNightRate(String room_id) {
-		Float perNightRate=0f;
+	public Float fetchPerNightRate(String room_id) 
+			throws RoomsNotFoundException{
+		Float perNightRate = null;
 		try 
 		{
 			con=DBUtil.getConn();
 			String query="SELECT per_night_rate FROM roomdetails where room_id='"+room_id+"'";
 			st=con.createStatement();
-			rs=st.executeQuery(query);		
-			
+			rs=st.executeQuery(query);	
 			while(rs.next())
 			{
 				perNightRate = rs.getFloat("per_night_rate");
 			}
-		}
-		catch(Exception e)
-		{
-//			throw new HotelException(e.getMessage());
-			e.printStackTrace();
-		}
-		finally 
+			if(perNightRate == null){
+				throw new RoomsNotFoundException("\nThere is no room with perticular Id.");
+			}
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
+		} finally 
 		{
 			try
 			{

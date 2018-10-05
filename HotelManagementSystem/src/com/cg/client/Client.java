@@ -1,6 +1,9 @@
 package com.cg.client;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,6 +13,11 @@ import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 import com.cg.entities.Users;
+import com.cg.exception.BookingsNotFoundException;
+import com.cg.exception.HotelNotFoundException;
+import com.cg.exception.RoomsNotFoundException;
+import com.cg.exception.UserCreationException;
+import com.cg.exception.UserNotFoundException;
 import com.cg.service.AdminServiceImpl;
 import com.cg.service.UserServiceImpl;
 
@@ -29,11 +37,14 @@ public class Client {
 	//index or the main base page for the application....
 	private static void loadIndex() {
 		int choice = 0;
+		
 		System.out.println("Welcome to SADBHAVNA HOTELS");
 		System.out.println("1. Login   2. Register   3. Exit");
+		try{
 		choice = scan.nextInt();
 		
 		switch(choice){
+		case 0:loadIndex();break;
 		case 1:Login();
 			break;
 		case 2:Register();
@@ -43,12 +54,17 @@ public class Client {
 		default: System.out.println("incorrect input!");
 		loadIndex();
 		}
-		
+		}catch(InputMismatchException e){
+			System.out.println("Invalid credentials! Please try again.");
+			scan.next();
+			loadIndex();
+			
+		}
 	}
 
 
 	
-	private static void Register() {
+	private static void Register(){
 		System.out.println("\nREGISTRATION PORTAL");
 		int user_role;
 		Users user = new Users();
@@ -59,7 +75,11 @@ public class Client {
 		System.out.println("choose role\n1.user\n2.Employee");
 		user_role = scan.nextInt();
 		if(user_role == 1) user.setRole("user");
-		else user.setRole("employee");
+		else if(user_role == 2) user.setRole("employee");
+		else {
+			System.out.println("invalid input try again.");
+			Register();
+		}
 		System.out.print("Enter Mobile Number: ");
 		user.setMobile_no(scan.next());
 		System.out.print("Enter Phone Number: ");
@@ -69,12 +89,13 @@ public class Client {
 		user.setAddress(scan.nextLine());
 		System.out.print("Enter Email Address: ");
 		user.setEmail(scan.next());
-		int rowsAffected = userSer.registerUser(user);
-		if(rowsAffected == 1)	showUserDashboard(user);
-		else{	
-			System.out.println("Invalid input problem resgistering, Register again");
+		try{
+			userSer.registerUser(user);
+		}catch(UserCreationException e){
+			System.out.println(e);
 			loadIndex();
 		}
+		showUserDashboard(user);
 	}
 
 
@@ -83,8 +104,8 @@ public class Client {
 		int choice = 0;
 		System.out.println("\nLOGIN PORTAL");
 		System.out.println("Login as- \n1. Admin\t2. User/Employee\t3. New User.");
+		try{
 		choice = scan.nextInt();
-		
 		switch(choice){
 		case 1:
 			System.out.println("\nEnter Admin Credentials. ");
@@ -105,13 +126,14 @@ public class Client {
 			user_name = scan.next();
 			System.out.print("password:   ");
 			password = scan.next();
-			Users currentUser = userSer.LoginUser(user_name, password);
-			if(currentUser == null){
-				System.out.println("Invalid credentials! Please try again.\n");
+			Users currentUser = null;
+			try{
+				currentUser = userSer.LoginUser(user_name, password);
+			}catch(UserNotFoundException e){
+				System.out.println(e);
 				loadIndex();
-			}else{
-				showUserDashboard(currentUser);
 			}
+			showUserDashboard(currentUser);
 			break;
 		case 3:
 			Register();
@@ -119,6 +141,12 @@ public class Client {
 		default:
 			System.out.println("Invalid Input Try Again!");
 			Login();
+		}
+		}catch(InputMismatchException e){
+			System.out.println("Input is not valid");
+			scan.next();
+			Login();
+			return ;
 		}
 		
 		
@@ -128,6 +156,7 @@ public class Client {
 
 	private static void showUserDashboard(Users currentUser) {
 		int choice=0;
+		try{
 		System.out.println("\nWelcome "+currentUser.getUser_name());
 		System.out.println("\nDASHBOARD");
 		System.out.println("1. Find Hotel by City.");
@@ -148,6 +177,12 @@ public class Client {
 		default: System.out.println("Invalid Input! Please Try Again.");
 		         showUserDashboard(currentUser);
 		}
+		}catch(InputMismatchException e){
+			System.out.println("Input is not valid");
+			scan.next();
+			showUserDashboard(currentUser);
+			return;
+		}
 	}
 
 
@@ -157,34 +192,44 @@ public class Client {
 		System.out.print("Enter City Name : ");
 		city = scan.next();
 		System.out.println();
-		List<Hotel> hotels = userSer.searchHotelByCity(city);
-		if(hotels.size() == 0){
-			System.out.println("Could not Find Hotel in the corresponding city!"
-					+ "\nYou can try another city.\n");
-			findHotelByCity(currentUser);
-		}else{
+		List<Hotel> hotels = null;
+		try{
+			hotels = userSer.searchHotelByCity(city);
 			for(Hotel hotel: hotels){
 				System.out.println(hotel);
 				
 				System.out.println("Showing available Rooms.\n");
-				List<RoomDetails> rooms = userSer.fetchAvailableRooms(hotel.getHotel_id());
-				for(RoomDetails room : rooms){
-					System.out.println(room);
+				try{
+					List<RoomDetails> rooms = userSer.fetchAvailableRooms(hotel.getHotel_id());
+					for(RoomDetails room : rooms){
+						System.out.println(room);
+					}
+				}catch(RoomsNotFoundException e){
+					System.out.println(e);
 				}
 			}
-		}
+		}catch(HotelNotFoundException e){
+			System.out.println(e);
+			findHotelByCity(currentUser);
+		}	
 	}
 
 
-	private static void viewBookingStatus(Users currentUser) {
+	private static void viewBookingStatus(Users currentUser) throws InputMismatchException{
 		System.out.println("Enter Your Booking Id: ");
-		System.out.println("\n"+userSer.viewBookingStatus(scan.next()));
-		showUserDashboard(currentUser);
+		try{
+			System.out.println("\n"+userSer.viewBookingStatus(scan.next()));
+			showUserDashboard(currentUser);
+		}catch(BookingsNotFoundException e){
+			System.out.println(e);
+			showUserDashboard(currentUser);
+		}
+		
 		
 	}
 
 
-	private static void bookRoom(Users currentUser) {
+	private static void bookRoom(Users currentUser) throws InputMismatchException{
 		String option = "";
 		System.out.println("\nBook Room.\n");
 		BookingDetails bookingDetails=new BookingDetails();
@@ -212,70 +257,90 @@ public class Client {
 			System.out.println("Enter Number of Children.");
 			bookingDetails.setNo_of_children(scan.nextInt());
 			
-			float avgRate = userSer.amountCalculator(bookingDetails.getBooked_from(), 
-					bookingDetails.getBooked_to(), 
-					userSer.fetchPerNightRate(bookingDetails.getRoom_id()));
-			bookingDetails.setAmount(avgRate);
-			bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
-		    System.out.println(bookingDetails);
-		showUserDashboard(currentUser);
+			try{
+				float perNightRate = userSer.fetchPerNightRate(bookingDetails.getRoom_id());
+				float avgRate = userSer.amountCalculator(bookingDetails.getBooked_from(), 
+						bookingDetails.getBooked_to(), perNightRate	);
+				bookingDetails.setAmount(avgRate);
+				bookingDetails=userSer.bookRoom(bookingDetails.getRoom_id(), bookingDetails);
+			    System.out.println(bookingDetails);
+				showUserDashboard(currentUser);
+			}catch(RoomsNotFoundException | BookingsNotFoundException e){
+				System.out.println(e);
+				showUserDashboard(currentUser);
+			}
 		
 	}
 
 
 	private static void showAdminDashboard(String user_name) {
-		int choice = 0;
-		System.out.println("\nWelcome "+user_name);
-		System.out.println("\nDASHBOARD");
-		System.out.println("1. Add New Hotel.");
-		System.out.println("2. Modify Hotel Details.");
-		System.out.println("3. Show All Hotels Info.");
-		System.out.println("4. Add New Room.");
-		System.out.println("5. Update Room Details.");
-		System.out.println("6. Delete Room.");
-		System.out.println("7. Show bookings for specific date.");
-		System.out.println("8. Fetch bookings for specfied hotel.");
-		System.out.println("9. Find Guest List for specified hotel.");
-		System.out.println("10. Loggout.");
-		choice = scan.nextInt();
-		
-		switch(choice){
-		case 1: addNewhotel(user_name);
-			break;
-		case 2: modifyHotel(user_name);
-			break;
-		case 3: fetchHotel(user_name);
-			break;
-		case 4: addNewRooms(user_name);
-			break;
-		case 5:	updateroomdetail(user_name);
-			break;
-		case 6:	deleteRoom(user_name);
-			break;
-		case 7: bookingForSpecificDate(user_name);
-			break;
-		case 8: bookingForSpecificHotel(user_name);
-			break;
-		case 9: guestListForHotel(user_name);
-			break;
-		case 10: loadIndex();
-			break;
-		default:System.out.println("Invalid Input! Please Try Again.");
+		try{
+			int choice = 0;
+			System.out.println("\nWelcome "+user_name);
+			System.out.println("\nDASHBOARD");
+			System.out.println("1. Add New Hotel.");
+			System.out.println("2. Modify Hotel Details.");
+			System.out.println("3. Show All Hotels Info.");
+			System.out.println("4. Add New Room.");
+			System.out.println("5. Update Room Details.");
+			System.out.println("6. Delete Room.");
+			System.out.println("7. Show bookings for specific date.");
+			System.out.println("8. Fetch bookings for specfied hotel.");
+			System.out.println("9. Find Guest List for specified hotel.");
+			System.out.println("10. Loggout.");
+			choice = scan.nextInt();
+			
+			switch(choice){
+			case 1: addNewhotel(user_name);
+				break;
+			case 2: modifyHotel(user_name);
+				break;
+			case 3: fetchHotel(user_name);
+				break;
+			case 4: addNewRooms(user_name);
+				break;
+			case 5:	updateroomdetail(user_name);
+				break;
+			case 6:	deleteRoom(user_name);
+				break;
+			case 7: bookingForSpecificDate(user_name);
+				break;
+			case 8: bookingForSpecificHotel(user_name);
+				break;
+			case 9: guestListForHotel(user_name);
+				break;
+			case 10: loadIndex();
+				break;
+			default:System.out.println("Invalid Input! Please Try Again.");
+			}
+		}catch(InputMismatchException e){
+			System.out.println("Input is not valid");
+			scan.next();
+			showAdminDashboard(user_name);
 		}
+		
 	}
 
 
-	private static void guestListForHotel(String user_name) {
+	private static void guestListForHotel(String user_name) throws InputMismatchException{
 		System.out.print("Enter the hotel Id:  ");
 		String hotel_id = scan.next();
-		List<Users> userList = admSer.guestForHotel(hotel_id);
-		for(Users user : userList){
-			System.out.println(user);
+		List<Users> userList = new ArrayList<>();
+		try{
+			userList = admSer.guestForHotel(hotel_id);
+			for(Users user : userList){
+				System.out.println(user);
+			}
+		}catch(UserNotFoundException e){
+			System.out.println(e);
+		}finally{
+			showAdminDashboard(user_name);
 		}
-		showAdminDashboard(user_name);
+		
+		
 	}
 
-	private static void bookingForSpecificHotel(String user_name) {
+	private static void bookingForSpecificHotel(String user_name) throws InputMismatchException{
 		String hotel_id = "";
 		System.out.println("Enter the Hotel Id"
 				+ "\nif u dont have Hotel Id press 1"
@@ -285,6 +350,7 @@ public class Client {
 			fetchHotel(user_name);
 			return;
 		}else{
+			try{
 			List<BookingDetails> allbookings = 
 				admSer.bookingForSpecificHotel(hotel_id);
 			if(allbookings.size() == 0){
@@ -293,46 +359,52 @@ public class Client {
 			}
 			for(BookingDetails booking: allbookings){
 				System.out.println(booking);
+			}}catch(BookingsNotFoundException e){
+				System.out.println(e);
+			}finally{
+				showAdminDashboard(user_name);
 			}
+		}
+	}
+
+	private static void bookingForSpecificDate(String user_name) throws InputMismatchException{
+		System.out.print("Enter the Date to find the corresponding booking(format: yyyy-mm-dd):  ");
+		try{
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yy");
+			List<BookingDetails> bookingsList = 
+					admSer.fetchSpecificDateBooking(sdf.format(Date.valueOf(scan.next())));
+			for(BookingDetails booking: bookingsList){
+				System.out.println();
+				System.out.println(booking);
+			}
+		}catch(BookingsNotFoundException e){
+			System.out.println(e);
+		}finally{
 			showAdminDashboard(user_name);
 		}
 	}
 
-	private static void bookingForSpecificDate(String user_name) {
-		System.out.print("Enter the Date to find the corresponding booking(format: yyyy-mm-dd):  ");
-		List<BookingDetails> bookingsList = 
-				admSer.fetchSpecificDateBooking(Date.valueOf(scan.next()));
-		for(BookingDetails booking: bookingsList){
-			System.out.println(booking);
-			System.out.println();
-		}
-		showAdminDashboard(user_name);
-	}
-
-	private static void deleteRoom(String user_name) {
+	private static void deleteRoom(String user_name) throws InputMismatchException{
 		System.out.println("Enter Room Id.");
 		String room_id = scan.next();
-		RoomDetails roomDetails = admSer.searchRoom(room_id);
-		if(roomDetails == null){
+		
+		try{
+			admSer.searchRoom(room_id);
 			System.out.println("Room Id provided is invalid!");
-			deleteRoom(user_name);
-			return;
-		}else{
-		admSer.removeRoom(room_id);
-		showAdminDashboard(user_name);
+			admSer.removeRoom(room_id);
+		}catch(RoomsNotFoundException e){
+			System.out.println(e);
+		}finally{
+			showAdminDashboard(user_name);
 		}
 	}
 
 
-	private static void updateroomdetail(String user_name) {
+	private static void updateroomdetail(String user_name) throws InputMismatchException{
 		System.out.println("\nUpdate Room:");
 		System.out.print("Enter Room Id For Updation: ");
-		RoomDetails roomDetails = admSer.searchRoom(scan.next());
-		if(roomDetails == null){
-			System.out.println("Room Id provided is invalid!");
-			updateroomdetail(user_name);
-			return;
-		}else{
+		try{
+			RoomDetails roomDetails = admSer.searchRoom(scan.next());
 			int choice = 0;
 			System.out.print("Enter Hotel Id: ");
 			roomDetails.setHotel_id(scan.next());
@@ -358,22 +430,22 @@ public class Client {
 			System.out.print("Enter Per Night Rate: ");
 			roomDetails.setPer_night_rate(scan.nextFloat());
 			roomDetails.setAvailability(UserDaoImpl.AVAILABLE);
-			if(admSer.updateRoomInfo(roomDetails) == 1){
-				System.out.println("Room Details Successfully Altered.");
-				showAdminDashboard(user_name);
-			}
-			else{
-				System.out.println("Could not update Information."
-						+ "\nRedirecting to form resubmission");
-				updateroomdetail(user_name);
-				return;
-			}
-			
+			admSer.updateRoomInfo(roomDetails);
+			System.out.println("Room Details Successfully Altered.\n");
+		}catch(RoomsNotFoundException e){
+			System.out.println(e);
+		}finally{
+			showAdminDashboard(user_name);
 		}
+		
+			
+			
+				
+			
 	}
 
 
-	private static void addNewRooms(String user_name) {
+	private static void addNewRooms(String user_name) throws InputMismatchException{
 		RoomDetails roomDetails = new RoomDetails();
 		int choice = 0;
 		System.out.println("Enter Hotel Id.");
@@ -399,23 +471,21 @@ public class Client {
 			           return;
 		}
 		System.out.println("Enter Per Night Rate.");
-		roomDetails.setPer_night_rate(scan.nextFloat());
-		admSer.updateAvgRate(roomDetails.getHotel_id());
 		roomDetails.setAvailability(UserDaoImpl.AVAILABLE);
-		if(admSer.addRooms(roomDetails) == 1)
-		{
+		roomDetails.setPer_night_rate(scan.nextFloat());
+		try{
+			admSer.updateAvgRate(roomDetails.getHotel_id());
+			admSer.addRooms(roomDetails);
 			System.out.println("Room Successfully Added.");
+		}catch(HotelNotFoundException | RoomsNotFoundException e){
+			System.out.println(e);
+		}finally{	
 			showAdminDashboard(user_name);
 		}
-		else
-		{
-		  System.out.println("Could not add Room ");	
-		}
-		
 	}
 
 
-	private static void addNewhotel(String user_name) {
+	private static void addNewhotel(String user_name) throws InputMismatchException{
 		Hotel hotel = new Hotel();
 		int rowsAffected = 0;
 		System.out.println("\nENTER HOTEL DETAILS.");
@@ -442,20 +512,16 @@ public class Client {
 		rowsAffected = admSer.addNewhotel(hotel);
 		if(rowsAffected == 1)	System.out.println("New Hotel Added!");
 		else	System.out.println("Invalid Input");
-		
-		showAdminDashboard(user_name);
-		
+		showAdminDashboard(user_name);	
 	}
 
 
-	private static void modifyHotel(String user_name) {
+	private static void modifyHotel(String user_name) throws InputMismatchException{
 		System.out.println("Enter Hotel Id");
 		String hotelId=scan.next();
-		 if(admSer.searchHotel(hotelId) == null){
-			 System.out.println("Invalid Hotel Id! Enter Again");
-			 modifyHotel(user_name);
-		 } else	{
-			Hotel hotel = new Hotel(); 
+		
+		 try{
+			Hotel hotel = admSer.searchHotel(hotelId); 
 			hotel.setHotel_id(hotelId);
 			System.out.println("\nENTER HOTEL DETAILS.");
 			System.out.print("Enter Hotel Name: ");
@@ -476,31 +542,25 @@ public class Client {
 			hotel.setEmail(scan.next());
 			System.out.print("Enter Hotel Fax: ");
 			hotel.setFax(scan.next());
-			if(admSer.updateHotelInfo(hotel)==1){
-				System.out.println("Hotel Details Updated");
+			admSer.updateHotelInfo(hotel);
+			}catch(HotelNotFoundException e){
+				System.out.println(e);
+			}finally{
+				showAdminDashboard(user_name);
 			}
-			}
-		 showAdminDashboard(user_name);
 	}
 
 
-	private static void fetchHotel(String user_name) {
-		int choice = 0;
+	private static void fetchHotel(String user_name) throws InputMismatchException{
 		System.out.println("\nGet All Hotel List.");
-		List<Hotel> hotelList = admSer.fetchHotelList();
-		for(Hotel hotel: hotelList){
-			System.out.println(hotel);
-		}
-		System.out.println("\n1. Go back to Dashboard.   2. Add rooms.");
-		choice = scan.nextInt();
-		switch(choice){
-		case 1:
-			showAdminDashboard(user_name);
-			break;
-		case 2:
-			addNewRooms(user_name);
-			break;
-		default: System.out.println("Invalid Input! Redirecting to DashBoard.");
+		try{
+			List<Hotel> hotelList = admSer.fetchHotelList();
+			for(Hotel hotel: hotelList){
+				System.out.println(hotel);
+			}
+		}catch(HotelNotFoundException e){
+			System.out.println(e);
+		}finally{
 			showAdminDashboard(user_name);
 		}
 	}

@@ -8,6 +8,11 @@ import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
 import com.cg.entities.RoomDetails;
 import com.cg.entities.Users;
+import com.cg.exception.BookingsNotFoundException;
+import com.cg.exception.HotelNotFoundException;
+import com.cg.exception.RoomsNotFoundException;
+import com.cg.exception.UserCreationException;
+import com.cg.exception.UserNotFoundException;
 
 public class UserServiceImpl implements UserService{
 
@@ -18,28 +23,31 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public int registerUser(Users user) {
+	public int registerUser(Users user) throws UserCreationException{
 		return userDaoImpl.registerUser(user);
 	}
 
 	@Override
-	public Users LoginUser(String user_name, String password) {
-		
+	public Users LoginUser(String user_name, String password) 
+			throws UserNotFoundException{
 		return userDaoImpl.LoginUser(user_name, password);
 	}
 
 	@Override
-	public List<RoomDetails> fetchAvailableRooms(String hotel_id) {
+	public List<RoomDetails> fetchAvailableRooms(String hotel_id) 
+			throws RoomsNotFoundException{
 		return userDaoImpl.fetchAvailableRooms(hotel_id);
 	}
 
 	@Override
-	public BookingDetails bookRoom(String room_id, BookingDetails bookDet) {
+	public BookingDetails bookRoom(String room_id, BookingDetails bookDet) 
+			throws RoomsNotFoundException, BookingsNotFoundException{
 		return userDaoImpl.bookRoom(room_id, bookDet);
 	}
 
 	@Override
-	public BookingDetails viewBookingStatus(String booking_id) {
+	public BookingDetails viewBookingStatus(String booking_id) 
+			throws BookingsNotFoundException{
 		return userDaoImpl.viewBookingStatus(booking_id);
 	}
 
@@ -52,12 +60,14 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<Hotel> searchHotelByCity(String city) {
+	public List<Hotel> searchHotelByCity(String city) 
+			throws HotelNotFoundException{
 		return userDaoImpl.searchHotelByCity(city);
 	}
 
 	@Override
-	public Float fetchPerNightRate(String room_id) {
+	public Float fetchPerNightRate(String room_id) 
+			throws RoomsNotFoundException{
 		return userDaoImpl.fetchPerNightRate(room_id);
 	}
 
