@@ -13,15 +13,12 @@ public class UserServiceImpl implements UserService{
 
 	UserDaoImpl userDaoImpl;
 	
-	
-	
 	public UserServiceImpl() {
 		userDaoImpl = new UserDaoImpl();
 	}
 
 	@Override
 	public int registerUser(Users user) {
-		
 		return userDaoImpl.registerUser(user);
 	}
 
@@ -43,16 +40,14 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public BookingDetails viewBookingStatus(String booking_id) {
-		// TODO Auto-generated method stub
 		return userDaoImpl.viewBookingStatus(booking_id);
 	}
 
 	@Override
 	public float amountCalculator(Date bookedFrom, Date bookedTo,
 			Float avgRatePerNight) {
-		// TODO Auto-generated method stub
-		int diffInDays = (int)( (bookedFrom.getTime() - bookedTo.getTime()) 
-                / (1000 * 60 * 60 * 24) );
+		int diffInDays = (int)( (bookedTo.getTime() - bookedFrom.getTime()) 
+                / (1000 * 60 * 60 * 24));
 		return (diffInDays*avgRatePerNight);
 	}
 

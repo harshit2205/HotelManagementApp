@@ -289,7 +289,6 @@ public class UserDaoImpl implements UserDao{
 		}
 		catch(Exception e)
 		{
-			
 //			throw new HotelException(e.getMessage());
 			e.printStackTrace();
 		}

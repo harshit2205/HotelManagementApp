@@ -89,7 +89,7 @@ public class AdminDaoImpl implements AdminDao
 			pst.setString(2, hotel.getHotel_name());
 			pst.setString(3, hotel.getAddress());
 			pst.setString(4, hotel.getDescription());
-			pst.setFloat( 5, hotel.getAvg_rate_per_night());
+			pst.setFloat(5, hotel.getAvg_rate_per_night());
 			pst.setString(6, hotel.getPhone_no());
 			pst.setString(7, hotel.getPhone_no2());
 			pst.setString(8, hotel.getRating());
@@ -273,15 +273,15 @@ public class AdminDaoImpl implements AdminDao
 		try
 		{
 			con = DBUtil.getConn();
-			String insertRoomQuery="INSERT INTO roomdetails VALUES(?,room_id_generator,?,?,?,?,?)";
+			String insertRoomQuery="INSERT INTO roomdetails VALUES(?,room_id_generator.nextval,?,?,?,?,?)";
 			pst=con.prepareStatement(insertRoomQuery);
 			pst.setString(1, roominfo.getHotel_id());
 			
-			pst.setString(3, maxRoomNoFinder(roominfo.getHotel_id()));
-			pst.setString(4, roominfo.getRoom_type());
-			pst.setFloat(5, roominfo.getPer_night_rate());
-			pst.setInt(6, roominfo.isAvailability());
-			pst.setString(7, null);
+			pst.setString(2, maxRoomNoFinder(roominfo.getHotel_id()));
+			pst.setString(3, roominfo.getRoom_type());
+			pst.setFloat(4, roominfo.getPer_night_rate());
+			pst.setInt(5, roominfo.isAvailability());
+			pst.setString(6, null);
 			rowsAffected = pst.executeUpdate();
 			updateAvgRate(roominfo.getHotel_id());
 		}
@@ -399,7 +399,7 @@ public class AdminDaoImpl implements AdminDao
 		List<BookingDetails> BList=new ArrayList<BookingDetails>();
 		try{
 			con=DBUtil.getConn();
-			String selectqry="SELECT * FROM bookingdetails WHERE '"+date+"' BETWEEN booked_from AND booked_to";
+			String selectqry="SELECT * FROM bookingdetails WHERE '"+date+"'>=booked_from AND '"+date+"'<booked_to";
 			st=con.createStatement();
 			rs=st.executeQuery(selectqry);
 			
@@ -421,8 +421,8 @@ public class AdminDaoImpl implements AdminDao
 		}
 		finally{
 			try{
-				st.close();
 				rs.close();
+				st.close();
 				con.close();
 			}
 			catch(SQLException e){
@@ -472,8 +472,40 @@ public class AdminDaoImpl implements AdminDao
 
 	@Override
 	public List<Users> guestForHotel(String hotel_id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Users> userList = new ArrayList<>();
+		
+		try{
+			con=DBUtil.getConn();
+			String selectqry="SELECT * FROM users IN (SELECT user_id FROM bookingdetails WHERE room_id IN (SELECT room_id FROM roomdetails WHERE hotel_id='"+hotel_id+"'))";
+			st=con.createStatement();
+			rs=st.executeQuery(selectqry);		
+			
+			while(rs.next())
+			{
+				Users user = new Users();
+				user.setUser_id(rs.getString("user_id"));
+				user.setUser_name(rs.getString("user_name"));
+				user.setRole(rs.getString("role"));
+				user.setMobile_no(rs.getString("mobile_no"));
+				user.setEmail(rs.getString("email"));
+				userList.add(user);
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			try{
+				st.close();
+				rs.close();
+				con.close();
+			}
+			catch(SQLException e){
+				e.printStackTrace();
+			}
+		}
+		return userList;
 	}
 
 	@Override
@@ -499,7 +531,6 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		
 	}
 
 	@Override
@@ -508,11 +539,11 @@ public class AdminDaoImpl implements AdminDao
 		int rowsAffected = 0;
 		try
 		{
-			con=DBUtil.getConn();
+			con = DBUtil.getConn();
 			String query="SELECT AVG(per_night_rate) FROM roomdetails WHERE hotel_id='"+hotel_id+"'";
 			st=con.createStatement();
 			rs=st.executeQuery(query);
-			while(rs.next()) average = rs.getFloat("avg(per_night_rate)");
+			while(rs.next()) average = rs.getFloat(1);
 			
 			Hotel hotel = searchHotel(hotel_id);
 			hotel.setAvg_rate_per_night(average);
@@ -558,7 +589,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		return Integer.toString(maxValue);
+		return Integer.toString(maxValue+1);
 	}
 
 	@Override
