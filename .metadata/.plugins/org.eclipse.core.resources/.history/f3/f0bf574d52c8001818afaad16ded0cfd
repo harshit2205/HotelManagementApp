@@ -266,13 +266,9 @@ public class Client {
 
 
 	private static void guestListForHotel(String user_name) {
+		Strig
 		System.out.print("Enter the hotel Id:  ");
-		String hotel_id = scan.next();
-		List<Users> userList = admSer.guestForHotel(hotel_id);
-		for(Users user : userList){
-			System.out.println(user);
-		}
-		showAdminDashboard(user_name);
+		
 	}
 
 	private static void bookingForSpecificHotel(String user_name) {

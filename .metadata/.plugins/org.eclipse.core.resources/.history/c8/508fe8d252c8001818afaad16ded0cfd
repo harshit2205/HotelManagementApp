@@ -421,8 +421,8 @@ public class AdminDaoImpl implements AdminDao
 		}
 		finally{
 			try{
-				rs.close();
 				st.close();
+				rs.close();
 				con.close();
 			}
 			catch(SQLException e){
