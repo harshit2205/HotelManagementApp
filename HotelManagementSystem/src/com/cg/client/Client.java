@@ -539,6 +539,7 @@ public class Client {
 		}
 		try{
 			admSer.addNewhotel(hotel);
+			showAdminDashboard(user_name);
 		}catch(HotelNotFoundException e){
 			System.out.println(e);
 			showAdminDashboard(user_name);
