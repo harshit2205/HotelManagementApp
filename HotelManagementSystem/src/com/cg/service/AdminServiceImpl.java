@@ -29,7 +29,7 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public int addNewhotel(Hotel hotel) {
+	public int addNewhotel(Hotel hotel) throws HotelNotFoundException{
 		// TODO Auto-generated method stub
 		return adminDaoImpl.addNewhotel(hotel);
 	}
@@ -128,6 +128,11 @@ public class AdminServiceImpl implements AdminService{
 	public RoomDetails searchRoom(String room_id) 
 			throws RoomsNotFoundException{
 		return adminDaoImpl.searchRoom(room_id);
+	}
+
+	@Override
+	public boolean searchUser(String user_name) {
+		return adminDaoImpl.searchUser(user_name);
 	}
 
 }

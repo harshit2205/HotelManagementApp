@@ -15,7 +15,8 @@ public interface AdminService {
 
 	public List<Hotel> fetchHotelList() 
 			throws HotelNotFoundException;
-	public int addNewhotel(Hotel hotel);
+	public int addNewhotel(Hotel hotel)
+			throws HotelNotFoundException;
 	public int updateHotelInfo(Hotel hotel) 
 			throws HotelNotFoundException;
 	public Hotel searchHotel(String hotel_id) 
@@ -45,4 +46,6 @@ public interface AdminService {
 	public String maxRoomNoFinder(String hotel_id)
 			throws HotelNotFoundException, RoomsNotFoundException;
 	public RoomDetails searchRoom(String room_id)
-			throws RoomsNotFoundException;}
+			throws RoomsNotFoundException;
+	public boolean searchUser(String user_name);
+}

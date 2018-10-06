@@ -1,0 +1,12 @@
+package com.cg.service;
+
+import com.cg.entities.BookingDetails;
+import com.cg.entities.Hotel;
+import com.cg.entities.Users;
+
+public interface ValidationService 
+{
+	public String userValidation(Users user);
+	public String hotelValidation(Hotel hotel);
+	public String bookingDetailsValidation(BookingDetails bookD);
+}
