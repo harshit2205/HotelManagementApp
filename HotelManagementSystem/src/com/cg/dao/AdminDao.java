@@ -15,7 +15,8 @@ public interface AdminDao {
 	
 	public List<Hotel> fetchHotelList() 
 			throws HotelNotFoundException;
-	public int addNewhotel(Hotel hotel);
+	public int addNewhotel(Hotel hotel)
+			throws HotelNotFoundException;
 	public int updateHotelInfo(Hotel hotel) 
 			throws HotelNotFoundException;
 	public Hotel searchHotel(String hotel_id) 
@@ -46,4 +47,5 @@ public interface AdminDao {
 			throws HotelNotFoundException, RoomsNotFoundException;
 	public RoomDetails searchRoom(String room_id)
 			throws RoomsNotFoundException;
+	public boolean searchUser(String user_name);
 }

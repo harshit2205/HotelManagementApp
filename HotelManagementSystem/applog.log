@@ -1,0 +1,12 @@
+2018-10-06 14:44:35,823 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:44:35,823 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:44:35,826 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-06 14:44:35,827 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:44:35,828 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:44:35,828 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:46:16,285 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:46:16,286 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:46:16,289 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-06 14:46:16,289 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:46:16,291 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:46:16,291 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.

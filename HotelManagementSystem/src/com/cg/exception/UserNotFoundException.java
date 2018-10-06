@@ -12,7 +12,7 @@ public class UserNotFoundException extends Exception{
 	
 	@Override
 	public String toString() {
-		return "\nBooking Exception: "+message;
+		return "\nUser Creation Exception: "+message;
 	}
 
 	public String getMessage() {
