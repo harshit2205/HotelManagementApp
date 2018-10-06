@@ -81,7 +81,8 @@ public class AdminDaoImpl implements AdminDao
 	}
 
 	@Override
-	public int addNewhotel(Hotel hotel) {
+	public int addNewhotel(Hotel hotel) throws HotelNotFoundException{
+		int rowsAffected = 0;
 		try
 		{
 			con = DBUtil.getConn();
@@ -98,13 +99,16 @@ public class AdminDaoImpl implements AdminDao
 			pst.setString(9, hotel.getEmail());
 			pst.setString(10,hotel.getFax());
 			
-			return pst.executeUpdate();
+			rowsAffected =  pst.executeUpdate();
+			if(rowsAffected == 0){
+				throw new HotelNotFoundException("Sorry! could not add new Hotel.");
+			}
 		}catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
-		return 0;
+		return rowsAffected;
 	}
 
 	@Override
@@ -628,6 +632,42 @@ public class AdminDaoImpl implements AdminDao
 			}
 		}
 		return roomDetails;
+	}
+
+	@Override
+	public boolean searchUser(String user_name) {
+		Users user = null;
+		try{
+			con=DBUtil.getConn();
+			String query="Select * from Users where user_name='"+user_name+"'";
+			st=con.createStatement();
+			rs=st.executeQuery(query);
+			while(rs.next()){
+				user = new Users(rs.getString("user_id"),
+						rs.getString("password"),
+						rs.getString("role"),
+						rs.getString("user_name"),
+						rs.getString("mobile_no"),
+						rs.getString("phone"),
+						rs.getString("address"),
+						rs.getString("email"));
+			}
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
+		} finally{
+			try {
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if(user == null) return false;
+		else return true;
+		
 	}
 
  

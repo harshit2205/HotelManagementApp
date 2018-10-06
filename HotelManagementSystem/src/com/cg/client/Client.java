@@ -18,12 +18,15 @@ import com.cg.exception.HotelNotFoundException;
 import com.cg.exception.RoomsNotFoundException;
 import com.cg.exception.UserCreationException;
 import com.cg.exception.UserNotFoundException;
+import com.cg.exception.ValidationException;
 import com.cg.service.AdminServiceImpl;
 import com.cg.service.UserServiceImpl;
+import com.cg.service.ValidationServiceImpl;
 
 public class Client {
 	static AdminServiceImpl admSer = null;
 	static UserServiceImpl userSer = null;
+	static ValidationServiceImpl valSer = null;
 	
 	static Scanner scan;
 
@@ -31,6 +34,7 @@ public class Client {
 		scan = new Scanner(System.in);
 		admSer = new AdminServiceImpl();
 		userSer = new UserServiceImpl();
+		valSer = new ValidationServiceImpl();
 		loadIndex();
 	}
 
@@ -89,13 +93,20 @@ public class Client {
 		user.setAddress(scan.nextLine());
 		System.out.print("Enter Email Address: ");
 		user.setEmail(scan.next());
+		
 		try{
-			userSer.registerUser(user);
-		}catch(UserCreationException e){
+			valSer.userValidation(user);
+			try{
+				userSer.registerUser(user);
+			}catch(UserCreationException e){
+				System.out.println(e);
+				loadIndex();
+			}
+			showUserDashboard(user);
+		}catch(ValidationException e){
 			System.out.println(e);
-			loadIndex();
+			Register();
 		}
-		showUserDashboard(user);
 	}
 
 
@@ -246,16 +257,28 @@ public class Client {
 			System.out.println("Enter Room Id.");
 			bookingDetails.setRoom_id(scan.next());
 			bookingDetails.setUser_id(currentUser.getUser_id());
-			System.out.println("Enter Check-In Date. (format: yyyy-mm-dd)");
-			bookingDetails.setBooked_from(Date.valueOf(scan.next()));
-			System.out.println(bookingDetails.getBooked_from().getTime());
-			System.out.println("Enter Check-Out Date. (format: yyyy-mm-dd)");
-			bookingDetails.setBooked_to(Date.valueOf(scan.next()));
-			System.out.println(bookingDetails.getBooked_to().getTime());
+			try{
+				System.out.println("Enter Check-In Date. (format: yyyy-mm-dd)");
+				bookingDetails.setBooked_from(Date.valueOf(scan.next()));
+				System.out.println("Enter Check-Out Date. (format: yyyy-mm-dd)");
+				bookingDetails.setBooked_to(Date.valueOf(scan.next()));
+			}catch(IllegalArgumentException e){
+				System.out.println("date format inputed does not match the given format.Retry");
+				bookRoom(currentUser);
+				return;
+			}
+			
 			System.out.println("Enter Number of Adults.");
 			bookingDetails.setNo_of_adults(scan.nextInt());
 			System.out.println("Enter Number of Children.");
 			bookingDetails.setNo_of_children(scan.nextInt());
+			
+			try{
+				valSer.bookingDetailsValidation(bookingDetails);
+			}catch(ValidationException e){
+				System.out.println(e);
+				bookRoom(currentUser);
+			}
 			
 			try{
 				float perNightRate = userSer.fetchPerNightRate(bookingDetails.getRoom_id());
@@ -471,11 +494,11 @@ public class Client {
 			           return;
 		}
 		System.out.println("Enter Per Night Rate.");
-		roomDetails.setAvailability(UserDaoImpl.AVAILABLE);
 		roomDetails.setPer_night_rate(scan.nextFloat());
+		roomDetails.setAvailability(UserDaoImpl.AVAILABLE);
 		try{
-			admSer.updateAvgRate(roomDetails.getHotel_id());
 			admSer.addRooms(roomDetails);
+			admSer.updateAvgRate(roomDetails.getHotel_id());
 			System.out.println("Room Successfully Added.");
 		}catch(HotelNotFoundException | RoomsNotFoundException e){
 			System.out.println(e);
@@ -487,7 +510,6 @@ public class Client {
 
 	private static void addNewhotel(String user_name) throws InputMismatchException{
 		Hotel hotel = new Hotel();
-		int rowsAffected = 0;
 		System.out.println("\nENTER HOTEL DETAILS.");
 		System.out.print("Enter Hotel Name: ");
 		scan.nextLine();
@@ -509,10 +531,19 @@ public class Client {
 		hotel.setEmail(scan.next());
 		System.out.print("Enter Hotel Fax: ");
 		hotel.setFax(scan.next());
-		rowsAffected = admSer.addNewhotel(hotel);
-		if(rowsAffected == 1)	System.out.println("New Hotel Added!");
-		else	System.out.println("Invalid Input");
-		showAdminDashboard(user_name);	
+		try{
+			valSer.hotelValidation(hotel);
+		}catch(ValidationException e){
+			System.out.println(e);
+			addNewhotel(user_name);
+		}
+		try{
+			admSer.addNewhotel(hotel);
+		}catch(HotelNotFoundException e){
+			System.out.println(e);
+			showAdminDashboard(user_name);
+		}
+			
 	}
 
 
@@ -520,7 +551,7 @@ public class Client {
 		System.out.println("Enter Hotel Id");
 		String hotelId=scan.next();
 		
-		 try{
+		try{
 			Hotel hotel = admSer.searchHotel(hotelId); 
 			hotel.setHotel_id(hotelId);
 			System.out.println("\nENTER HOTEL DETAILS.");
@@ -542,12 +573,18 @@ public class Client {
 			hotel.setEmail(scan.next());
 			System.out.print("Enter Hotel Fax: ");
 			hotel.setFax(scan.next());
-			admSer.updateHotelInfo(hotel);
-			}catch(HotelNotFoundException e){
+			try{
+				valSer.hotelValidation(hotel);
+			}catch(ValidationException e){
 				System.out.println(e);
-			}finally{
-				showAdminDashboard(user_name);
+				modifyHotel(user_name);
 			}
+			admSer.updateHotelInfo(hotel);
+		}catch(HotelNotFoundException e){
+			System.out.println(e);
+		}finally{
+			showAdminDashboard(user_name);
+		}
 	}
 
 
