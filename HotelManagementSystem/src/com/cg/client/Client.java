@@ -124,7 +124,7 @@ public class Client {
 			user_name = scan.next();
 			System.out.print("password:   ");
 			password = scan.next();
-			if(user_name.equals("secret123") || password.equals("secret123")){
+			if(user_name.equals("secret123") && password.equals("secret123")){
 			showAdminDashboard(user_name);
 			}else{
 				System.out.println("Invalid credentials! Please try again.\n");

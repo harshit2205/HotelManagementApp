@@ -523,18 +523,25 @@ public class AdminDaoImpl implements AdminDao
 		
 		try{
 			con=DBUtil.getConn();
-			String selectqry="SELECT * FROM users IN (SELECT user_id FROM bookingdetails WHERE room_id IN (SELECT room_id FROM roomdetails WHERE hotel_id='"+hotel_id+"'))";
+			String query="SELECT user_id FROM bookingdetails WHERE room_id IN (SELECT room_id FROM roomdetails WHERE hotel_id='"+hotel_id+"')";
 			st=con.createStatement();
-			rs=st.executeQuery(selectqry);		
+			rs = st.executeQuery(query);	
+			Users user = null;
 			
 			while(rs.next())
 			{
-				Users user = new Users();
-				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setRole(rs.getString("role"));
-				user.setMobile_no(rs.getString("mobile_no"));
-				user.setEmail(rs.getString("email"));
+				String query1 = "SELECT * FROM users WHERE user_id='"+rs.getString("user_id")+"'";
+				ResultSet rs2 = st.executeQuery(query1);
+				while(rs2.next()){
+					user = new Users(rs.getString("user_id"),
+							rs.getString("password"),
+							rs.getString("role"),
+							rs.getString("user_name"),
+							rs.getString("mobile_no"),
+							rs.getString("phone"),
+							rs.getString("address"),
+							rs.getString("email"));
+				}
 				userList.add(user);
 			}
 			if(userList.size() == 0){

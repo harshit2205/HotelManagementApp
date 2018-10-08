@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="D:\JAR Files" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="D:\JarFiles-master" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="AddUnimplementedConstructorsDialog">
 		<item value="false" key="OmitCallToSuper"/>
 	</section>
