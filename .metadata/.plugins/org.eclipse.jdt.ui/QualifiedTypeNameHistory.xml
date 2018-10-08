@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.logging.Logger"/>
-<fullyQualifiedTypeName name="jdk.internal.instrumentation.Logger"/>
-<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
-<fullyQualifiedTypeName name="org.apache.log4j.PropertyConfigurator"/>
-<fullyQualifiedTypeName name="com.cg.exception.RoomsNotFoundException"/>
-<fullyQualifiedTypeName name="com.cg.exception.HotelNotFoundException"/>
-</qualifiedTypeNameHistroy>
