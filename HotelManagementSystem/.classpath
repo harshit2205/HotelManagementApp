@@ -2,12 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/JarFiles-master/classes12.jar"/>
-	<classpathentry kind="lib" path="D:/JarFiles-master/easymock-2.5.jar"/>
-	<classpathentry kind="lib" path="D:/JarFiles-master/junit-4.4.jar"/>
-	<classpathentry kind="lib" path="D:/JarFiles-master/log4j-1.2.9.jar"/>
-	<classpathentry kind="lib" path="D:/JarFiles-master/ojdbc5.jar"/>
-	<classpathentry kind="lib" path="D:/JarFiles-master/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="D:/JarFiles-master/ojdbc6_g.jar"/>
+	<classpathentry kind="lib" path="D:/nish/classes12.jar"/>
+	<classpathentry kind="lib" path="D:/nish/easymock-2.5.jar"/>
+	<classpathentry kind="lib" path="D:/nish/junit-4.4.jar"/>
+	<classpathentry kind="lib" path="D:/nish/log4j-1.2.9.jar"/>
+	<classpathentry kind="lib" path="D:/nish/ojdbc5.jar"/>
+	<classpathentry kind="lib" path="D:/nish/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/nish/ojdbc6_g.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

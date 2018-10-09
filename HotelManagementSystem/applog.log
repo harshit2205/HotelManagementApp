@@ -1,0 +1,24 @@
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:31:52,568 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:31:52,568 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:31:54,428 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:31:54,428 - com.cg.client.Client - INFO - Login method called
+2018-10-09 10:31:55,240 - com.cg.client.Client - INFO - User login
+2018-10-09 10:32:05,273 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:32:05,273 - com.cg.client.Client - INFO - Login method called
+2018-10-09 10:32:05,851 - com.cg.client.Client - INFO - User login
+2018-10-09 10:32:14,839 - com.cg.dao.UserDaoImpl - INFO - User successfully logged on Venka
+2018-10-09 10:32:22,227 - com.cg.client.Client - INFO - Viewing Booking Status
+2018-10-09 10:32:38,509 - com.cg.client.Client - INFO - Booking room
+2018-10-09 10:32:51,569 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:32:51,569 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:32:52,336 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 10:33:49,367 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:33:49,367 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:33:50,180 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 10:35:15,426 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:35:15,426 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:35:16,181 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved

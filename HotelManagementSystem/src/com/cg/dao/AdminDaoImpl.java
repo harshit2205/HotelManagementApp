@@ -9,6 +9,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 import com.cg.dbutil.DBUtil;
 import com.cg.entities.BookingDetails;
 import com.cg.entities.Hotel;
@@ -31,7 +34,16 @@ public class AdminDaoImpl implements AdminDao
 	ResultSet rs=null;
 	
 	
-	
+	Logger adminDaoLogger=null;
+	public AdminDaoImpl() 
+	{
+		adminDaoLogger=Logger.getLogger(AdminDaoImpl.class);
+		PropertyConfigurator.configure("log4j.properties");
+		adminDaoLogger.debug("This is a debug message.");
+		adminDaoLogger.warn("This is a warn message.");
+		adminDaoLogger.fatal("This is a fatal message.");
+	}
+
 	@Override
 	public List<Hotel> fetchHotelList() throws HotelNotFoundException{
 		List<Hotel> HList=new ArrayList<Hotel>();
@@ -73,10 +85,11 @@ public class AdminDaoImpl implements AdminDao
 			catch(SQLException e)
 			{
 //				throw  new HotelException(e.getMessage());
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
-		
+		adminDaoLogger.info("All Hotel's data Retrieved");
 		return HList;
 	}
 
@@ -108,7 +121,13 @@ public class AdminDaoImpl implements AdminDao
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
+<<<<<<< HEAD
 		return rowsAffected;
+=======
+		adminDaoLogger.info("New Hotel Data Inserted");
+		return rowsAffected;
+		
+>>>>>>> 7454c51a2731723539ed7cf80dcef0f66275b578
 	}
 
 	@Override
@@ -139,6 +158,7 @@ public class AdminDaoImpl implements AdminDao
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
+		adminDaoLogger.info("Hotel data updated");
 		return rowsAffected;
 	}
 
@@ -177,10 +197,11 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 				st.close();
 			} catch (SQLException e) {
+				adminDaoLogger.error(e.getMessage());
 				System.out.println("App Error: There is problem closing connections.");
 			}
 		}
-		
+		adminDaoLogger.info("The hotel for hotel id "+hotel_id+" is retireved"+hotel);
 		return hotel;
 	}
 
@@ -205,6 +226,9 @@ public class AdminDaoImpl implements AdminDao
 						rs.getInt("availability"),
 						rs.getBlob("imageFile")));
 			}
+			if(RoomList.size() == 0){
+				throw new RoomsNotFoundException("there are no rooms available.");
+			}
 		} catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
@@ -219,11 +243,11 @@ public class AdminDaoImpl implements AdminDao
 			}
 			catch(SQLException e)
 			{
-//				throw  new HotelException(e.getMessage());
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
-		
+		adminDaoLogger.info("All Available Rooms data Retrieved");
 		return RoomList;
 	}
 
@@ -248,6 +272,9 @@ public class AdminDaoImpl implements AdminDao
 						rs.getInt("availability"),
 						rs.getBlob("imageFile")));
 			}
+			if(RoomList.size() == 0){
+				throw new RoomsNotFoundException("No rooms available for this hotel.");
+			}
 		} catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
@@ -263,10 +290,11 @@ public class AdminDaoImpl implements AdminDao
 			catch(SQLException e)
 			{
 //				throw  new HotelException(e.getMessage());
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
-		
+		adminDaoLogger.info("All Booked Rooms data Retrieved");
 		return RoomList;
 	}
 
@@ -285,12 +313,17 @@ public class AdminDaoImpl implements AdminDao
 			pst.setInt(5, roominfo.isAvailability());
 			pst.setString(6, null);
 			rowsAffected = pst.executeUpdate();
+			if(rowsAffected == 0){
+				throw new RoomsNotFoundException("Sorry! could not insert rooms. Please try again.");
+			}
 			updateAvgRate(roominfo.getHotel_id());
 		} catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
-		}return rowsAffected;
+		}
+		adminDaoLogger.info("New Room data Inserted."+rowsAffected);
+		return rowsAffected;
 	}
 
 	@Override
@@ -308,11 +341,16 @@ public class AdminDaoImpl implements AdminDao
 			pst.setBlob(5, roomInfo.getImageFile());
 			pst.setString(6, roomInfo.getRoom_id());
 			rowsAffected = pst.executeUpdate();	
+			if(rowsAffected == 0){
+				throw new RoomsNotFoundException("Sorry! could not update room info please try again.");
+			}
 		} catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
-		}return rowsAffected;
+		}
+		adminDaoLogger.info("Room data Updated."+rowsAffected);
+		return rowsAffected;
 	}
 
 	@Override
@@ -324,6 +362,9 @@ public class AdminDaoImpl implements AdminDao
 			pst=con.prepareStatement(removeRoomQuery);
 			pst.setString(1,room_id);
 			rs=pst.executeQuery();
+			if(rs == null){
+				throw new RoomsNotFoundException("couldn't delete room Please try again.");
+			}
 		} catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
@@ -338,16 +379,16 @@ public class AdminDaoImpl implements AdminDao
             }
             catch(SQLException e)
             {
-//              throw  new HotelException(e.getMessage());
+            	adminDaoLogger.error(e.getMessage());
                 e.printStackTrace();
             }
         }
+		adminDaoLogger.info("Room data is deleted");
 	}
 
 	@Override
 	public List<RoomDetails> fetchAllRooms(String hotel_id) throws RoomsNotFoundException
 	{
-	
         List<RoomDetails> AllRoomList=new ArrayList<RoomDetails>();
         try 
         {
@@ -366,6 +407,9 @@ public class AdminDaoImpl implements AdminDao
                         rs.getInt("availability"),
                         rs.getBlob("imageFile")));
             }
+            if(AllRoomList.size() == 0){
+            	throw new RoomsNotFoundException("there are no rooms to show.");
+            }
         } catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
@@ -381,10 +425,11 @@ public class AdminDaoImpl implements AdminDao
             catch(SQLException e)
             {
 //              throw  new HotelException(e.getMessage());
+            	adminDaoLogger.error(e.getMessage());
                 e.printStackTrace();
             }
         }
-        
+        adminDaoLogger.info("All rooms data is retrieved");
         return AllRoomList;
 	}
 
@@ -424,9 +469,11 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 			}
 			catch(SQLException e){
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		adminDaoLogger.info("The booking list data for date"+date+" is retireved");
 		return bookingsList;
 	}
 
@@ -465,9 +512,11 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 			}
 			catch(SQLException e){
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		adminDaoLogger.info("The booking list data for hotel id "+hotel_id+" is retireved");
 		return BList;
 	}
 
@@ -478,18 +527,25 @@ public class AdminDaoImpl implements AdminDao
 		
 		try{
 			con=DBUtil.getConn();
-			String selectqry="SELECT * FROM users IN (SELECT user_id FROM bookingdetails WHERE room_id IN (SELECT room_id FROM roomdetails WHERE hotel_id='"+hotel_id+"'))";
+			String query="SELECT user_id FROM bookingdetails WHERE room_id IN (SELECT room_id FROM roomdetails WHERE hotel_id='"+hotel_id+"')";
 			st=con.createStatement();
-			rs=st.executeQuery(selectqry);		
+			rs = st.executeQuery(query);	
+			Users user = null;
 			
 			while(rs.next())
 			{
-				Users user = new Users();
-				user.setUser_id(rs.getString("user_id"));
-				user.setUser_name(rs.getString("user_name"));
-				user.setRole(rs.getString("role"));
-				user.setMobile_no(rs.getString("mobile_no"));
-				user.setEmail(rs.getString("email"));
+				String query1 = "SELECT * FROM users WHERE user_id='"+rs.getString("user_id")+"'";
+				ResultSet rs2 = st.executeQuery(query1);
+				while(rs2.next()){
+					user = new Users(rs.getString("user_id"),
+							rs.getString("password"),
+							rs.getString("role"),
+							rs.getString("user_name"),
+							rs.getString("mobile_no"),
+							rs.getString("phone"),
+							rs.getString("address"),
+							rs.getString("email"));
+				}
 				userList.add(user);
 			}
 			if(userList.size() == 0){
@@ -507,9 +563,11 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 			}
 			catch(SQLException e){
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		adminDaoLogger.info("The guest list for hotel id"+hotel_id+"is retireved");
 		return userList;
 	}
 
@@ -532,9 +590,11 @@ public class AdminDaoImpl implements AdminDao
 				pst.close();
 				con.close();
 			} catch (SQLException e) {
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		adminDaoLogger.info("The hotel data for hotel id"+hotel_id+" is deleted");
 	}
 
 	@Override
@@ -552,7 +612,9 @@ public class AdminDaoImpl implements AdminDao
 			Hotel hotel = searchHotel(hotel_id);
 			hotel.setAvg_rate_per_night(average);
 			rowsAffected = updateHotelInfo(hotel);
-			
+			if(rowsAffected == 0){
+				throw new HotelNotFoundException("Couldnt update avg rate.");
+			}
 		} catch (SQLException e) {
 			System.out.println("App Error: There is problem in syntax.");
 		} catch(IOException e){
@@ -563,9 +625,11 @@ public class AdminDaoImpl implements AdminDao
 				st.close();
 				con.close();
 			} catch (SQLException e) {
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		adminDaoLogger.info("The hotel average rate is updated"+rowsAffected);
 		return rowsAffected;
 	}
 
@@ -590,9 +654,11 @@ public class AdminDaoImpl implements AdminDao
 				st.close();
 				con.close();
 			} catch (SQLException e) {
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		adminDaoLogger.info("The maximum room no of hotel is retrieved"+maxValue);
 		return Integer.toString(maxValue+1);
 	}
 
@@ -628,9 +694,11 @@ public class AdminDaoImpl implements AdminDao
 				st.close();
 				con.close();
 			} catch (SQLException e) {
+				adminDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		adminDaoLogger.info("The room for room_id"+room_id+"is retrieved");
 		return roomDetails;
 	}
 

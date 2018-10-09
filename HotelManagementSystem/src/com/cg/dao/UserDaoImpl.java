@@ -9,6 +9,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.omg.CORBA.UserException;
 
 import com.cg.dbutil.DBUtil;
@@ -32,6 +37,15 @@ public class UserDaoImpl implements UserDao{
 	PreparedStatement pst = null;
 	ResultSet rs=null;
 	
+	Logger userDaoLogger=null;
+	public UserDaoImpl() 
+	{
+		userDaoLogger=Logger.getLogger(UserDaoImpl.class);
+		PropertyConfigurator.configure("log4j.properties");
+		userDaoLogger.debug("This is a debug message.");
+		userDaoLogger.warn("This is a warn message.");
+		userDaoLogger.fatal("This is a fatal message.");
+	}
 
 	@Override
 	public int registerUser(Users user) throws UserCreationException{
@@ -58,6 +72,7 @@ public class UserDaoImpl implements UserDao{
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
+		userDaoLogger.info("New User is successfully registered");
 		return 0;
 	}
 
@@ -100,9 +115,11 @@ public class UserDaoImpl implements UserDao{
 			}
 			catch(SQLException e)
 			{
+				userDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		userDaoLogger.info("User successfully logged on "+user.getUser_name());
 		return user;
 	}
 
@@ -145,9 +162,11 @@ public class UserDaoImpl implements UserDao{
 			}
 			catch(SQLException e)
 			{
+				userDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		userDaoLogger.info("All Availabe rooms data is retrieved");
 		return roomsList;
 	}
 
@@ -216,9 +235,11 @@ public class UserDaoImpl implements UserDao{
 			}
 			catch(SQLException e){
 //				throw  new HotelException(e.getMessage());
+				userDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
+		userDaoLogger.info("The room has been successfully booked"+bookDet);
 		return bookDet;
 	}
 
@@ -261,9 +282,11 @@ public class UserDaoImpl implements UserDao{
 				catch(SQLException e)
 				{
 //					throw  new HotelException(e.getMessage());
+					userDaoLogger.error(e.getMessage());
 					e.printStackTrace();
 				}
 			}
+		userDaoLogger.info("The booking room details are retireved");
 		return bookdetail;
 	}
 
@@ -306,10 +329,11 @@ public class UserDaoImpl implements UserDao{
 				con.close();
 				st.close();
 			} catch (SQLException e) {
+				userDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
-		
+		userDaoLogger.info("The hotels searched by city are retrieved successfully");
 		return hotels;
 	}
 
@@ -345,10 +369,11 @@ public class UserDaoImpl implements UserDao{
 			catch(SQLException e)
 			{
 //				throw  new HotelException(e.getMessage());
+				userDaoLogger.error(e.getMessage());
 				e.printStackTrace();
 			}
 		}
-
+		userDaoLogger.info("The per night rate for hotel is retrieved"+perNightRate);
 		return perNightRate;
 	}
 

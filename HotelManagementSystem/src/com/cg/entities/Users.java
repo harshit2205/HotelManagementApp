@@ -33,10 +33,12 @@ public class Users {
 	//to String function.....
 	@Override
 	public String toString() {
-		return "Users [user_id=" + user_id + ", password=" + password
-				+ ", role=" + role + ", user_name=" + user_name
-				+ ", mobile_no=" + mobile_no + ", phone=" + phone
-				+ ", address=" + address + ", email=" + email + "]";
+		return "USERNAME " + user_name.toUpperCase()+"\n"
+				+ "user_id : " + user_id + ""
+				+ "\nrole : " + role 
+				+ "\nmobile_no : " + mobile_no 
+				+ "\nphone : " + phone
+				+ "\nemail : " + email ;
 	}
 
 	public String getUser_id() {
