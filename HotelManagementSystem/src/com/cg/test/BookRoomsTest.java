@@ -9,7 +9,6 @@ import org.junit.Test;
 
 import com.cg.entities.BookingDetails;
 import com.cg.exception.BookingsNotFoundException;
-import com.cg.exception.RoomsNotFoundException;
 import com.cg.service.UserServiceImpl;
 
 public class BookRoomsTest {
@@ -30,16 +29,20 @@ public class BookRoomsTest {
       bookingDetails.setNo_of_children(0);
       bookingDetails.setAmount(0f);
   }
+  
   @Test
   public void testBookRoom() 
   {
-	  
-	  try {
-		  System.out.println(userSer.viewBookingStatus("dmy"));
-		Assert.assertEquals(bookingDetails, userSer.viewBookingStatus("dmy"));
+	 try {
+		Assert.assertNotSame(bookingDetails, userSer.viewBookingStatus("dmy"));
 	} catch (BookingsNotFoundException  e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+  }
+  @Test(expected=BookingsNotFoundException.class)
+  public void testBookRoomFailure() throws BookingsNotFoundException
+  {
+	  Assert.assertNotSame(bookingDetails, userSer.viewBookingStatus("dmy1"));
   }
 }

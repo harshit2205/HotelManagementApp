@@ -1,7 +1,6 @@
 package com.cg.test;
 
 import junit.framework.Assert;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -12,6 +11,7 @@ import com.cg.service.AdminServiceImpl;
 public class UpdateHotelTest {
     static AdminServiceImpl adminSer=null;
     static Hotel hotel=null;
+    
     @BeforeClass
     public static void setUp()
     {
@@ -28,13 +28,21 @@ public class UpdateHotelTest {
     	hotel.setEmail("dummy@dummy.com");
     	hotel.setFax("dummy");
     }
+    
     @Test
     public void updateTest() 
     {
     	try {
+    		hotel.setHotel_id("dmy");
 			Assert.assertEquals(1, adminSer.updateHotelInfo(hotel));
 		} catch (HotelNotFoundException e) {
 			e.printStackTrace();
 		}
+    }
+    @Test(expected=HotelNotFoundException.class)
+    public void updateTestFailure() throws HotelNotFoundException
+    {
+		hotel.setHotel_id("dmy1");
+		Assert.assertEquals(1, adminSer.updateHotelInfo(hotel));
     }
 }

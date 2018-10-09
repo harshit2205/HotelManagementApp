@@ -135,4 +135,16 @@ public class AdminServiceImpl implements AdminService{
 		return adminDaoImpl.searchUser(user_name);
 	}
 
+	@Override
+	public RoomDetails searchAvailableRoom(String room_id)
+			throws RoomsNotFoundException {
+		return adminDaoImpl.searchAvailableRoom(room_id);
+	}
+
+	@Override
+	public RoomDetails searchAvailableRoomByHotel(String hotel_id)
+			throws RoomsNotFoundException {
+		return adminDaoImpl.searchAvailableRoomByHotel(hotel_id);
+	}
+
 }

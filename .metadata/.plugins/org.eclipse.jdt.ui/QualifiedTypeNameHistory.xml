@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.junit.AfterClass"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="com.cg.exception.ValidationException"/>
+<fullyQualifiedTypeName name="com.cg.entities.RoomDetails"/>
+<fullyQualifiedTypeName name="com.cg.service.ValidationService"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.cg.exception.RoomsNotFoundException"/>
+<fullyQualifiedTypeName name="com.cg.exception.HotelNotFoundException"/>
+<fullyQualifiedTypeName name="com.cg.exception.BookingsNotFoundException"/>
+</qualifiedTypeNameHistroy>

@@ -13,7 +13,7 @@ public class HotelNotFoundException extends Exception{
 	
 	@Override
 	public String toString() {
-		return "\nHotel Not Found Exception: "+message;
+		return message;
 	}
 
 	public String getMessage() {

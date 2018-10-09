@@ -1,0 +1,150 @@
+2018-10-09 10:57:28,685 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:57:28,685 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:57:28,685 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:57:28,685 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:57:28,685 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:57:28,685 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:57:32,601 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:57:32,601 - com.cg.client.Client - INFO - Login method called
+2018-10-09 10:57:33,928 - com.cg.client.Client - INFO - Admin login
+2018-10-09 10:57:39,187 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 10:58:52,878 - com.cg.dao.AdminDaoImpl - INFO - New Hotel Data Inserted
+2018-10-09 10:58:52,878 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:00:08,311 - com.cg.dao.AdminDaoImpl - INFO - The hotel for hotel id 1134 is retireved1134	COUNTRY IN
+Delhi	 Delhi
+ About = Best hotel
+
+Rs. 1800.0/pernight 	 Contact No. 123456789 123456789
+ This Hotel is Rated 3Star 	 email = countryin.hotel@countryin.com,
+ fax = countryfax12
+
+2018-10-09 11:02:04,115 - com.cg.dao.AdminDaoImpl - INFO - Hotel data updated
+2018-10-09 11:02:04,115 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:03:13,725 - com.cg.dao.AdminDaoImpl - INFO - All Hotel's data Retrieved
+2018-10-09 11:03:13,725 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:03:33,324 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:05:08,929 - com.cg.dao.AdminDaoImpl - INFO - The booking list data for date04-Oct-18 is retireved
+2018-10-09 11:05:08,929 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:05:26,493 - com.cg.dao.AdminDaoImpl - INFO - The booking list data for hotel id 1134 is retireved
+2018-10-09 11:05:26,508 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:06:02,133 - com.cg.dao.AdminDaoImpl - INFO - The booking list data for hotel id 1131 is retireved
+2018-10-09 11:06:02,133 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:06:10,044 - com.cg.client.Client - INFO - Fetching Guest List for Hotel
+2018-10-09 11:06:11,011 - com.cg.dao.AdminDaoImpl - INFO - The guest list for hotel id1131is retireved
+2018-10-09 11:06:11,011 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:06:19,349 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:06:19,349 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:06:20,707 - com.cg.client.Client - INFO - User login
+2018-10-09 11:06:34,860 - com.cg.dao.UserDaoImpl - INFO - User successfully logged on Shashank
+2018-10-09 11:06:40,915 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:06:40,915 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:06:42,680 - com.cg.client.Client - INFO - User login
+2018-10-09 11:06:50,284 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:06:50,284 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:07:21,084 - com.cg.client.Client - INFO - User login
+2018-10-09 11:07:35,708 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:07:35,708 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:07:36,833 - com.cg.client.Client - INFO - User login
+2018-10-09 11:07:46,181 - com.cg.dao.UserDaoImpl - INFO - User successfully logged on Shashank
+2018-10-09 11:07:49,678 - com.cg.client.Client - INFO - Finding Hotel by City
+2018-10-09 11:07:52,441 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 11:07:52,441 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 11:07:53,299 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 11:07:54,066 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 11:08:09,326 - com.cg.client.Client - INFO - Viewing Booking Status
+2018-10-09 11:08:39,534 - com.cg.dao.UserDaoImpl - INFO - The booking room details are retireved
+2018-10-09 11:09:15,578 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:09:15,578 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:09:22,027 - com.cg.client.Client - INFO - Admin login
+2018-10-09 11:09:29,412 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:09:29,412 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:09:31,207 - com.cg.client.Client - INFO - Admin login
+2018-10-09 11:09:37,623 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:09:37,623 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:09:38,732 - com.cg.client.Client - INFO - Admin login
+2018-10-09 11:09:43,211 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:10:08,651 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:10:08,651 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:10:08,651 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:10:08,651 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:10:08,651 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:10:08,651 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:10:18,214 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:10:18,214 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:10:23,711 - com.cg.client.Client - INFO - User login
+2018-10-09 11:10:31,234 - com.cg.dao.UserDaoImpl - INFO - User successfully logged on Venka
+2018-10-09 11:13:19,636 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:13:19,636 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:13:25,413 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:13:25,413 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:13:26,412 - com.cg.dao.AdminDaoImpl - INFO - Hotel data updated
+2018-10-09 11:20:08,420 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:20:08,420 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:20:08,420 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:20:08,420 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:20:08,420 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:20:08,420 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:20:12,819 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:20:12,819 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:20:13,725 - com.cg.client.Client - INFO - Admin login
+2018-10-09 11:20:18,283 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:20:59,500 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:20:59,500 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:20:59,500 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:20:59,500 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:20:59,500 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:20:59,500 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:21:01,902 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:21:01,902 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:21:02,668 - com.cg.client.Client - INFO - Admin login
+2018-10-09 11:21:09,299 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:21:58,530 - com.cg.dao.AdminDaoImpl - INFO - New Hotel Data Inserted
+2018-10-09 11:21:58,530 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:22:06,182 - com.cg.dao.AdminDaoImpl - INFO - All Hotel's data Retrieved
+2018-10-09 11:22:06,182 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:22:20,394 - com.cg.client.Client - INFO - Performing delete operation for Hotel
+2018-10-09 11:22:21,174 - com.cg.dao.AdminDaoImpl - INFO - The hotel data for hotel id1153 is deleted
+2018-10-09 11:22:21,174 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:22:24,873 - com.cg.dao.AdminDaoImpl - INFO - All Hotel's data Retrieved
+2018-10-09 11:22:24,873 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 11:28:07,987 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:28:07,987 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:28:07,987 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:28:07,987 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:28:07,987 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:28:07,987 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:28:10,671 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:28:10,671 - com.cg.client.Client - INFO - Register method called
+2018-10-09 11:28:20,235 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:28:20,235 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:28:20,235 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:28:20,235 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:28:20,235 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:28:20,235 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:28:22,171 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:28:22,171 - com.cg.client.Client - INFO - Exited out
+2018-10-09 11:29:25,659 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:29:25,659 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:29:25,659 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:29:25,659 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:29:25,659 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:29:25,659 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:29:26,797 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:29:26,797 - com.cg.client.Client - INFO - Exited out
+2018-10-09 11:29:35,838 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:29:35,838 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:29:35,838 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 11:29:35,838 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:29:35,838 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 11:29:35,838 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 11:29:37,835 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:29:37,835 - com.cg.client.Client - INFO - Login method called
+2018-10-09 11:30:07,950 - com.cg.client.Client - INFO - Register method called
+2018-10-09 11:30:48,697 - com.cg.client.Client - INFO - validating user input
+2018-10-09 11:31:00,834 - com.cg.client.Client - INFO - Finding Hotel by City
+2018-10-09 11:31:05,800 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 11:31:05,800 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 11:31:06,550 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 11:31:07,330 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 11:33:34,661 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 11:33:34,676 - com.cg.client.Client - INFO - Exited out

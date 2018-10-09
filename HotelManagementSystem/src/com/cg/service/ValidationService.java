@@ -1,16 +1,18 @@
 package com.cg.service;
 
-import com.cg.entities.BookingDetails;
-import com.cg.entities.Hotel;
-import com.cg.entities.Users;
-import com.cg.exception.ValidationException;
+import java.sql.Date;
+
 
 public interface ValidationService 
 {
-	public String userValidation(Users user) 
-			throws ValidationException;
-	public String hotelValidation(Hotel hotel) 
-			throws ValidationException;
-	public String bookingDetailsValidation(BookingDetails bookD) 
-			throws ValidationException;
+	public boolean passwordValidation(String str);
+	public boolean userNameValidation(String str);
+	public boolean phoneValidation(String str);
+	public boolean emailValidation(String str);
+	public boolean dateValidation(Date date);
+	public boolean datesValidation(Date from_date,Date to_date);
+	public boolean personsValidation(int adult,int children);
+	public boolean priceValidation(Float price);
+	public boolean cityValidation(String city);
+	public boolean ratingValidation(int rating);
 }

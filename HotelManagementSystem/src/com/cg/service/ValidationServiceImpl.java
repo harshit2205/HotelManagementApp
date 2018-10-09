@@ -3,81 +3,17 @@ package com.cg.service;
 import java.sql.Date;
 import java.util.regex.Pattern;
 
-import com.cg.entities.BookingDetails;
-import com.cg.entities.Hotel;
-import com.cg.entities.Users;
-import com.cg.exception.ValidationException;
 
 public class ValidationServiceImpl implements ValidationService
 {
-	static final String VALIDATED = "Correct Input!";
 	AdminServiceImpl admSer = null;
-	
-	
-
 	public ValidationServiceImpl() {
 		admSer = new AdminServiceImpl();
 	}
 
-	@Override
-	public String userValidation(Users user) 
-			throws ValidationException{
-<<<<<<< HEAD
-		if(passwordValidation(user.getPassword())){
-			if(userNameValidation(user.getUser_name())){
-=======
-		if(userNameValidation(user.getUser_name())){
-			if(passwordValidation(user.getPassword())){
->>>>>>> 7454c51a2731723539ed7cf80dcef0f66275b578
-				if(phoneValidation(user.getPhone())){
-					if(phoneValidation(user.getMobile_no())){
-						if(emailValidation(user.getEmail())) return VALIDATED;
-						else throw new ValidationException("Enter a valid Email Address");
-					}else throw new ValidationException("Enter a valid Mobile Number");
-				}else throw new ValidationException("Enter a valid Phone Number");
-<<<<<<< HEAD
-			}else throw new ValidationException("Enter a Valid Username");
-		}else throw new ValidationException("Enter a Valid Password");
-=======
-			}else throw new ValidationException("Enter a valid Password which contains:\n"
-				+ "A digit must occur at least once\n"
-				+ "An upper case letter must occur at least once\n"
-				+ "A lower case letter must occur at least once\n"
-				+ "A special character must occur at least once\n"
-				+ "No whitespace allowed in the entire string\n"
-				+ "At least 8 characters");
-		}else throw new ValidationException("Enter a Valid Username:"
-				+ "Starting with Caps\n"
-				+ "with minimum 1 and maximum 20 characters");
->>>>>>> 7454c51a2731723539ed7cf80dcef0f66275b578
-	}
-	
-	@Override
-	public String hotelValidation(Hotel hotel) 
-			throws ValidationException{
-	if(emailValidation(hotel.getEmail())){
-		if(phoneValidation(hotel.getPhone_no())){
-			if(phoneValidation(hotel.getPhone_no())) return VALIDATED;
-				else throw new ValidationException("Enter a valid Phone Number");
-			}else throw new ValidationException("Enter a valid Phone Number");
-		}else throw new ValidationException("Enter a valid Email Address");
-	}
-
-	@Override
-	public String bookingDetailsValidation(BookingDetails bookD)
-			throws ValidationException{
-	if(datesValidation(bookD.getBooked_from(),bookD.getBooked_to())){
-		if(dateValidation(bookD.getBooked_from())){
-			if(personsValidation(bookD.getNo_of_adults(), bookD.getNo_of_children())) return VALIDATED;
-			else throw new ValidationException("Number of persons limit exceeded");
-			}else throw new ValidationException("The date is older than current day");
-		}else throw new ValidationException("The checkout date is older than booked checkin date");
-	}
-
-
 	
 	//these are generic functions for validation....
-
+	@Override
 	public boolean passwordValidation(String str)
 	{
 		String pswdPattern = "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
@@ -96,7 +32,8 @@ public class ValidationServiceImpl implements ValidationService
 			return false;
 		}
 	}
-
+	
+	@Override
 	public boolean userNameValidation(String str)
 	{
 		String namePattern = "[A-Z][a-z]{1,20}";
@@ -106,6 +43,7 @@ public class ValidationServiceImpl implements ValidationService
 		}else return false;
 	}
 
+	@Override
 	public boolean phoneValidation(String str)
 	{
 		String PhonePattern = "[0-9]{10}";
@@ -119,6 +57,7 @@ public class ValidationServiceImpl implements ValidationService
 		}
 	}
 
+	@Override
 	public boolean emailValidation(String str)
 	{
 		String EmailPattern = "[a-zA-Z0-9._%+-]+@[A-Za-z]+[.][A-Za-z]{1,3}";
@@ -132,6 +71,7 @@ public class ValidationServiceImpl implements ValidationService
 		}
 	}
 
+	@Override
 	public boolean dateValidation(Date date)
 	{
 		Date user_date = date;
@@ -148,6 +88,7 @@ public class ValidationServiceImpl implements ValidationService
 
 	}
 
+	@Override
 	public boolean datesValidation(Date from_date,Date to_date)
 	{
 		if(to_date.before(from_date))
@@ -161,6 +102,7 @@ public class ValidationServiceImpl implements ValidationService
 
 	}
 	
+	@Override
 	public boolean personsValidation(int adult,int children)
 	{
 		int sum=adult+children;
@@ -172,6 +114,37 @@ public class ValidationServiceImpl implements ValidationService
 		{
 			return false;
 		}
+	}
+
+	@Override
+	public boolean priceValidation(Float price)
+	{
+		if(price<0)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+
+
+	@Override
+	public boolean cityValidation(String city) {
+		String cityNamePattern = "[A-Z][a-z]{1,20}";
+		if(Pattern.matches(cityNamePattern,city)){
+			return true;
+		}else return false;
+	}
+
+
+	@Override
+	public boolean ratingValidation(int rating) {
+		if(rating>=0 && rating<=5){
+			return true;
+		}
+		return false;
 	}
 
 	

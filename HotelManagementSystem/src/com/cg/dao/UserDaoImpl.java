@@ -8,13 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-
-
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.omg.CORBA.UserException;
 
 import com.cg.dbutil.DBUtil;
 import com.cg.entities.BookingDetails;
@@ -116,8 +111,8 @@ public class UserDaoImpl implements UserDao{
 			catch(SQLException e)
 			{
 				userDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		userDaoLogger.info("User successfully logged on "+user.getUser_name());
 		return user;
@@ -163,8 +158,8 @@ public class UserDaoImpl implements UserDao{
 			catch(SQLException e)
 			{
 				userDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		userDaoLogger.info("All Availabe rooms data is retrieved");
 		return roomsList;
@@ -234,10 +229,9 @@ public class UserDaoImpl implements UserDao{
 				con.close();
 			}
 			catch(SQLException e){
-//				throw  new HotelException(e.getMessage());
 				userDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		userDaoLogger.info("The room has been successfully booked"+bookDet);
 		return bookDet;
@@ -281,10 +275,9 @@ public class UserDaoImpl implements UserDao{
 				}
 				catch(SQLException e)
 				{
-//					throw  new HotelException(e.getMessage());
 					userDaoLogger.error(e.getMessage());
-					e.printStackTrace();
-				}
+					System.out.println("App Error: There is problem closing connections.");
+					}
 			}
 		userDaoLogger.info("The booking room details are retireved");
 		return bookdetail;
@@ -330,8 +323,8 @@ public class UserDaoImpl implements UserDao{
 				st.close();
 			} catch (SQLException e) {
 				userDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		userDaoLogger.info("The hotels searched by city are retrieved successfully");
 		return hotels;
@@ -368,10 +361,9 @@ public class UserDaoImpl implements UserDao{
 			}
 			catch(SQLException e)
 			{
-//				throw  new HotelException(e.getMessage());
 				userDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		userDaoLogger.info("The per night rate for hotel is retrieved"+perNightRate);
 		return perNightRate;

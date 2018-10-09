@@ -12,7 +12,7 @@ public class UserCreationException extends Exception{
 	
 	@Override
 	public String toString() {
-		return "\nUser Creation Exception: "+message;
+		return message;
 	}
 
 	public String getMessage() {

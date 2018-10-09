@@ -4,13 +4,13 @@ import java.sql.Blob;
 
 public class RoomDetails {
 
-	private String hotel_id;
-	private String room_id;
-	private String room_no;
-	private String room_type;
-	private float per_night_rate;
-	private int availability;
-	private Blob imageFile;
+	private String hotelId; //hotel_id
+	private String roomId; //room_id
+	private String roomNo; //room_no
+	private String roomType; //room_type
+	private float perNightRate; //per_night_rate
+	private int availability;//availability
+	private Blob imageFile; //imageFile
 	
 	//constructors parameterized and non parameterized....
 
@@ -22,11 +22,11 @@ public class RoomDetails {
 	public RoomDetails(String hotel_id, String room_id, String room_no, String room_type, float per_night_rate,
 			int availability, Blob imageFile) {
 		super();
-		this.hotel_id = hotel_id;
-		this.room_id = room_id;
-		this.room_no = room_no;
-		this.room_type = room_type;
-		this.per_night_rate = per_night_rate;
+		this.hotelId = hotel_id;
+		this.roomId = room_id;
+		this.roomNo = room_no;
+		this.roomType = room_type;
+		this.perNightRate = per_night_rate;
 		this.availability = availability;
 		this.imageFile = imageFile;
 	}
@@ -34,51 +34,50 @@ public class RoomDetails {
 	//to String function....
 	@Override
 	public String toString() {
-		return "RoomDetails [hotel_id=" + hotel_id + ", room_id=" + room_id
-				+ ", room_no=" + room_no + ", room_type=" + room_type
-				+ ", per_night_rate=" + per_night_rate + ", availability="
-				+ availability + ", imageFile=" + imageFile + "]";
+		return "____________________________\nRoom Id: "+roomId+"\t Room No: "+roomNo
+				+"\nRoom Type: "+roomType
+				+"\nPer Night Rate: Rs."+perNightRate+"\n____________________________";
 	}
 
 	//getters and setters.....
 	public String getHotel_id() {
-		return hotel_id;
+		return hotelId;
 	}
 
 	public void setHotel_id(String hotel_id) {
-		this.hotel_id = hotel_id;
+		this.hotelId = hotel_id;
 	}
 
 	public String getRoom_id() {
-		return room_id;
+		return roomId;
 	}
 
 	public void setRoom_id(String room_id) {
-		this.room_id = room_id;
+		this.roomId = room_id;
 	}
 
 	public String getRoom_no() {
-		return room_no;
+		return roomNo;
 	}
 
 	public void setRoom_no(String room_no) {
-		this.room_no = room_no;
+		this.roomNo = room_no;
 	}
 
 	public String getRoom_type() {
-		return room_type;
+		return roomType;
 	}
 
 	public void setRoom_type(String room_type) {
-		this.room_type = room_type;
+		this.roomType = room_type;
 	}
 
 	public float getPer_night_rate() {
-		return per_night_rate;
+		return perNightRate;
 	}
 
 	public void setPer_night_rate(float per_night_rate) {
-		this.per_night_rate = per_night_rate;
+		this.perNightRate = per_night_rate;
 	}
 
 	public int isAvailability() {

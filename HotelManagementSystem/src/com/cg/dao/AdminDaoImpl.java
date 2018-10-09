@@ -23,7 +23,7 @@ import com.cg.exception.RoomsNotFoundException;
 import com.cg.exception.UserNotFoundException;
 
 public class AdminDaoImpl implements AdminDao
-{
+{   
 	public static final String STAN_AC_ROOM = "STAN_AC_ROOM";
 	public static final String STAN_NON_AC_ROOM = "STAN_NON_AC_ROOM";
 	public static final String EXEC_AC_ROOM = "EXEC_AC_ROOM";
@@ -84,10 +84,9 @@ public class AdminDaoImpl implements AdminDao
 			}
 			catch(SQLException e)
 			{
-//				throw  new HotelException(e.getMessage());
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+					}
 		}
 		adminDaoLogger.info("All Hotel's data Retrieved");
 		return HList;
@@ -121,13 +120,12 @@ public class AdminDaoImpl implements AdminDao
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
-<<<<<<< HEAD
-		return rowsAffected;
-=======
+
+		
+
 		adminDaoLogger.info("New Hotel Data Inserted");
 		return rowsAffected;
 		
->>>>>>> 7454c51a2731723539ed7cf80dcef0f66275b578
 	}
 
 	@Override
@@ -244,8 +242,8 @@ public class AdminDaoImpl implements AdminDao
 			catch(SQLException e)
 			{
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("All Available Rooms data Retrieved");
 		return RoomList;
@@ -289,10 +287,9 @@ public class AdminDaoImpl implements AdminDao
 			}
 			catch(SQLException e)
 			{
-//				throw  new HotelException(e.getMessage());
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("All Booked Rooms data Retrieved");
 		return RoomList;
@@ -380,8 +377,8 @@ public class AdminDaoImpl implements AdminDao
             catch(SQLException e)
             {
             	adminDaoLogger.error(e.getMessage());
-                e.printStackTrace();
-            }
+            	System.out.println("App Error: There is problem closing connections.");
+    			}
         }
 		adminDaoLogger.info("Room data is deleted");
 	}
@@ -424,10 +421,9 @@ public class AdminDaoImpl implements AdminDao
             }
             catch(SQLException e)
             {
-//              throw  new HotelException(e.getMessage());
             	adminDaoLogger.error(e.getMessage());
-                e.printStackTrace();
-            }
+            	System.out.println("App Error: There is problem closing connections.");
+    			}
         }
         adminDaoLogger.info("All rooms data is retrieved");
         return AllRoomList;
@@ -470,8 +466,8 @@ public class AdminDaoImpl implements AdminDao
 			}
 			catch(SQLException e){
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("The booking list data for date"+date+" is retireved");
 		return bookingsList;
@@ -513,8 +509,8 @@ public class AdminDaoImpl implements AdminDao
 			}
 			catch(SQLException e){
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("The booking list data for hotel id "+hotel_id+" is retireved");
 		return BList;
@@ -564,8 +560,8 @@ public class AdminDaoImpl implements AdminDao
 			}
 			catch(SQLException e){
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("The guest list for hotel id"+hotel_id+"is retireved");
 		return userList;
@@ -591,8 +587,8 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 			} catch (SQLException e) {
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("The hotel data for hotel id"+hotel_id+" is deleted");
 	}
@@ -626,8 +622,8 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 			} catch (SQLException e) {
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("The hotel average rate is updated"+rowsAffected);
 		return rowsAffected;
@@ -655,8 +651,8 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 			} catch (SQLException e) {
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("The maximum room no of hotel is retrieved"+maxValue);
 		return Integer.toString(maxValue+1);
@@ -695,8 +691,8 @@ public class AdminDaoImpl implements AdminDao
 				con.close();
 			} catch (SQLException e) {
 				adminDaoLogger.error(e.getMessage());
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		adminDaoLogger.info("The room for room_id"+room_id+"is retrieved");
 		return roomDetails;
@@ -730,12 +726,94 @@ public class AdminDaoImpl implements AdminDao
 				st.close();
 				con.close();
 			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+				System.out.println("App Error: There is problem closing connections.");
+				}
 		}
 		if(user == null) return false;
 		else return true;
 		
+	}
+
+	@Override
+	public RoomDetails searchAvailableRoom(String room_id)
+			throws RoomsNotFoundException {
+		RoomDetails roomDetails = null;
+		try
+		{
+			con=DBUtil.getConn();
+			String query="Select * from roomdetails where room_id='"+room_id+"' AND availability=1";
+			st=con.createStatement();
+			rs=st.executeQuery(query);
+			while(rs.next()){
+				roomDetails = new RoomDetails();
+				roomDetails.setHotel_id(rs.getString("hotel_id"));
+				roomDetails.setRoom_id(rs.getString("room_id"));
+				roomDetails.setRoom_no(rs.getString("room_no"));
+				roomDetails.setRoom_type(rs.getString("room_type"));
+				roomDetails.setPer_night_rate(rs.getFloat("per_night_rate"));
+				roomDetails.setAvailability(rs.getInt("availability"));
+			}
+			if(roomDetails == null){
+				throw new RoomsNotFoundException("Room is booked Already, cannot delete.");
+			}
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
+		} finally{
+			try {
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				adminDaoLogger.error(e.getMessage());
+				System.out.println("App Error: There is problem closing connections.");
+				}
+		}
+		adminDaoLogger.info("The room for room_id"+room_id+"is retrieved");
+		return roomDetails;
+	}
+
+	@Override
+	public RoomDetails searchAvailableRoomByHotel(String hotel_id)
+			throws RoomsNotFoundException {
+		RoomDetails roomDetails = null;
+		List<RoomDetails> rooms = new ArrayList<>();
+		try
+		{
+			con=DBUtil.getConn();
+			String query="Select * from roomdetails where hotel_id='"+hotel_id+"' AND availability=0";
+			st=con.createStatement();
+			rs=st.executeQuery(query);
+			while(rs.next()){
+				roomDetails = new RoomDetails();
+				roomDetails.setHotel_id(rs.getString("hotel_id"));
+				roomDetails.setRoom_id(rs.getString("room_id"));
+				roomDetails.setRoom_no(rs.getString("room_no"));
+				roomDetails.setRoom_type(rs.getString("room_type"));
+				roomDetails.setPer_night_rate(rs.getFloat("per_night_rate"));
+				roomDetails.setAvailability(rs.getInt("availability"));
+				rooms.add(roomDetails);
+			}
+			if(rooms.size()>0){
+				throw new RoomsNotFoundException("There are booked rooms cannot delete hotel.");
+			}
+		} catch (SQLException e) {
+			System.out.println("App Error: There is problem in syntax.");
+		} catch(IOException e){
+			System.out.println("App Error: Could not establish proper connection.");
+		} finally{
+			try {
+				rs.close();
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				adminDaoLogger.error(e.getMessage());
+				System.out.println("App Error: There is problem closing connections.");
+				}
+		}
+		adminDaoLogger.info("The room for room_id"+hotel_id+"is retrieved");
+		return roomDetails;
 	}
 
  

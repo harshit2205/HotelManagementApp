@@ -2,25 +2,25 @@ package com.cg.entities;
 
 public class Users {
 
-	private String user_id;
-	private String password;
-	private String role;
-	private String user_name;
-	private String mobile_no;
-	private String phone;
-	private String address;
-	private String email;
+	private String userId;  //user_id
+	private String password;  //password
+	private String role; //role
+	private String userName;  //user_name
+	private String mobileNo;  //mobile_no
+	private String phone;  //phone
+	private String address;  //address
+	private String email;  //email
 	
 	//constructors parameterized and non parameterized constructor....
 	public Users(String user_id, String password, String role,
 			String user_name, String mobile_no, String phone, String address,
 			String email) {
 		super();
-		this.user_id = user_id;
+		this.userId = user_id;
 		this.password = password;
 		this.role = role;
-		this.user_name = user_name;
-		this.mobile_no = mobile_no;
+		this.userName = user_name;
+		this.mobileNo = mobile_no;
 		this.phone = phone;
 		this.address = address;
 		this.email = email;
@@ -33,20 +33,18 @@ public class Users {
 	//to String function.....
 	@Override
 	public String toString() {
-		return "USERNAME " + user_name.toUpperCase()+"\n"
-				+ "user_id : " + user_id + ""
-				+ "\nrole : " + role 
-				+ "\nmobile_no : " + mobile_no 
+		return "USERNAME " + userName.toUpperCase()+"\n"
+				+ "\nmobile_no : " + mobileNo 
 				+ "\nphone : " + phone
-				+ "\nemail : " + email ;
+				+ "\nemail : " + email +"\n";
 	}
 
 	public String getUser_id() {
-		return user_id;
+		return userId;
 	}
 
 	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+		this.userId = user_id;
 	}
 
 	public String getPassword() {
@@ -66,19 +64,19 @@ public class Users {
 	}
 
 	public String getUser_name() {
-		return user_name;
+		return userName;
 	}
 
 	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+		this.userName = user_name;
 	}
 
 	public String getMobile_no() {
-		return mobile_no;
+		return mobileNo;
 	}
 
 	public void setMobile_no(String mobile_no) {
-		this.mobile_no = mobile_no;
+		this.mobileNo = mobile_no;
 	}
 
 	public String getPhone() {

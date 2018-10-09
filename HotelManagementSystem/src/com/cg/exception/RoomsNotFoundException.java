@@ -12,7 +12,7 @@ public class RoomsNotFoundException extends Exception{
 	
 	@Override
 	public String toString() {
-		return "\nRooms Not Found Exception: "+message;
+		return message;
 	}
 
 	public String getMessage() {

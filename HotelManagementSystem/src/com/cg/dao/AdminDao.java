@@ -48,4 +48,9 @@ public interface AdminDao {
 	public RoomDetails searchRoom(String room_id)
 			throws RoomsNotFoundException;
 	public boolean searchUser(String user_name);
+	public RoomDetails searchAvailableRoom(String room_id)
+			throws RoomsNotFoundException;
+	public RoomDetails searchAvailableRoomByHotel(String hotel_id)
+			throws RoomsNotFoundException; 
+	
 }

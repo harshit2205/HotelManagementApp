@@ -1,0 +1,22 @@
+1539062841937	Delete element
+1539078001369	Delete element
+1539085377890	Delete element
+1539086059554	Rename field 'booking_id'
+1539086074966	Rename field 'room_id'
+1539086097734	Rename field 'user_id'
+1539086107594	Rename field 'booked_from'
+1539086174689	Rename field 'booked_to'
+1539086189320	Rename field 'no_of_adults'
+1539086207213	Rename field 'no_of_children'
+1539086291506	Rename field 'hotel_id'
+1539086300275	Rename field 'hotel_name'
+1539086318981	Rename field 'avg_rate_per_night'
+1539086325829	Rename field 'phone_no'
+1539086334753	Rename field 'phone_no2'
+1539086387299	Rename field 'hotel_id'
+1539086394069	Rename field 'room_id'
+1539086401572	Rename field 'room_no'
+1539086407673	Rename field 'room_type'
+1539086415675	Rename field 'per_night_rate'
+1539086485644	Rename field 'user_name'
+1539086491603	Rename field 'mobile_no'

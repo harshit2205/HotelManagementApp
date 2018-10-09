@@ -12,7 +12,7 @@ public class BookingsNotFoundException extends Exception{
 	
 	@Override
 	public String toString() {
-		return "\nBookings Not Found Exception: "+message;
+		return message;
 	}
 
 	public String getMessage() {
