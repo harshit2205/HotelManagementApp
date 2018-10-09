@@ -22,16 +22,24 @@ public class ValidationServiceImpl implements ValidationService
 	@Override
 	public String userValidation(Users user) 
 			throws ValidationException{
-		if(passwordValidation(user.getPassword())){
-			if(userNameValidation(user.getUser_name())){
+		if(userNameValidation(user.getUser_name())){
+			if(passwordValidation(user.getPassword())){
 				if(phoneValidation(user.getPhone())){
 					if(phoneValidation(user.getMobile_no())){
 						if(emailValidation(user.getEmail())) return VALIDATED;
 						else throw new ValidationException("Enter a valid Email Address");
 					}else throw new ValidationException("Enter a valid Mobile Number");
 				}else throw new ValidationException("Enter a valid Phone Number");
-			}else throw new ValidationException("Enter a Valid Username");
-		}else throw new ValidationException("Enter a Valid Password");
+			}else throw new ValidationException("Enter a valid Password which contains:\n"
+				+ "A digit must occur at least once\n"
+				+ "An upper case letter must occur at least once\n"
+				+ "A lower case letter must occur at least once\n"
+				+ "A special character must occur at least once\n"
+				+ "No whitespace allowed in the entire string\n"
+				+ "At least 8 characters");
+		}else throw new ValidationException("Enter a Valid Username:"
+				+ "Starting with Caps\n"
+				+ "with minimum 1 and maximum 20 characters");
 	}
 	
 	@Override
@@ -62,7 +70,7 @@ public class ValidationServiceImpl implements ValidationService
 
 	public boolean passwordValidation(String str)
 	{
-		String pswdPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
+		String pswdPattern = "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
 		/*(?=.*[0-9])= a digit must occur at least once
 			(?=.*[a-z])= a lower case letter must occur at least once
 			(?=.*[A-Z])= an upper case letter must occur at least once
@@ -146,7 +154,7 @@ public class ValidationServiceImpl implements ValidationService
 	public boolean personsValidation(int adult,int children)
 	{
 		int sum=adult+children;
-		if(sum>=0 && sum <3)
+		if(sum>=0 && sum <=3)
 		{
 			return true;
 		}

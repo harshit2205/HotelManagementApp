@@ -72,7 +72,7 @@ public class UserDaoImpl implements UserDao{
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
-		userDaoLogger.info("New User is successfully registered"+user);
+		userDaoLogger.info("New User is successfully registered");
 		return 0;
 	}
 
@@ -119,7 +119,7 @@ public class UserDaoImpl implements UserDao{
 				e.printStackTrace();
 			}
 		}
-		userDaoLogger.info("User successfully logged on"+user);
+		userDaoLogger.info("User successfully logged on "+user.getUser_name());
 		return user;
 	}
 
@@ -166,7 +166,7 @@ public class UserDaoImpl implements UserDao{
 				e.printStackTrace();
 			}
 		}
-		userDaoLogger.info("All Availabe rooms data is retrieved"+roomsList);
+		userDaoLogger.info("All Availabe rooms data is retrieved");
 		return roomsList;
 	}
 
@@ -286,7 +286,7 @@ public class UserDaoImpl implements UserDao{
 					e.printStackTrace();
 				}
 			}
-		userDaoLogger.info("The booking room details are retireved"+bookdetail);
+		userDaoLogger.info("The booking room details are retireved");
 		return bookdetail;
 	}
 
@@ -333,7 +333,7 @@ public class UserDaoImpl implements UserDao{
 				e.printStackTrace();
 			}
 		}
-		userDaoLogger.info("The hotels searched by city are retrieved successfully"+hotels);
+		userDaoLogger.info("The hotels searched by city are retrieved successfully");
 		return hotels;
 	}
 

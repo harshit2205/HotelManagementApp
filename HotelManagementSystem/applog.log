@@ -1,48 +1,24 @@
-2018-10-06 14:44:35,823 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-06 14:44:35,823 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:44:35,826 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-06 14:44:35,827 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:44:35,828 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-06 14:44:35,828 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:46:16,285 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-06 14:46:16,286 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:46:16,289 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-06 14:46:16,289 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:46:16,291 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-06 14:46:16,291 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:52:07,567 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-06 14:52:07,567 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:52:07,571 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-06 14:52:07,571 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-06 14:52:07,572 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-06 14:52:07,572 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 14:09:32,931 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 14:09:32,946 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 14:09:32,949 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-08 14:09:32,949 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-08 14:09:32,951 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 14:09:32,951 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 14:10:07,710 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 14:10:07,710 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 14:10:07,713 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-08 14:10:07,713 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-08 14:10:07,715 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 14:10:07,715 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:03:47,785 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 15:03:47,786 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:03:47,789 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-08 15:03:47,789 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:03:47,790 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 15:03:47,791 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:16:10,908 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 15:16:10,909 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:16:10,911 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-08 15:16:10,912 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:16:10,913 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 15:16:10,913 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:50:28,519 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 15:50:28,520 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:50:28,523 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
-2018-10-08 15:50:28,523 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
-2018-10-08 15:50:28,524 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
-2018-10-08 15:50:28,524 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:31:52,568 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:31:52,568 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:31:52,568 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:31:54,428 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:31:54,428 - com.cg.client.Client - INFO - Login method called
+2018-10-09 10:31:55,240 - com.cg.client.Client - INFO - User login
+2018-10-09 10:32:05,273 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:32:05,273 - com.cg.client.Client - INFO - Login method called
+2018-10-09 10:32:05,851 - com.cg.client.Client - INFO - User login
+2018-10-09 10:32:14,839 - com.cg.dao.UserDaoImpl - INFO - User successfully logged on Venka
+2018-10-09 10:32:22,227 - com.cg.client.Client - INFO - Viewing Booking Status
+2018-10-09 10:32:38,509 - com.cg.client.Client - INFO - Booking room
+2018-10-09 10:32:51,569 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:32:51,569 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:32:52,336 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 10:33:49,367 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:33:49,367 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:33:50,180 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 10:35:15,426 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:35:15,426 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:35:16,181 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved

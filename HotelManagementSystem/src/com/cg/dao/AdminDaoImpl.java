@@ -89,7 +89,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		adminDaoLogger.info("All Hotel's data Retrieved:"+HList);
+		adminDaoLogger.info("All Hotel's data Retrieved");
 		return HList;
 	}
 
@@ -121,7 +121,7 @@ public class AdminDaoImpl implements AdminDao
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
-		adminDaoLogger.info("New Hotel Data Inserted."+hotel);
+		adminDaoLogger.info("New Hotel Data Inserted");
 		return rowsAffected;
 		
 	}
@@ -154,7 +154,7 @@ public class AdminDaoImpl implements AdminDao
 		} catch(IOException e){
 			System.out.println("App Error: Could not establish proper connection.");
 		}
-		adminDaoLogger.info("Hotel data updated"+hotel);
+		adminDaoLogger.info("Hotel data updated");
 		return rowsAffected;
 	}
 
@@ -197,7 +197,7 @@ public class AdminDaoImpl implements AdminDao
 				System.out.println("App Error: There is problem closing connections.");
 			}
 		}
-		adminDaoLogger.info("The hotel for hotel id"+hotel_id+"is retireved"+hotel);
+		adminDaoLogger.info("The hotel for hotel id "+hotel_id+" is retireved"+hotel);
 		return hotel;
 	}
 
@@ -243,7 +243,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		adminDaoLogger.info("All Available Rooms data Retrieved:"+RoomList);
+		adminDaoLogger.info("All Available Rooms data Retrieved");
 		return RoomList;
 	}
 
@@ -290,7 +290,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		adminDaoLogger.info("All Booked Rooms data Retrieved:"+RoomList);
+		adminDaoLogger.info("All Booked Rooms data Retrieved");
 		return RoomList;
 	}
 
@@ -379,7 +379,7 @@ public class AdminDaoImpl implements AdminDao
                 e.printStackTrace();
             }
         }
-		adminDaoLogger.info("Room data is deleted for room id"+room_id);
+		adminDaoLogger.info("Room data is deleted");
 	}
 
 	@Override
@@ -425,7 +425,7 @@ public class AdminDaoImpl implements AdminDao
                 e.printStackTrace();
             }
         }
-        adminDaoLogger.info("All rooms data is retrieved"+AllRoomList);
+        adminDaoLogger.info("All rooms data is retrieved");
         return AllRoomList;
 	}
 
@@ -469,7 +469,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		adminDaoLogger.info("The booking list data for date"+date+" is retireved"+bookingsList);
+		adminDaoLogger.info("The booking list data for date"+date+" is retireved");
 		return bookingsList;
 	}
 
@@ -512,7 +512,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		adminDaoLogger.info("The booking list data for hotel id"+hotel_id+" is retireved"+BList);
+		adminDaoLogger.info("The booking list data for hotel id "+hotel_id+" is retireved");
 		return BList;
 	}
 
@@ -563,7 +563,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		adminDaoLogger.info("The guest list for hotel id"+hotel_id+"is retireved"+userList);
+		adminDaoLogger.info("The guest list for hotel id"+hotel_id+"is retireved");
 		return userList;
 	}
 
@@ -694,7 +694,7 @@ public class AdminDaoImpl implements AdminDao
 				e.printStackTrace();
 			}
 		}
-		adminDaoLogger.info("The room for room_id"+room_id+"is retrieved"+roomDetails);
+		adminDaoLogger.info("The room for room_id"+room_id+"is retrieved");
 		return roomDetails;
 	}
 

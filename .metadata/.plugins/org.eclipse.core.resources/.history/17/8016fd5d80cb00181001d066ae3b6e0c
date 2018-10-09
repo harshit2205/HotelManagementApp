@@ -1,0 +1,232 @@
+2018-10-06 14:44:35,823 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:44:35,823 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:44:35,826 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-06 14:44:35,827 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:44:35,828 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:44:35,828 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:46:16,285 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:46:16,286 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:46:16,289 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-06 14:46:16,289 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:46:16,291 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:46:16,291 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:52:07,567 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:52:07,567 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:52:07,571 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-06 14:52:07,571 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-06 14:52:07,572 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-06 14:52:07,572 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 14:09:32,931 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 14:09:32,946 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 14:09:32,949 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-08 14:09:32,949 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-08 14:09:32,951 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 14:09:32,951 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 14:10:07,710 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 14:10:07,710 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 14:10:07,713 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-08 14:10:07,713 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-08 14:10:07,715 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 14:10:07,715 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:03:47,785 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 15:03:47,786 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:03:47,789 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-08 15:03:47,789 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:03:47,790 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 15:03:47,791 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:16:10,908 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 15:16:10,909 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:16:10,911 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-08 15:16:10,912 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:16:10,913 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 15:16:10,913 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:50:28,519 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 15:50:28,520 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:50:28,523 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-08 15:50:28,523 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-08 15:50:28,524 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-08 15:50:28,524 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:22:08,620 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:22:08,620 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:22:08,620 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 09:22:08,620 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:22:08,620 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:22:08,620 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:22:58,691 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:22:58,691 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:22:58,691 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 09:22:58,691 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:22:58,707 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:22:58,707 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:24:40,128 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:24:40,128 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:24:40,144 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 09:24:40,144 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:24:40,144 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:24:40,144 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:24:52,690 - com.cg.dao.AdminDaoImpl - INFO - All Hotel's data Retrieved:[dmy	DUMMY
+null	 Dummy
+ About = dummy
+
+Rs. 0.0/pernight 	 Contact No. 0000000000 0000000000
+ This Hotel is Rated 0Star 	 email = dummy@dummy.com,
+ fax = dummy
+, 1134	COUNTRY IN
+Delhi	 Delhi
+ About = Best hotel
+
+Rs. 2000.0/pernight 	 Contact No. 123456789 123456789
+ This Hotel is Rated 3Star 	 email = countryin.hotel@countryin.com,
+ fax = countryfax12
+, 1131	HYAAT HOTEL
+Andheri East, Mumbai, pin-456123	 Mumbai
+ About = Ranked amongst the top hotels of India, with best continental cuisine.
+
+Rs. 2600.0/pernight 	 Contact No. 9654736192 4856213790
+ This Hotel is Rated 4.5Star 	 email = hotelhyaat@gmail.com,
+ fax = megafax123
+, 1133	LALIT
+Barahkhambha Road,New Delhi	 Delhi
+ About = Ranked amongst the top hotels of India, with best hospitality services..
+
+Rs. 5000.0/pernight 	 Contact No. 994565656 858596825
+ This Hotel is Rated 5Star 	 email = lalit.hotel@lalit.com,
+ fax = faxlalit156
+, 1132	LEELA KEMPINSIKI
+Goa	 Goa
+ About = Best sceinc view with plenty of water sport activities.
+
+Rs. 3000.0/pernight 	 Contact No. 8527589756 5585858745
+ This Hotel is Rated 4Star 	 email = kempinsinkihotel@leela.com,
+ fax = faxleela123
+, 1151	TAMANNA HOTEL
+Pune	 Pune
+ About = nice hotel
+
+Rs. 0.0/pernight 	 Contact No. 1234567895 1234567896
+ This Hotel is Rated 1Star 	 email = tamanna@tamanna.com,
+ fax = tamfax123
+]
+2018-10-09 09:38:38,948 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:38:38,948 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:38:38,948 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 09:38:38,948 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:38:38,948 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:38:38,948 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:38:41,007 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 09:38:53,585 - com.cg.dao.AdminDaoImpl - INFO - All Hotel's data Retrieved
+2018-10-09 09:40:26,136 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:40:26,136 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:40:26,136 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 09:40:26,136 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:40:26,136 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:40:26,136 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:40:27,680 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 09:40:27,680 - com.cg.client.Client - INFO - Login method called
+2018-10-09 09:52:44,064 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:52:44,064 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:52:44,064 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 09:52:44,064 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:52:44,064 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:52:44,064 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:52:46,107 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 09:52:46,107 - com.cg.client.Client - INFO - Login method called
+2018-10-09 09:52:46,841 - com.cg.client.Client - INFO - Admin login
+2018-10-09 09:52:53,020 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 09:53:08,328 - com.cg.dao.AdminDaoImpl - INFO - The booking list data for hotel id1134 is retireved
+2018-10-09 09:53:08,328 - com.cg.client.Client - INFO - Showing the User Dashboard
+2018-10-09 09:56:31,962 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:56:31,962 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:56:31,962 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 09:56:31,962 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:56:31,962 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 09:56:31,962 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 09:56:34,458 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 09:56:34,458 - com.cg.client.Client - INFO - Register method called
+2018-10-09 09:57:34,377 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:10:20,171 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:10:20,171 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:10:20,186 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:10:20,186 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:10:20,186 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:10:20,186 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:10:25,028 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:10:25,028 - com.cg.client.Client - INFO - Register method called
+2018-10-09 10:11:08,855 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:12:03,293 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:12:23,326 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:13:03,241 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:13:03,241 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:13:03,241 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:13:03,241 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:13:03,241 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:13:03,241 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:13:05,253 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:13:05,253 - com.cg.client.Client - INFO - Login method called
+2018-10-09 10:13:06,939 - com.cg.client.Client - INFO - Admin login
+2018-10-09 10:13:12,316 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:13:12,316 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:13:12,316 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:13:12,316 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:13:12,316 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:13:12,316 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:13:13,907 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:13:13,907 - com.cg.client.Client - INFO - Register method called
+2018-10-09 10:13:33,764 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:16:44,578 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:16:44,578 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:16:44,578 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:16:44,578 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:16:44,578 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:16:44,578 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:16:46,031 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:16:46,031 - com.cg.client.Client - INFO - Register method called
+2018-10-09 10:16:58,784 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:20:44,141 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:20:44,141 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:20:44,141 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:20:44,141 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:20:44,141 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:20:44,141 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:20:46,719 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:20:46,719 - com.cg.client.Client - INFO - Register method called
+2018-10-09 10:20:54,013 - com.cg.client.Client - INFO - Venka
+2018-10-09 10:21:56,878 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:21:56,878 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:21:56,878 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:21:56,878 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:21:56,878 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:21:56,878 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:21:58,377 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:21:58,377 - com.cg.client.Client - INFO - Register method called
+2018-10-09 10:22:01,520 - com.cg.client.Client - INFO - Venka
+2018-10-09 10:22:09,535 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:22:17,502 - com.cg.client.Client - INFO - Venka
+2018-10-09 10:23:16,486 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:23:47,190 - com.cg.client.Client - INFO - Venka
+2018-10-09 10:24:25,223 - com.cg.client.Client - INFO - validating user input
+2018-10-09 10:27:01,114 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:27:01,114 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:27:01,130 - com.cg.dao.UserDaoImpl - WARN - This is a warn message.
+2018-10-09 10:27:01,130 - com.cg.dao.UserDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:27:01,130 - com.cg.dao.AdminDaoImpl - WARN - This is a warn message.
+2018-10-09 10:27:01,130 - com.cg.dao.AdminDaoImpl - FATAL - This is a fatal message.
+2018-10-09 10:27:02,318 - com.cg.client.Client - INFO - Entered Hotel Management System
+2018-10-09 10:27:02,318 - com.cg.client.Client - INFO - Login method called
+2018-10-09 10:27:04,585 - com.cg.client.Client - INFO - User login
+2018-10-09 10:27:13,097 - com.cg.dao.UserDaoImpl - INFO - User successfully logged onUSERNAME VENKA
+user_id : 1175
+role : user
+mobile_no : 1234567891
+phone : 1234567890
+email : venka@gogo.com
+2018-10-09 10:27:37,271 - com.cg.client.Client - INFO - Finding Hotel by City
+2018-10-09 10:27:43,176 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:27:43,176 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:27:43,958 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 10:27:43,958 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:27:44,786 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
+2018-10-09 10:30:52,224 - com.cg.client.Client - INFO - Finding Hotel by City
+2018-10-09 10:30:57,692 - com.cg.dao.UserDaoImpl - INFO - The hotels searched by city are retrieved successfully
+2018-10-09 10:30:57,692 - com.cg.client.Client - INFO - Fetching available rooms
+2018-10-09 10:30:58,474 - com.cg.dao.UserDaoImpl - INFO - All Availabe rooms data is retrieved
